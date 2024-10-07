@@ -1,0 +1,3012 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>NovaRide</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <style>
+      .swiper-wrapper {
+        transition-timing-function: linear;
+      }
+    </style>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <style>
+      .swiper-wrapper {
+        transition-timing-function: linear;
+      }
+    </style>
+    <style>
+      .carousel {
+        display: flex;
+        transition: transform 0.01s ease;
+      }
+      .card {
+        flex: 0 0 auto; /* Allow cards to adjust based on their width */
+        width: 100%;
+        margin: 0.1rem; /* Default to full width for small screens */
+      }
+    </style>
+    <style>
+      @keyframes move-car {
+        0% {
+          transform: translateX(20%); /* Start from outside the right */
+        }
+        50% {
+          transform: translateX(-20%); /* Move to outside the left */
+        }
+        100% {
+          transform: translateX(20%); /* Move back to outside the right */
+        }
+      }
+
+      .animate-move-car {
+        animation: move-car 2s linear infinite;
+      }
+      /* Corrected marquees styles */
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-50px * 6));
+        }
+      }
+
+      .slider {
+        height: 100px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .slider .slide-track {
+        animation: scroll 40s linear infinite;
+        display: flex;
+        gap: 12px;
+      }
+    </style>
+  </head>
+  <body id="bodyId" class="lg:px-6">
+    <!--Header Section Start-->
+    <header id="headerId" class="px-3 py-9">
+      <nav
+        id="navId"
+        class="flex flex-cols-1 lg:grid lg:grid-cols-[1fr_2fr_1fr] gap-4 items-center justify-between"
+      >
+        <div class="w-[95%] lg:block">
+          <img
+            src="./images/logo.svg"
+            alt=""
+            id="logoId"
+            class="h-[33.44px] w-[180px] lg:block"
+          />
+        </div>
+        <div class="hidden lg:block">
+          <ul
+            class="flex flex-row gap-12 items-center justify-center text-lg font-medium"
+          >
+            <li>
+              <a
+                href="javascript:void(0)"
+                class="hover:text-[#ff3001] hover:fill-[#ff3001] text-gray-800 text-lg font-medium block"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="javascript:void(0)"
+                class="hover:text-[#ff3001] hover:fill-[#ff3001] text-gray-800 text-lg font-medium block"
+                >About Us</a
+              >
+            </li>
+            <li class="group relative">
+              <a
+                href="javascript:void(0)"
+                class="hover:text-[#ff3001] hover:fill-[#ff3001] text-gray-800 text-lg font-medium block"
+                >Store<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16px"
+                  height="16px"
+                  class="ml-1 inline-block"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
+                    data-name="16"
+                    data-original="#000000"
+                  />
+                </svg>
+              </a>
+              <ul
+                class="absolute rounded-2xl top-10 left-0 block space-y-2 shadow-lg bg-[#ff3001] text-white max-h-0 overflow-hidden min-w-[250px] group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500"
+              >
+                <li class="py-1">
+                  <a
+                    href="javascript:void(0)"
+                    class="hover:text-black hover:fill-black text-white text-gray-800 text-lg font-medium block"
+                  >
+                    Car Lists
+                  </a>
+                </li>
+                <li class="py-1">
+                  <a
+                    href="javascript:void(0)"
+                    class="hover:text-black hover:fill-black text-white text-gray-800 text-lg font-medium block"
+                  >
+                    Car Type
+                  </a>
+                </li>
+                <li class="py-1">
+                  <a
+                    href="javascript:void(0)"
+                    class="hover:text-black hover:fill-black text-white text-gray-800 text-lg font-medium block"
+                  >
+                    Car Single
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                href="javascript:void(0)"
+                class="hover:text-[#ff3001] hover:fill-[#ff3001] text-gray-800 text-lg font-medium block"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="hidden lg:block">
+          <a href="#" class="flex justify-end group">
+            <span
+              class="border bg-[#ff3600] py-2 px-6 rounded-full text-white text-lg font-medium border-none"
+            >
+              Book a Rental</span
+            ><span
+              class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+            >
+              <img
+                src="./images/arrow-angle-24.png"
+                class="w-6 h-6 text-white transition-opacity duration-3000 group-hover:hidden"
+              />
+              <img
+                src="./images/arrow-right-24.png"
+                class="w-6 h-6 text-white hidden transition-opacity duration-3000 group-hover:block"
+              />
+            </span>
+          </a>
+        </div>
+        <div class="lg:hidden w-[10%] h-auto">
+          <button
+            id="menu-button"
+            class="flex items-center justify-end float-right focus:outline-none"
+          >
+            <svg
+              class="h-[33.44px] bg-[#ff3600] text-white font-semibold rounded p-1"
+              fill="white"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+          <button
+            id="close-button"
+            class="hidden lg:hidden flex items-center justify-end float-right focus:outline-none"
+          >
+            <svg
+              class="h-[33.44px] bg-[#ff3601] text-white font-semibold rounded p-1"
+              fill="white"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 18L18 6M6 6l12 12"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <div id="mobile-menu" class="hidden lg:hidden h-100vh text-white">
+      <ul
+        class="flex flex-col gap-4 ml-4 items-start justify-start text-lg font-medium"
+      >
+        <li>
+          <a
+            href="javascript:void(0)"
+            class="hover:text-[#ff3001] hover:fill-[#ff3001] text-white text-lg font-medium block"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="javascript:void(0)"
+            class="hover:text-[#ff3001] hover:fill-[#ff3001] text-white text-lg font-medium block"
+            >About Us</a
+          >
+        </li>
+        <li class="group relative">
+          <a
+            href="javascript:void(0)"
+            class="hover:text-[#ff3001] hover:fill-[#ff3001] text-white text-lg font-medium block"
+            >Store
+            <span class="ml-1 inline-block items-center"
+              ><img
+                src="./images/arrow-down-24.png"
+                class="w-3 h-6 items-center pt-4"
+            /></span>
+          </a>
+          <ul
+            class="absolute rounded-2xl top-10 left-0 block space-y-2 shadow-lg bg-[#ff3001] text-white max-h-0 overflow-hidden min-w-[250px] group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500"
+          >
+            <li class="py-1">
+              <a
+                href="javascript:void(0)"
+                class="hover:text-black hover:fill-black text-white text-lg font-medium block"
+              >
+                Car Lists
+              </a>
+            </li>
+            <li class="py-1">
+              <a
+                href="javascript:void(0)"
+                class="hover:text-black hover:fill-black text-white text-lg font-medium block"
+              >
+                Car Type
+              </a>
+            </li>
+            <li class="py-1">
+              <a
+                href="javascript:void(0)"
+                class="hover:text-black hover:fill-black text-white text-lg font-medium block"
+              >
+                Car Single
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a
+            href="javascript:void(0)"
+            class="hover:text-[#ff3001] hover:fill-[#ff3001] text-white text-lg font-medium block"
+            >Contact Us</a
+          >
+        </li>
+        <li>
+          <a
+            href="javascript:void(0)"
+            class="hover:text-[#ff3001] hover:fill-[#ff3001] text-white text-lg font-medium block"
+            >Book A Rental</a
+          >
+        </li>
+      </ul>
+    </div>
+    <script>
+      // JavaScript for toggling the mobile menu
+      const menuButton = document.getElementById("menu-button");
+      const closeButton = document.getElementById("close-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const logoId = document.getElementById("logoId");
+      const navId = document.getElementById("navId");
+      const bodyId = document.getElementById("bodyId");
+      const headerId = document.getElementById("headerId");
+
+      // Show mobile menu and change styles when menu button is clicked
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        menuButton.classList.add("hidden"); // Hide the menu button
+        closeButton.classList.remove("hidden"); // Show the close button
+        logoId.classList.toggle("hidden");
+        navId.classList.add("border-b", "pb-5", "border-white"); // Ensure you're adding classes correctly
+        bodyId.classList.add("bg-black");
+        headerId.classList.add("py-4");
+      });
+
+      // Hide mobile menu and revert styles when close button is clicked
+      closeButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        menuButton.classList.remove("hidden"); // Show the menu button
+        closeButton.classList.add("hidden"); // Hide the close button
+        logoId.classList.toggle("hidden");
+        navId.classList.remove("border-b-4", "pb-3", "border-red-500"); // Remove classes correctly
+        bodyId.classList.remove("bg-black"); // Remove the background class
+        headerId.classList.remove("py-4"); // Remove the background class
+      });
+    </script>
+    <!--Header Section End-->
+    <!--Hero Section Start-->
+    <section class="relative">
+      <div class="relative">
+        <img
+          src="./images/hero-bg.jpg"
+          alt="hero background"
+          class="lg:rounded-2xl w-[100%] h-[100%] h-[36rem] lg:h-[52rem] xl:h-[50rem] object-cover"
+        />
+      </div>
+      <div
+        class="absolute right-0 left-0 top-24 flex flex-col items-center justify-center text-center mx-4 sm:mx-10 md:mx-22"
+      >
+        <h6 class="text-[#ff3600] font-bold text-lg">Welcome To Car Rent</h6>
+        <h1
+          class="font-bold text-3xl max-w-4xl md:text-7xl mt-4 text-white leading-8"
+        >
+          Looking to save more on your rental car?
+        </h1>
+        <p class="font-medium text-lg max-w-3xl text-white mt-8">
+          Whether you’re planning a weekend getaway, a business trip, or just
+          need a reliable ride for the day, we offer a wide range of vehicles to
+          suit your needs.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row gap-6 items-center justify-center mt-8"
+        >
+          <div>
+            <a href="#" class="flex items-center justify-end group">
+              <span
+                class="border bg-[#ff3600] py-2 px-6 rounded-full text-white text-lg font-medium border-none"
+              >
+                Book a Rental
+              </span>
+
+              <span
+                class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+              >
+                <img
+                  src="./images/arrow-angle-24.png"
+                  class="w-6 h-6 text-white transition-opacity duration-3000 group-hover:hidden"
+                />
+                <img
+                  src="./images/arrow-right-24.png"
+                  class="w-6 h-6 text-white hidden transition-opacity duration-3000 group-hover:block"
+                />
+              </span>
+            </a>
+          </div>
+          <div>
+            <a href="#" class="flex items-center justify-end group">
+              <span
+                class="border bg-white py-2 px-6 rounded-full text-black text-lg font-medium border-none"
+              >
+                Learn More
+              </span>
+
+              <span
+                class="bg-white w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+              >
+                <img
+                  src="./images/arrow-angle-black-24.svg"
+                  class="w-9 h-9 text-white transition-opacity duration-3000 group-hover:hidden"
+                />
+                <img
+                  src="./images/arrow-right-24.png"
+                  class="w-6 h-6 text-white hidden transition-opacity duration-3000 group-hover:block"
+                />
+              </span>
+            </a>
+          </div>
+        </div>
+        <div
+          class="hidden xl:grid mt-40 w-full lg:h-[9rem] xl:h-[8rem] grid grid-cols-[1fr_1fr_1fr_1fr_1fr_1fr] items-center justify-between gap-4 rounded-2xl bg-white"
+        >
+          <div>
+            <h2
+              class="text-xl font-bold text-left xl:px-3 border-r border-grey-100"
+            >
+              Need to Rent a Luxury Car ?
+            </h2>
+          </div>
+          <div
+            class="flex flex-col items-start justify-start text-left xl:px-3 border-r border-grey-100"
+          >
+            <label for="fullName" class="mb-2 text-lg font-semibold"
+              >Full Name</label
+            >
+            <input id="fullName" placeholder="Enter Full Name" />
+          </div>
+          <div
+            class="flex flex-col items-start justify-start text-left xl:px-3 border-r border-grey-100"
+          >
+            <label for="mobile" class="mb-2 text-lg font-semibold"
+              >Mobile No</label
+            >
+            <input id="mobile" placeholder="Enter Phone No" />
+          </div>
+          <div
+            class="flex flex-col items-start justify-start text-left xl:px-3 border-r border-grey-100"
+          >
+            <label for="pickup" class="mb-2 text-lg font-semibold"
+              >Pickup Location</label
+            >
+            <input id="pickup" placeholder="Enter Location" />
+          </div>
+          <div
+            class="flex flex-col items-start justify-start text-left xl:px-3 border-r border-grey-100"
+          >
+            <label for="date" class="mb-2 text-lg font-semibold"
+              >Pickup Date</label
+            >
+            <input id="date" placeholder="mm/dd/yyyy" />
+          </div>
+          <div>
+            <button
+              class="border bg-[#ff3600] py-2 px-6 rounded-full text-white text-lg font-medium border-none"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+        <div
+          class="hidden md:h-[10rem] lg:flex xl:hidden lg:flex-col items-center rounded-2xl bg-white justify-start mt-40"
+        >
+          <div class="flex flex-row justify-start w-full">
+            <h2 class="text-xl font-bold text-black py-2 ml-4">
+              Need to Rent a Luxury Car?
+            </h2>
+          </div>
+
+          <div
+            class="lg:h-[8rem] xl:h-[8rem] grid grid-cols-[1fr_1fr_1fr_1fr_1fr] items-center justify-between gap-4"
+          >
+            <div
+              class="ml-4 flex flex-col items-start justify-start text-left lg:px-1 border-r border-grey-100"
+            >
+              <label for="fullName" class="mb-2 text-lg font-semibold"
+                >Full Name</label
+              >
+              <input id="fullName" placeholder="Enter Full Name" />
+            </div>
+            <div
+              class="flex flex-col items-start justify-start text-left lg:px-1 border-r border-grey-100"
+            >
+              <label for="mobile" class="mb-2 text-lg font-semibold"
+                >Mobile No</label
+              >
+              <input id="mobile" placeholder="Enter Phone No" />
+            </div>
+            <div
+              class="flex flex-col items-start justify-start text-left lg:px-1 border-r border-grey-100"
+            >
+              <label for="pickup" class="mb-2 text-lg font-semibold"
+                >Pickup Location</label
+              >
+              <input id="pickup" placeholder="Enter Location" />
+            </div>
+            <div
+              class="flex flex-col items-start justify-start text-left lg:px-1 border-r border-grey-100"
+            >
+              <label for="date" class="mb-2 text-lg font-semibold"
+                >Pickup Date</label
+              >
+              <input id="date" placeholder="mm/dd/yyyy" />
+            </div>
+            <div>
+              <button
+                class="border bg-[#ff3600] py-2 px-6 rounded-full text-white text-lg font-medium border-none"
+              >
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div
+      class="h-[31rem] sm:h-[20rem] w-[97%] mx-auto lg:hidden flex flex-col rounded-2xl bg-white mt-10"
+    >
+      <div class="flex flex-row justify-start mb-7 w-full">
+        <h2 class="text-xl font-bold text-black py-2 ml-4">
+          Need to Rent a Luxury Car?
+        </h2>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-start">
+        <div
+          class="ml-4 sm:w-[50%] flex flex-col items-start justify-start text-left sm:border-r sm:border-gray-100 sm:pr-4 sm:border-b-0 w-[93%] border-b pb-2 mb-5 border-gray-300"
+        >
+          <label for="fullName" class="mb-2 text-lg font-semibold"
+            >Full Name</label
+          >
+          <input
+            id="fullName"
+            placeholder="Enter Full Name"
+            class="focus:outline-none w-full"
+          />
+        </div>
+
+        <div
+          class="ml-4 sm:w-[50%] flex flex-col items-start justify-start text-left sm:pr-4 w-[93%] sm:border-b-0 border-b pb-2 mb-5 border-gray-300"
+        >
+          <label for="mobile" class="mb-2 text-lg font-semibold"
+            >Mobile No</label
+          >
+          <input
+            id="mobile"
+            placeholder="Enter Phone No"
+            class="w-full focus:outline-none"
+          />
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row items-start">
+        <div
+          class="ml-4 sm:w-[50%] flex flex-col items-start justify-start text-left sm:border-r sm:border-gray-100 sm:pr-4 sm:border-b-0 w-[93%] border-b pb-2 mb-5 border-gray-300"
+        >
+          <label for="pickup" class="mb-2 text-lg font-semibold"
+            >Pickup Location</label
+          >
+          <input
+            id="pickup"
+            placeholder="Enter Location"
+            class="focus:outline-none w-full"
+          />
+        </div>
+
+        <div
+          class="ml-4 sm:w-[50%] flex flex-col items-start justify-start text-left sm:pr-4 w-[93%] sm:border-b-0 border-b pb-2 mb-5 border-gray-300"
+        >
+          <label for="date" class="mb-2 text-lg font-semibold"
+            >Pickup Date</label
+          >
+          <input
+            id="date"
+            placeholder="mm/dd/yyyy"
+            class="w-full focus:outline-none"
+          />
+        </div>
+      </div>
+
+      <div class="flex flex-row justify-start w-full mt-4">
+        <button
+          class="border bg-[#ff3600] py-2 px-6 ml-4 rounded-full text-white text-lg font-medium border-none"
+        >
+          Send
+        </button>
+      </div>
+    </div>
+    <!--Hero Section End-->
+    <!--About Us Section Start-->
+    <section>
+      <div
+        class="w-full flex flex-col gap-20 lg:flex-row lg:gap-4 items-start mb-20 justify-center mx-auto rounded-2xl mt-8"
+      >
+        <div
+          class="w-[97%] relative lg:w-[50%] h-auto flex justify-start items-start relative text-center mx-auto"
+        >
+          <div>
+            <img
+              src="./images/about-img-1.jpg"
+              alt=""
+              class="w-[65%] ml-5 md:w-[390px] absolute lg:w-[100%] h-full md:ml-12 lg:ml-0 relative rounded-full"
+            />
+          </div>
+          <div class="absolute top-40 md:top-60 right-0 md:right-[11%] z-100">
+            <img
+              src="./images/about-img-2.jpg"
+              alt=""
+              class="w-[60%] ml-20 mb-10 md:w-[75%] h-full rounded-full"
+            />
+          </div>
+        </div>
+
+        <div
+          class="w-[97%] lg:w-[50%] flex flex-col justify-start mx-auto md:pt-50 lg:mt-0 items-start pt-10 pl-4 pr-4 gap-6"
+        >
+          <p class="text-[#ff3601] font-medium text-lg">About Us</p>
+          <h1 class="text-5xl font-extrabold">
+            Your trusted partner in reliable car rental
+          </h1>
+          <p class="text-[#616d8f]">
+            Aqestic Optio Amet A Ququam Saepe Aliquid Voluate Dicta Fuga Dolor
+            Saerror Sed Earum A Magni Soluta Quam Minus Dolor Dolor
+          </p>
+          <div>
+            <a
+              href="#"
+              class="flex flex-row gap-12 items-center justify-start group border-b pb-8 border-gray-100"
+            >
+              <div class="elementskit-info-box-icon text-center relative mb-5">
+                <div
+                  class="relative top-0 left-0 w-[60px] h-[60px] bg-[#ff3601] rounded-full opacity-10 z-0 group-hover:opacity-70"
+                ></div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="74"
+                  height="75"
+                  class="absolute top-3 left-2"
+                  viewBox="0 0 74 75"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_718_6)">
+                    <path
+                      d="M18.1504 70.0362H24.5654C28.2842 70.0362 28.2897 64.2422 24.5654 64.2422H18.1504C14.4318 64.2422 14.4263 70.0362 18.1504 70.0362ZM18.1504 66.4102H24.5654C25.5078 66.4102 25.5078 67.8682 24.5654 67.8682H18.1504C17.2082 67.8682 17.2082 66.4102 18.1504 66.4102Z"
+                      fill="#FF3600"
+                    ></path>
+                    <path
+                      d="M26.1109 37.5626L19.0493 44.6244L16.6037 42.1786C15.6123 41.188 14.0796 42.7205 15.0706 43.7117L18.2828 46.9239C18.7939 47.3471 19.3049 47.3471 19.8159 46.9239L27.6441 39.0957C28.635 38.1045 27.1023 36.572 26.1109 37.5626Z"
+                      fill="#FF3600"
+                    ></path>
+                    <path
+                      d="M73.1938 48.2596C72.7562 47.4242 72.4391 46.509 72.2237 45.5905C71.1666 41.1687 69.5606 36.8848 67.4509 32.8576L63.9233 26.1245C61.9264 22.3126 56.0332 22.9464 54.9206 27.1272C52.2816 26.1778 49.3025 27.7383 48.5809 30.4486C46.3992 29.6635 43.8798 30.5882 42.7232 32.5947V8.792V4.53989C42.723 2.2047 40.8231 0.304688 38.4877 0.304688H13.2352C11.8336 0.304688 11.8336 2.47266 13.2352 2.47266H38.4877C39.6276 2.47266 40.555 3.39997 40.555 4.53989V7.70801H2.16797V4.53989C2.16797 3.39997 3.09528 2.47266 4.2352 2.47266H7.16499C8.56651 2.47266 8.56651 0.304688 7.16499 0.304688H4.2352C1.90001 0.304688 0 2.2047 0 4.53989V8.792V61.0379V70.0695C0 72.4047 1.90001 74.3047 4.2352 74.3047H38.4877C40.823 74.3047 42.723 72.4047 42.723 70.0695V61.0379V56.696L46.5966 58.6119C47.5538 59.0854 48.3405 59.8737 48.812 60.8319C50.5328 64.3289 54.9433 65.7786 58.4077 63.9635L64.8661 60.58C66.1076 59.9296 65.1015 58.0094 63.86 58.6596L57.4016 62.0431C55.0027 63.3005 51.9531 62.3047 50.7572 59.8747C50.0763 58.4911 48.9402 57.3525 47.5577 56.6685L31.1197 48.5378C28.0324 47.0383 30.2651 42.1949 33.4006 43.6573L39.3692 46.7992C40.29 47.284 41.3172 46.259 40.8343 45.3372L30.4657 25.5462C28.7632 22.3454 33.3227 19.3909 35.0618 22.7111L42.3907 36.7L44.305 40.354C44.9369 41.5607 46.8741 40.5863 46.2254 39.3479L44.3617 35.7906C43.607 33.2756 46.7119 31.2478 48.7104 33.0011L50.7842 36.9595C51.4161 38.1662 53.3533 37.1918 52.7046 35.9535L50.5959 31.9286C50.3986 29.6162 53.2303 28.1281 55.0203 29.6533L57.1076 33.6378C57.7395 34.8445 59.6767 33.87 59.028 32.6317L56.9403 28.6467C56.6562 25.8088 60.6504 24.5489 62.0026 27.1304L65.5302 33.8635C67.5568 37.7319 69.0994 41.847 70.115 46.0941C70.3614 47.1958 70.7492 48.2651 71.2733 49.2654C72.5223 51.6493 71.5988 54.6048 69.215 55.8538C67.9736 56.5045 68.9799 58.4248 70.2211 57.7742C73.664 55.9706 74.9976 51.7023 73.1938 48.2596ZM40.555 70.0695C40.555 71.2094 39.6276 72.1367 38.4877 72.1367H4.2352C3.09528 72.1367 2.16797 71.2094 2.16797 70.0695V62.1219H40.555V70.0695ZM27.8717 44.0104C27.1359 45.5571 27.2788 47.4097 28.2376 48.8283C26.445 50.7042 23.9857 51.7672 21.3614 51.7672C16.1103 51.7672 11.8383 47.4952 11.8383 42.244C11.8383 36.9929 16.1103 32.7209 21.3614 32.7209C26.3439 32.7209 30.4422 36.5677 30.8486 41.447C29.5647 41.8386 28.4488 42.7969 27.8717 44.0104ZM35.7423 20.187C35.2697 19.8033 34.7244 19.5081 34.1257 19.3211C30.6535 18.2361 27.1566 21.4201 27.9208 24.9759H7.3419C7.14259 24.9759 6.98057 24.8139 6.98057 24.6146V16.868C6.98057 16.6687 7.14259 16.5066 7.3419 16.5066H35.381C35.5803 16.5066 35.7423 16.6687 35.7423 16.868V20.187ZM40.555 28.5247L37.9103 23.4767V16.868C37.9103 15.4734 36.7755 14.3387 35.381 14.3387H7.3419C5.94732 14.3387 4.8126 15.4734 4.8126 16.868V24.6147C4.8126 26.0093 5.94732 27.144 7.3419 27.144H28.8551L37.2982 43.2594L34.3893 41.7281C34.3765 41.7213 34.3633 41.7146 34.3502 41.7084C33.9195 41.5035 33.469 41.3653 33.0106 41.2933C32.5247 35.2902 27.4875 30.5529 21.3616 30.5529C14.915 30.5529 9.67044 35.7975 9.67044 42.244C9.67044 48.6906 14.915 53.9352 21.3616 53.9352C24.5947 53.9352 27.6264 52.6241 29.8288 50.306C33.2678 52.2878 36.9968 53.8636 40.555 55.6236V59.9537H2.16797V9.87598H40.555V28.5247Z"
+                      fill="#040401"
+                    ></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_718_6">
+                      <rect
+                        width="74"
+                        height="74"
+                        fill="white"
+                        transform="translate(0 0.304688)"
+                      ></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div class="flex flex-col space-y-4">
+                <h2 class="font-bold text-xl justify-start">
+                  Easy Booking Process
+                </h2>
+                <p class="text-[#616d8f]">
+                  We have optimized the booking process so that our clients can
+                  experience the easiest and the safest service
+                </p>
+              </div>
+            </a>
+            <a
+              class="flex flex-row gap-12 items-center justify-start group pb-8 mt-5"
+            >
+              <div class="elementskit-info-box-icon text-center relative mb-5">
+                <div
+                  class="relative top-0 left-0 w-[60px] h-[60px] bg-[#ff3601] rounded-full opacity-10 z-0 group-hover:opacity-70"
+                ></div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="74"
+                  height="75"
+                  class="absolute top-3 left-2"
+                  viewBox="0 0 74 75"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_15_229)">
+                    <path
+                      d="M18.3842 35.8803L12.4874 34.6084C10.8686 34.2615 9.36548 35.5334 9.36548 37.1522V39.5803C9.36548 41.5459 10.8686 42.0084 12.7186 42.0084H19.1936C20.4655 42.0084 21.7374 41.7772 21.7374 40.3897V40.0428C21.7374 37.9615 20.3499 36.2272 18.3842 35.8803ZM11.5624 39.5803C11.5624 39.4647 11.5624 39.4647 11.5624 37.0365C11.5624 36.8053 11.7936 36.574 12.0249 36.6897L17.9217 37.9615C18.7311 38.1928 19.3092 38.8865 19.4249 39.6959C15.378 39.6959 11.9092 39.6959 11.5624 39.5803Z"
+                      fill="black"
+                    ></path>
+                    <path
+                      d="M70.8779 23.5084L62.5529 19.5772C59.7779 18.3053 56.7716 17.8428 53.881 18.4209L52.6091 15.8772C51.6841 13.5647 49.4873 11.9459 46.9435 11.9459H19.8873C17.3435 11.9459 15.1466 13.449 14.2216 15.7615L9.71226 25.1272C8.67163 23.624 6.93726 22.699 5.08726 22.699H3.12163C1.38726 22.699 -0.000244141 24.0865 -0.000244141 25.8209V27.0928C-0.000244141 28.8272 1.38726 30.2147 3.12163 30.2147H6.12788C4.85601 31.8334 4.27788 33.9147 4.27788 35.9959V42.9334C4.27788 45.5928 5.20288 48.1365 7.05288 50.3334V55.5365C7.05288 57.849 8.90288 59.699 11.2154 59.699H15.4935C17.806 59.699 19.656 57.849 19.656 55.5365V53.4553H42.781C47.8685 60.3928 55.8466 63.399 55.9623 63.399C56.1935 63.5147 56.4248 63.5147 56.7716 63.399C56.8873 63.2834 73.9998 57.0397 73.9998 41.4303V28.4803C73.9998 26.399 72.7279 24.4334 70.8779 23.5084ZM16.3029 16.6865C16.881 15.1834 18.2685 14.2584 19.8873 14.2584H46.9435C48.5623 14.2584 49.9498 15.1834 50.6435 16.8022L51.6841 18.999C51.2216 19.1147 50.7591 19.3459 50.2966 19.5772L41.9716 23.5084C40.1216 24.4334 38.8498 26.2834 38.8498 28.3647H10.5216C10.9841 27.6709 10.5216 28.8272 16.3029 16.6865ZM2.31226 27.0928V25.8209C2.31226 25.3584 2.65913 25.0115 3.12163 25.0115H5.08726C7.39976 25.0115 8.20913 27.0928 8.44038 27.4397C8.32476 27.6709 8.20913 27.7865 7.97788 28.0178H3.12163C2.65913 27.9022 2.31226 27.5553 2.31226 27.0928ZM17.3435 55.4209C17.3435 56.4615 16.5341 57.2709 15.4935 57.2709H11.0998C10.0591 57.3865 9.24976 56.4615 9.24976 55.4209V52.0678C10.6373 52.8772 12.256 53.3397 13.8748 53.3397H17.3435V55.4209ZM13.7591 51.1428C9.59663 51.1428 6.35913 47.0959 6.35913 42.8178V35.8803C6.35913 33.9147 7.16851 32.0647 8.55601 30.5615H38.8498V40.7365H26.131C25.5529 40.7365 24.9748 41.199 24.9748 41.8928C24.9748 42.5865 25.4373 43.049 26.131 43.049H38.9654C39.081 43.8584 39.081 44.5522 39.3123 45.2459H26.131C25.5529 45.2459 24.9748 45.7084 24.9748 46.4022C24.9748 47.0959 25.4373 47.5584 26.131 47.5584H39.7748C40.2373 48.8303 40.6998 50.1022 41.3935 51.1428H13.7591ZM71.6873 41.4303C71.6873 54.2647 58.7373 60.1615 56.4248 61.0865C48.0998 57.7334 41.1623 50.5647 41.1623 41.4303C41.1623 37.1522 41.1623 34.8397 41.1623 28.4803C41.1623 27.2084 41.856 26.1678 43.0123 25.5897L51.3373 21.6584C54.6904 20.0397 58.3904 20.0397 61.7435 21.6584L70.0685 25.5897C71.1091 26.1678 71.9185 27.2084 71.9185 28.4803V41.4303H71.6873Z"
+                      fill="black"
+                    ></path>
+                    <path
+                      d="M67.7559 28.249L60.1247 24.6647C57.8122 23.5084 54.9215 23.5084 52.609 24.6647L45.0934 28.249C44.7465 28.4803 44.3997 28.8272 44.3997 29.2897V41.4303C44.3997 50.5647 52.3778 55.5366 55.8465 57.2709C56.1934 57.3866 56.5403 57.3866 56.8872 57.2709C60.3559 55.5366 68.334 50.5647 68.334 41.4303V29.2897C68.334 28.8272 68.1028 28.4803 67.7559 28.249ZM66.1372 41.4303C66.1372 48.8303 59.6622 53.2241 56.4247 54.9584C52.609 52.8772 46.7122 48.7147 46.7122 41.4303V29.9834L53.6497 26.6303C55.384 25.8209 57.4653 25.8209 59.1997 26.6303L66.1372 29.9834V41.4303Z"
+                      fill="black"
+                    ></path>
+                    <path
+                      d="M51.9153 41.0834C51.4528 40.7365 50.759 40.8522 50.2965 41.3147C49.834 41.7772 50.0653 42.4709 50.5278 42.9334L54.9215 46.2865C55.384 46.6334 56.0778 46.5178 56.5403 46.0553L63.0153 37.6147C63.3622 37.1522 63.2465 36.4584 62.784 35.9959C62.3215 35.649 61.6278 35.7647 61.1653 36.2272L55.384 43.7428L51.9153 41.0834Z"
+                      fill="#FF3600"
+                    ></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_15_229">
+                      <rect
+                        width="74"
+                        height="74"
+                        fill="white"
+                        transform="translate(-0.000244141 0.730286)"
+                      ></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+
+              <div class="flex flex-col space-y-4">
+                <h2 class="font-bold text-xl justify-start">
+                  Convenient Pick-Up & Return Process
+                </h2>
+                <p class="text-[#616d8f] text-lg">
+                  We have optimized the booking process so that our clients can
+                  experience the easiest and the safest service
+                </p>
+              </div>
+            </a>
+            <div>
+              <div>
+                <a href="#" class="flex justify-start group">
+                  <span
+                    class="border bg-[#ff3600] py-2 px-6 rounded-full text-white text-lg font-medium border-none"
+                  >
+                    Book a Rental</span
+                  ><span
+                    class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+                  >
+                    <img
+                      src="./images/arrow-angle-24.png"
+                      class="w-6 h-6 text-white transition-opacity duration-3000 group-hover:hidden"
+                    />
+                    <img
+                      src="./images/arrow-right-24.png"
+                      class="w-6 h-6 text-white hidden transition-opacity duration-3000 group-hover:block"
+                    />
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--About Us Section End-->
+    <!--Service Section Start-->
+    <section class="bg-[#fff8f6] lg:rounded-2xl py-20">
+      <div class="mt-30 flex flex-col justify-center items-center">
+        <p class="text-[#ff3601] font-medium text-lg mt-30">Our Services</p>
+        <h1 class="text-5xl font-extrabold px-30 text-center">
+          Explore our wide range of <br />
+          rental services
+        </h1>
+        <div
+          class="grid grid-cols-[1fr] sm:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr_1fr] gap-6 px-4 my-16"
+        >
+          <div
+            class="w-[97%] hover:bg-[#ff3001] group transition duration-300 hover:delay-700 bg-white pl-4 rounded-2xl flex flex-col py-5 items-start justify-start border border-gray-300"
+          >
+            <div class="elementskit-info-box-icon relative mb-12">
+              <div
+                class="top-0 left-0 w-[60px] h-[60px] bg-[#ff3601] rounded-full opacity-10 z-0 group-hover:opacity-70"
+              ></div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="74"
+                height="75"
+                class="absolute top-3 left-2"
+                viewBox="0 0 74 75"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_718_6)">
+                  <path
+                    d="M18.1504 70.0362H24.5654C28.2842 70.0362 28.2897 64.2422 24.5654 64.2422H18.1504C14.4318 64.2422 14.4263 70.0362 18.1504 70.0362ZM18.1504 66.4102H24.5654C25.5078 66.4102 25.5078 67.8682 24.5654 67.8682H18.1504C17.2082 67.8682 17.2082 66.4102 18.1504 66.4102Z"
+                    fill="#FF3600"
+                  ></path>
+                  <path
+                    d="M26.1109 37.5626L19.0493 44.6244L16.6037 42.1786C15.6123 41.188 14.0796 42.7205 15.0706 43.7117L18.2828 46.9239C18.7939 47.3471 19.3049 47.3471 19.8159 46.9239L27.6441 39.0957C28.635 38.1045 27.1023 36.572 26.1109 37.5626Z"
+                    fill="#FF3600"
+                  ></path>
+                  <path
+                    d="M73.1938 48.2596C72.7562 47.4242 72.4391 46.509 72.2237 45.5905C71.1666 41.1687 69.5606 36.8848 67.4509 32.8576L63.9233 26.1245C61.9264 22.3126 56.0332 22.9464 54.9206 27.1272C52.2816 26.1778 49.3025 27.7383 48.5809 30.4486C46.3992 29.6635 43.8798 30.5882 42.7232 32.5947V8.792V4.53989C42.723 2.2047 40.8231 0.304688 38.4877 0.304688H13.2352C11.8336 0.304688 11.8336 2.47266 13.2352 2.47266H38.4877C39.6276 2.47266 40.555 3.39997 40.555 4.53989V7.70801H2.16797V4.53989C2.16797 3.39997 3.09528 2.47266 4.2352 2.47266H7.16499C8.56651 2.47266 8.56651 0.304688 7.16499 0.304688H4.2352C1.90001 0.304688 0 2.2047 0 4.53989V8.792V61.0379V70.0695C0 72.4047 1.90001 74.3047 4.2352 74.3047H38.4877C40.823 74.3047 42.723 72.4047 42.723 70.0695V61.0379V56.696L46.5966 58.6119C47.5538 59.0854 48.3405 59.8737 48.812 60.8319C50.5328 64.3289 54.9433 65.7786 58.4077 63.9635L64.8661 60.58C66.1076 59.9296 65.1015 58.0094 63.86 58.6596L57.4016 62.0431C55.0027 63.3005 51.9531 62.3047 50.7572 59.8747C50.0763 58.4911 48.9402 57.3525 47.5577 56.6685L31.1197 48.5378C28.0324 47.0383 30.2651 42.1949 33.4006 43.6573L39.3692 46.7992C40.29 47.284 41.3172 46.259 40.8343 45.3372L30.4657 25.5462C28.7632 22.3454 33.3227 19.3909 35.0618 22.7111L42.3907 36.7L44.305 40.354C44.9369 41.5607 46.8741 40.5863 46.2254 39.3479L44.3617 35.7906C43.607 33.2756 46.7119 31.2478 48.7104 33.0011L50.7842 36.9595C51.4161 38.1662 53.3533 37.1918 52.7046 35.9535L50.5959 31.9286C50.3986 29.6162 53.2303 28.1281 55.0203 29.6533L57.1076 33.6378C57.7395 34.8445 59.6767 33.87 59.028 32.6317L56.9403 28.6467C56.6562 25.8088 60.6504 24.5489 62.0026 27.1304L65.5302 33.8635C67.5568 37.7319 69.0994 41.847 70.115 46.0941C70.3614 47.1958 70.7492 48.2651 71.2733 49.2654C72.5223 51.6493 71.5988 54.6048 69.215 55.8538C67.9736 56.5045 68.9799 58.4248 70.2211 57.7742C73.664 55.9706 74.9976 51.7023 73.1938 48.2596ZM40.555 70.0695C40.555 71.2094 39.6276 72.1367 38.4877 72.1367H4.2352C3.09528 72.1367 2.16797 71.2094 2.16797 70.0695V62.1219H40.555V70.0695ZM27.8717 44.0104C27.1359 45.5571 27.2788 47.4097 28.2376 48.8283C26.445 50.7042 23.9857 51.7672 21.3614 51.7672C16.1103 51.7672 11.8383 47.4952 11.8383 42.244C11.8383 36.9929 16.1103 32.7209 21.3614 32.7209C26.3439 32.7209 30.4422 36.5677 30.8486 41.447C29.5647 41.8386 28.4488 42.7969 27.8717 44.0104ZM35.7423 20.187C35.2697 19.8033 34.7244 19.5081 34.1257 19.3211C30.6535 18.2361 27.1566 21.4201 27.9208 24.9759H7.3419C7.14259 24.9759 6.98057 24.8139 6.98057 24.6146V16.868C6.98057 16.6687 7.14259 16.5066 7.3419 16.5066H35.381C35.5803 16.5066 35.7423 16.6687 35.7423 16.868V20.187ZM40.555 28.5247L37.9103 23.4767V16.868C37.9103 15.4734 36.7755 14.3387 35.381 14.3387H7.3419C5.94732 14.3387 4.8126 15.4734 4.8126 16.868V24.6147C4.8126 26.0093 5.94732 27.144 7.3419 27.144H28.8551L37.2982 43.2594L34.3893 41.7281C34.3765 41.7213 34.3633 41.7146 34.3502 41.7084C33.9195 41.5035 33.469 41.3653 33.0106 41.2933C32.5247 35.2902 27.4875 30.5529 21.3616 30.5529C14.915 30.5529 9.67044 35.7975 9.67044 42.244C9.67044 48.6906 14.915 53.9352 21.3616 53.9352C24.5947 53.9352 27.6264 52.6241 29.8288 50.306C33.2678 52.2878 36.9968 53.8636 40.555 55.6236V59.9537H2.16797V9.87598H40.555V28.5247Z"
+                    fill="#040401"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_718_6">
+                    <rect
+                      width="74"
+                      height="74"
+                      fill="white"
+                      transform="translate(0 0.304688)"
+                    ></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+
+            <h2 class="font-bold text-xl justify-start mb-3">
+              Car Rental With Driver
+            </h2>
+            <p class="text-[#616d8f] justify-start mb-6">
+              Enhance your rental experience with additional options.
+            </p>
+            <a href="#" class="flex justify-end group">
+              <span
+                class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+              >
+                <img
+                  src="./images/arrow-angle-24.png"
+                  class="w-6 h-6 text-white transition-opacity duration-3000 group-hover:hidden"
+                />
+                <img
+                  src="./images/arrow-right-24.png"
+                  class="w-6 h-6 text-white hidden transition-opacity duration-3000 group-hover:block"
+                />
+              </span>
+            </a>
+          </div>
+          <div
+            class="w-[97%] hover:bg-[#ff3001] group bg-white transition duration-300 hover:delay-700 pl-4 rounded-2xl flex flex-col py-5 items-start justify-start border border-gray-300"
+          >
+            <div class="elementskit-info-box-icon relative mb-12">
+              <div
+                class="top-0 left-0 w-[60px] h-[60px] bg-[#ff3601] rounded-full opacity-10 z-0 group-hover:opacity-70"
+              ></div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="74"
+                height="75"
+                class="absolute top-3 left-2"
+                viewBox="0 0 74 75"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_718_6)">
+                  <path
+                    d="M18.1504 70.0362H24.5654C28.2842 70.0362 28.2897 64.2422 24.5654 64.2422H18.1504C14.4318 64.2422 14.4263 70.0362 18.1504 70.0362ZM18.1504 66.4102H24.5654C25.5078 66.4102 25.5078 67.8682 24.5654 67.8682H18.1504C17.2082 67.8682 17.2082 66.4102 18.1504 66.4102Z"
+                    fill="#FF3600"
+                  ></path>
+                  <path
+                    d="M26.1109 37.5626L19.0493 44.6244L16.6037 42.1786C15.6123 41.188 14.0796 42.7205 15.0706 43.7117L18.2828 46.9239C18.7939 47.3471 19.3049 47.3471 19.8159 46.9239L27.6441 39.0957C28.635 38.1045 27.1023 36.572 26.1109 37.5626Z"
+                    fill="#FF3600"
+                  ></path>
+                  <path
+                    d="M73.1938 48.2596C72.7562 47.4242 72.4391 46.509 72.2237 45.5905C71.1666 41.1687 69.5606 36.8848 67.4509 32.8576L63.9233 26.1245C61.9264 22.3126 56.0332 22.9464 54.9206 27.1272C52.2816 26.1778 49.3025 27.7383 48.5809 30.4486C46.3992 29.6635 43.8798 30.5882 42.7232 32.5947V8.792V4.53989C42.723 2.2047 40.8231 0.304688 38.4877 0.304688H13.2352C11.8336 0.304688 11.8336 2.47266 13.2352 2.47266H38.4877C39.6276 2.47266 40.555 3.39997 40.555 4.53989V7.70801H2.16797V4.53989C2.16797 3.39997 3.09528 2.47266 4.2352 2.47266H7.16499C8.56651 2.47266 8.56651 0.304688 7.16499 0.304688H4.2352C1.90001 0.304688 0 2.2047 0 4.53989V8.792V61.0379V70.0695C0 72.4047 1.90001 74.3047 4.2352 74.3047H38.4877C40.823 74.3047 42.723 72.4047 42.723 70.0695V61.0379V56.696L46.5966 58.6119C47.5538 59.0854 48.3405 59.8737 48.812 60.8319C50.5328 64.3289 54.9433 65.7786 58.4077 63.9635L64.8661 60.58C66.1076 59.9296 65.1015 58.0094 63.86 58.6596L57.4016 62.0431C55.0027 63.3005 51.9531 62.3047 50.7572 59.8747C50.0763 58.4911 48.9402 57.3525 47.5577 56.6685L31.1197 48.5378C28.0324 47.0383 30.2651 42.1949 33.4006 43.6573L39.3692 46.7992C40.29 47.284 41.3172 46.259 40.8343 45.3372L30.4657 25.5462C28.7632 22.3454 33.3227 19.3909 35.0618 22.7111L42.3907 36.7L44.305 40.354C44.9369 41.5607 46.8741 40.5863 46.2254 39.3479L44.3617 35.7906C43.607 33.2756 46.7119 31.2478 48.7104 33.0011L50.7842 36.9595C51.4161 38.1662 53.3533 37.1918 52.7046 35.9535L50.5959 31.9286C50.3986 29.6162 53.2303 28.1281 55.0203 29.6533L57.1076 33.6378C57.7395 34.8445 59.6767 33.87 59.028 32.6317L56.9403 28.6467C56.6562 25.8088 60.6504 24.5489 62.0026 27.1304L65.5302 33.8635C67.5568 37.7319 69.0994 41.847 70.115 46.0941C70.3614 47.1958 70.7492 48.2651 71.2733 49.2654C72.5223 51.6493 71.5988 54.6048 69.215 55.8538C67.9736 56.5045 68.9799 58.4248 70.2211 57.7742C73.664 55.9706 74.9976 51.7023 73.1938 48.2596ZM40.555 70.0695C40.555 71.2094 39.6276 72.1367 38.4877 72.1367H4.2352C3.09528 72.1367 2.16797 71.2094 2.16797 70.0695V62.1219H40.555V70.0695ZM27.8717 44.0104C27.1359 45.5571 27.2788 47.4097 28.2376 48.8283C26.445 50.7042 23.9857 51.7672 21.3614 51.7672C16.1103 51.7672 11.8383 47.4952 11.8383 42.244C11.8383 36.9929 16.1103 32.7209 21.3614 32.7209C26.3439 32.7209 30.4422 36.5677 30.8486 41.447C29.5647 41.8386 28.4488 42.7969 27.8717 44.0104ZM35.7423 20.187C35.2697 19.8033 34.7244 19.5081 34.1257 19.3211C30.6535 18.2361 27.1566 21.4201 27.9208 24.9759H7.3419C7.14259 24.9759 6.98057 24.8139 6.98057 24.6146V16.868C6.98057 16.6687 7.14259 16.5066 7.3419 16.5066H35.381C35.5803 16.5066 35.7423 16.6687 35.7423 16.868V20.187ZM40.555 28.5247L37.9103 23.4767V16.868C37.9103 15.4734 36.7755 14.3387 35.381 14.3387H7.3419C5.94732 14.3387 4.8126 15.4734 4.8126 16.868V24.6147C4.8126 26.0093 5.94732 27.144 7.3419 27.144H28.8551L37.2982 43.2594L34.3893 41.7281C34.3765 41.7213 34.3633 41.7146 34.3502 41.7084C33.9195 41.5035 33.469 41.3653 33.0106 41.2933C32.5247 35.2902 27.4875 30.5529 21.3616 30.5529C14.915 30.5529 9.67044 35.7975 9.67044 42.244C9.67044 48.6906 14.915 53.9352 21.3616 53.9352C24.5947 53.9352 27.6264 52.6241 29.8288 50.306C33.2678 52.2878 36.9968 53.8636 40.555 55.6236V59.9537H2.16797V9.87598H40.555V28.5247Z"
+                    fill="#040401"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_718_6">
+                    <rect
+                      width="74"
+                      height="74"
+                      fill="white"
+                      transform="translate(0 0.304688)"
+                    ></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+
+            <h2 class="font-bold text-xl justify-start mb-3">
+              Car Rental With Driver
+            </h2>
+            <p class="text-[#616d8f] justify-start mb-6">
+              Enhance your rental experience with additional options.
+            </p>
+            <a href="#" class="flex justify-end group">
+              <span
+                class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+              >
+                <img
+                  src="./images/arrow-angle-24.png"
+                  class="w-6 h-6 text-white transition-opacity duration-3000 group-hover:hidden"
+                />
+                <img
+                  src="./images/arrow-right-24.png"
+                  class="w-6 h-6 text-white hidden transition-opacity duration-3000 group-hover:block"
+                />
+              </span>
+            </a>
+          </div>
+          <div
+            class="w-[97%] hover:bg-[#ff3001] group bg-white pl-4 transition duration-300 hover:delay-700 rounded-2xl flex flex-col py-5 items-start justify-start border border-gray-300"
+          >
+            <div class="elementskit-info-box-icon relative mb-12">
+              <div
+                class="top-0 left-0 w-[60px] h-[60px] bg-[#ff3601] rounded-full opacity-10 z-0 group-hover:opacity-70"
+              ></div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="74"
+                height="75"
+                class="absolute top-3 left-2"
+                viewBox="0 0 74 75"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_718_6)">
+                  <path
+                    d="M18.1504 70.0362H24.5654C28.2842 70.0362 28.2897 64.2422 24.5654 64.2422H18.1504C14.4318 64.2422 14.4263 70.0362 18.1504 70.0362ZM18.1504 66.4102H24.5654C25.5078 66.4102 25.5078 67.8682 24.5654 67.8682H18.1504C17.2082 67.8682 17.2082 66.4102 18.1504 66.4102Z"
+                    fill="#FF3600"
+                  ></path>
+                  <path
+                    d="M26.1109 37.5626L19.0493 44.6244L16.6037 42.1786C15.6123 41.188 14.0796 42.7205 15.0706 43.7117L18.2828 46.9239C18.7939 47.3471 19.3049 47.3471 19.8159 46.9239L27.6441 39.0957C28.635 38.1045 27.1023 36.572 26.1109 37.5626Z"
+                    fill="#FF3600"
+                  ></path>
+                  <path
+                    d="M73.1938 48.2596C72.7562 47.4242 72.4391 46.509 72.2237 45.5905C71.1666 41.1687 69.5606 36.8848 67.4509 32.8576L63.9233 26.1245C61.9264 22.3126 56.0332 22.9464 54.9206 27.1272C52.2816 26.1778 49.3025 27.7383 48.5809 30.4486C46.3992 29.6635 43.8798 30.5882 42.7232 32.5947V8.792V4.53989C42.723 2.2047 40.8231 0.304688 38.4877 0.304688H13.2352C11.8336 0.304688 11.8336 2.47266 13.2352 2.47266H38.4877C39.6276 2.47266 40.555 3.39997 40.555 4.53989V7.70801H2.16797V4.53989C2.16797 3.39997 3.09528 2.47266 4.2352 2.47266H7.16499C8.56651 2.47266 8.56651 0.304688 7.16499 0.304688H4.2352C1.90001 0.304688 0 2.2047 0 4.53989V8.792V61.0379V70.0695C0 72.4047 1.90001 74.3047 4.2352 74.3047H38.4877C40.823 74.3047 42.723 72.4047 42.723 70.0695V61.0379V56.696L46.5966 58.6119C47.5538 59.0854 48.3405 59.8737 48.812 60.8319C50.5328 64.3289 54.9433 65.7786 58.4077 63.9635L64.8661 60.58C66.1076 59.9296 65.1015 58.0094 63.86 58.6596L57.4016 62.0431C55.0027 63.3005 51.9531 62.3047 50.7572 59.8747C50.0763 58.4911 48.9402 57.3525 47.5577 56.6685L31.1197 48.5378C28.0324 47.0383 30.2651 42.1949 33.4006 43.6573L39.3692 46.7992C40.29 47.284 41.3172 46.259 40.8343 45.3372L30.4657 25.5462C28.7632 22.3454 33.3227 19.3909 35.0618 22.7111L42.3907 36.7L44.305 40.354C44.9369 41.5607 46.8741 40.5863 46.2254 39.3479L44.3617 35.7906C43.607 33.2756 46.7119 31.2478 48.7104 33.0011L50.7842 36.9595C51.4161 38.1662 53.3533 37.1918 52.7046 35.9535L50.5959 31.9286C50.3986 29.6162 53.2303 28.1281 55.0203 29.6533L57.1076 33.6378C57.7395 34.8445 59.6767 33.87 59.028 32.6317L56.9403 28.6467C56.6562 25.8088 60.6504 24.5489 62.0026 27.1304L65.5302 33.8635C67.5568 37.7319 69.0994 41.847 70.115 46.0941C70.3614 47.1958 70.7492 48.2651 71.2733 49.2654C72.5223 51.6493 71.5988 54.6048 69.215 55.8538C67.9736 56.5045 68.9799 58.4248 70.2211 57.7742C73.664 55.9706 74.9976 51.7023 73.1938 48.2596ZM40.555 70.0695C40.555 71.2094 39.6276 72.1367 38.4877 72.1367H4.2352C3.09528 72.1367 2.16797 71.2094 2.16797 70.0695V62.1219H40.555V70.0695ZM27.8717 44.0104C27.1359 45.5571 27.2788 47.4097 28.2376 48.8283C26.445 50.7042 23.9857 51.7672 21.3614 51.7672C16.1103 51.7672 11.8383 47.4952 11.8383 42.244C11.8383 36.9929 16.1103 32.7209 21.3614 32.7209C26.3439 32.7209 30.4422 36.5677 30.8486 41.447C29.5647 41.8386 28.4488 42.7969 27.8717 44.0104ZM35.7423 20.187C35.2697 19.8033 34.7244 19.5081 34.1257 19.3211C30.6535 18.2361 27.1566 21.4201 27.9208 24.9759H7.3419C7.14259 24.9759 6.98057 24.8139 6.98057 24.6146V16.868C6.98057 16.6687 7.14259 16.5066 7.3419 16.5066H35.381C35.5803 16.5066 35.7423 16.6687 35.7423 16.868V20.187ZM40.555 28.5247L37.9103 23.4767V16.868C37.9103 15.4734 36.7755 14.3387 35.381 14.3387H7.3419C5.94732 14.3387 4.8126 15.4734 4.8126 16.868V24.6147C4.8126 26.0093 5.94732 27.144 7.3419 27.144H28.8551L37.2982 43.2594L34.3893 41.7281C34.3765 41.7213 34.3633 41.7146 34.3502 41.7084C33.9195 41.5035 33.469 41.3653 33.0106 41.2933C32.5247 35.2902 27.4875 30.5529 21.3616 30.5529C14.915 30.5529 9.67044 35.7975 9.67044 42.244C9.67044 48.6906 14.915 53.9352 21.3616 53.9352C24.5947 53.9352 27.6264 52.6241 29.8288 50.306C33.2678 52.2878 36.9968 53.8636 40.555 55.6236V59.9537H2.16797V9.87598H40.555V28.5247Z"
+                    fill="#040401"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_718_6">
+                    <rect
+                      width="74"
+                      height="74"
+                      fill="white"
+                      transform="translate(0 0.304688)"
+                    ></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+
+            <h2 class="font-bold text-xl justify-start mb-3">
+              Car Rental With Driver
+            </h2>
+            <p class="text-[#616d8f] justify-start mb-6">
+              Enhance your rental experience with additional options.
+            </p>
+            <a href="#" class="flex justify-end group">
+              <span
+                class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+              >
+                <img
+                  src="./images/arrow-angle-24.png"
+                  class="w-6 h-6 text-white transition-opacity duration-3000 group-hover:hidden"
+                />
+                <img
+                  src="./images/arrow-right-24.png"
+                  class="w-6 h-6 text-white hidden transition-opacity duration-3000 group-hover:block"
+                />
+              </span>
+            </a>
+          </div>
+          <div
+            class="w-[97%] hover:bg-[#ff3001] group transition duration-300 hover:delay-700 bg-white pl-4 rounded-2xl flex flex-col py-5 items-start justify-start border border-gray-300"
+          >
+            <div class="elementskit-info-box-icon relative mb-12">
+              <div
+                class="top-0 left-0 w-[60px] h-[60px] bg-[#ff3601] rounded-full opacity-10 z-0 group-hover:opacity-70"
+              ></div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="74"
+                height="75"
+                class="absolute top-3 left-2"
+                viewBox="0 0 74 75"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_718_6)">
+                  <path
+                    d="M18.1504 70.0362H24.5654C28.2842 70.0362 28.2897 64.2422 24.5654 64.2422H18.1504C14.4318 64.2422 14.4263 70.0362 18.1504 70.0362ZM18.1504 66.4102H24.5654C25.5078 66.4102 25.5078 67.8682 24.5654 67.8682H18.1504C17.2082 67.8682 17.2082 66.4102 18.1504 66.4102Z"
+                    fill="#FF3600"
+                  ></path>
+                  <path
+                    d="M26.1109 37.5626L19.0493 44.6244L16.6037 42.1786C15.6123 41.188 14.0796 42.7205 15.0706 43.7117L18.2828 46.9239C18.7939 47.3471 19.3049 47.3471 19.8159 46.9239L27.6441 39.0957C28.635 38.1045 27.1023 36.572 26.1109 37.5626Z"
+                    fill="#FF3600"
+                  ></path>
+                  <path
+                    d="M73.1938 48.2596C72.7562 47.4242 72.4391 46.509 72.2237 45.5905C71.1666 41.1687 69.5606 36.8848 67.4509 32.8576L63.9233 26.1245C61.9264 22.3126 56.0332 22.9464 54.9206 27.1272C52.2816 26.1778 49.3025 27.7383 48.5809 30.4486C46.3992 29.6635 43.8798 30.5882 42.7232 32.5947V8.792V4.53989C42.723 2.2047 40.8231 0.304688 38.4877 0.304688H13.2352C11.8336 0.304688 11.8336 2.47266 13.2352 2.47266H38.4877C39.6276 2.47266 40.555 3.39997 40.555 4.53989V7.70801H2.16797V4.53989C2.16797 3.39997 3.09528 2.47266 4.2352 2.47266H7.16499C8.56651 2.47266 8.56651 0.304688 7.16499 0.304688H4.2352C1.90001 0.304688 0 2.2047 0 4.53989V8.792V61.0379V70.0695C0 72.4047 1.90001 74.3047 4.2352 74.3047H38.4877C40.823 74.3047 42.723 72.4047 42.723 70.0695V61.0379V56.696L46.5966 58.6119C47.5538 59.0854 48.3405 59.8737 48.812 60.8319C50.5328 64.3289 54.9433 65.7786 58.4077 63.9635L64.8661 60.58C66.1076 59.9296 65.1015 58.0094 63.86 58.6596L57.4016 62.0431C55.0027 63.3005 51.9531 62.3047 50.7572 59.8747C50.0763 58.4911 48.9402 57.3525 47.5577 56.6685L31.1197 48.5378C28.0324 47.0383 30.2651 42.1949 33.4006 43.6573L39.3692 46.7992C40.29 47.284 41.3172 46.259 40.8343 45.3372L30.4657 25.5462C28.7632 22.3454 33.3227 19.3909 35.0618 22.7111L42.3907 36.7L44.305 40.354C44.9369 41.5607 46.8741 40.5863 46.2254 39.3479L44.3617 35.7906C43.607 33.2756 46.7119 31.2478 48.7104 33.0011L50.7842 36.9595C51.4161 38.1662 53.3533 37.1918 52.7046 35.9535L50.5959 31.9286C50.3986 29.6162 53.2303 28.1281 55.0203 29.6533L57.1076 33.6378C57.7395 34.8445 59.6767 33.87 59.028 32.6317L56.9403 28.6467C56.6562 25.8088 60.6504 24.5489 62.0026 27.1304L65.5302 33.8635C67.5568 37.7319 69.0994 41.847 70.115 46.0941C70.3614 47.1958 70.7492 48.2651 71.2733 49.2654C72.5223 51.6493 71.5988 54.6048 69.215 55.8538C67.9736 56.5045 68.9799 58.4248 70.2211 57.7742C73.664 55.9706 74.9976 51.7023 73.1938 48.2596ZM40.555 70.0695C40.555 71.2094 39.6276 72.1367 38.4877 72.1367H4.2352C3.09528 72.1367 2.16797 71.2094 2.16797 70.0695V62.1219H40.555V70.0695ZM27.8717 44.0104C27.1359 45.5571 27.2788 47.4097 28.2376 48.8283C26.445 50.7042 23.9857 51.7672 21.3614 51.7672C16.1103 51.7672 11.8383 47.4952 11.8383 42.244C11.8383 36.9929 16.1103 32.7209 21.3614 32.7209C26.3439 32.7209 30.4422 36.5677 30.8486 41.447C29.5647 41.8386 28.4488 42.7969 27.8717 44.0104ZM35.7423 20.187C35.2697 19.8033 34.7244 19.5081 34.1257 19.3211C30.6535 18.2361 27.1566 21.4201 27.9208 24.9759H7.3419C7.14259 24.9759 6.98057 24.8139 6.98057 24.6146V16.868C6.98057 16.6687 7.14259 16.5066 7.3419 16.5066H35.381C35.5803 16.5066 35.7423 16.6687 35.7423 16.868V20.187ZM40.555 28.5247L37.9103 23.4767V16.868C37.9103 15.4734 36.7755 14.3387 35.381 14.3387H7.3419C5.94732 14.3387 4.8126 15.4734 4.8126 16.868V24.6147C4.8126 26.0093 5.94732 27.144 7.3419 27.144H28.8551L37.2982 43.2594L34.3893 41.7281C34.3765 41.7213 34.3633 41.7146 34.3502 41.7084C33.9195 41.5035 33.469 41.3653 33.0106 41.2933C32.5247 35.2902 27.4875 30.5529 21.3616 30.5529C14.915 30.5529 9.67044 35.7975 9.67044 42.244C9.67044 48.6906 14.915 53.9352 21.3616 53.9352C24.5947 53.9352 27.6264 52.6241 29.8288 50.306C33.2678 52.2878 36.9968 53.8636 40.555 55.6236V59.9537H2.16797V9.87598H40.555V28.5247Z"
+                    fill="#040401"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_718_6">
+                    <rect
+                      width="74"
+                      height="74"
+                      fill="white"
+                      transform="translate(0 0.304688)"
+                    ></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+
+            <h2 class="font-bold text-xl justify-start mb-3">
+              Car Rental With Driver
+            </h2>
+            <p class="text-[#616d8f] justify-start mb-6">
+              Enhance your rental experience with additional options.
+            </p>
+            <a href="#" class="flex justify-end group">
+              <span
+                class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+              >
+                <img
+                  src="./images/arrow-angle-24.png"
+                  class="w-6 h-6 text-white transition-opacity duration-3000 group-hover:hidden"
+                />
+                <img
+                  src="./images/arrow-right-24.png"
+                  class="w-6 h-6 text-white hidden transition-opacity duration-3000 group-hover:block"
+                />
+              </span>
+            </a>
+          </div>
+        </div>
+        <p
+          class="text-center text-[#616d8f] text-lg w-[80%] sm:w-[75%] lg:w-[50%]"
+        >
+          Discover our range of car rental services designed to meet all your
+          travel needs. From a diverse fleet of vehicles to flexible rental
+          plans.
+        </p>
+        <a href="#" class="flex justify-end group mt-10">
+          <span
+            class="border bg-[#ff3600] py-2 px-6 rounded-full text-white text-lg font-medium border-none"
+          >
+            Book a Rental</span
+          ><span
+            class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+          >
+            <img
+              src="./images/arrow-angle-24.png"
+              class="w-6 h-6 text-white transition-opacity duration-3000 group-hover:hidden"
+            />
+            <img
+              src="./images/arrow-right-24.png"
+              class="w-6 h-6 text-white hidden transition-opacity duration-3000 group-hover:block"
+            />
+          </span>
+        </a>
+      </div>
+    </section>
+    <!--Service Section End-->
+    <!--Our Fleets Section Start-->
+    <!-- Carousel Section -->
+    <section>
+      <div class="flex flex-col justify-center items-center mt-16">
+        <p class="mx-auto text-[#ff3601] mb-4 font-semibold">Our Fleets</p>
+        <h1
+          class="text-2xl text-center sm:text-3xl md:text-4xl px-10 sm:px-30 lg:text-5xl font-bold mb-16"
+        >
+          Explore our perfect and extensive fleet
+        </h1>
+        <div class="w-full relative px-8 md:px-8 lg:px-1 mb-12">
+          <div class="swiper multiple-slide-carousel swiper-container relative">
+            <div class="swiper-wrapper mb-24">
+              <!-- Swiper Slides -->
+              <div class="swiper-slide">
+                <div
+                  class="border border-gray-200 rounded-2xl h-auto flex justify-center items-center"
+                >
+                  <div
+                    class="text-grey-200 px-6 py-8 flex flex-col gap-2 items-start justify-start"
+                  >
+                    <div>
+                      <img
+                        src="./images/Sapphire-Convertible.png"
+                        alt=""
+                        class="w-[100%] mx-auto"
+                      />
+                    </div>
+                    <div>
+                      <span class="rounded-full bg-gray-100 px-2 py-1"
+                        >Luxury Car</span
+                      >
+                      <h2 class="mt-4 text-xl font-semibold">
+                        Sapphire Convertible
+                      </h2>
+                    </div>
+                    <div
+                      class="flex flex-row items-center justify-between w-full mt-5"
+                    >
+                      <div class="flex flex-row items-center gap-2">
+                        <img src="./icon-door.svg" />
+                        <p>Doors</p>
+                      </div>
+                      <p>6</p>
+                    </div>
+                    <div
+                      class="flex flex-row items-center justify-between w-full mt-4 border-b border-gray-200 pb-5"
+                    >
+                      <div class="flex flex-row items-center gap-2">
+                        <img src="./icon-passengers.svg" />
+                        <p>Doors</p>
+                      </div>
+                      <p>6</p>
+                    </div>
+                    <div
+                      class="mt-5 flex flex-row justify-between w-full items-center"
+                    >
+                      <h1 class="text-xl font-bold">
+                        $253<span class="text-base font-thin">/Per Day</span>
+                      </h1>
+                      <a href="#" class="flex items-center justify-end group">
+                        <span
+                          class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+                        >
+                          <!-- Default Icon -->
+                          <svg
+                            class="w-4 h-4 text-white transition-opacity duration-3000 group-hover:hidden"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                          >
+                            <path
+                              d="M11.6654 3.97592L1.64141 13.9999L-0.00537109 12.3531L10.0174 2.32914H1.18372V-0.00012207H13.9946V12.8108H11.6654V3.97592Z"
+                              fill="white"
+                            />
+                          </svg>
+
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-12 h-12 text-white hidden transition-opacity duration-3000 group-hover:block"
+                            fill="currentColor"
+                            class="bi bi-arrow-right-short"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="border border-gray-200 rounded-2xl h-auto flex justify-center items-center"
+                >
+                  <div
+                    class="text-grey-200 px-6 py-8 flex flex-col gap-2 items-start justify-start"
+                  >
+                    <div>
+                      <img
+                        src="./images/Eclipse-Sedan.png"
+                        alt=""
+                        class="w-[100%] mx-auto"
+                      />
+                    </div>
+                    <div>
+                      <span class="rounded-full bg-gray-100 px-2 py-1"
+                        >Luxury Car</span
+                      >
+                      <h2 class="mt-4 text-xl font-semibold">Eclipse Sedan</h2>
+                    </div>
+                    <div
+                      class="flex flex-row items-center justify-between w-full mt-5"
+                    >
+                      <div class="flex flex-row items-center gap-2">
+                        <img src="./icon-door.svg" />
+                        <p>Doors</p>
+                      </div>
+                      <p>6</p>
+                    </div>
+                    <div
+                      class="flex flex-row items-center justify-between w-full mt-4 border-b border-gray-200 pb-5"
+                    >
+                      <div class="flex flex-row items-center gap-2">
+                        <img src="./icon-passengers.svg" />
+                        <p>Doors</p>
+                      </div>
+                      <p>6</p>
+                    </div>
+                    <div
+                      class="mt-5 flex flex-row justify-between w-full items-center"
+                    >
+                      <h1 class="text-xl font-bold">
+                        $253<span class="text-base font-thin">/Per Day</span>
+                      </h1>
+                      <a href="#" class="flex items-center justify-end group">
+                        <span
+                          class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+                        >
+                          <!-- Default Icon -->
+                          <svg
+                            class="w-4 h-4 text-white transition-opacity duration-3000 group-hover:hidden"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                          >
+                            <path
+                              d="M11.6654 3.97592L1.64141 13.9999L-0.00537109 12.3531L10.0174 2.32914H1.18372V-0.00012207H13.9946V12.8108H11.6654V3.97592Z"
+                              fill="white"
+                            />
+                          </svg>
+
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-12 h-12 text-white hidden transition-opacity duration-3000 group-hover:block"
+                            fill="currentColor"
+                            class="bi bi-arrow-right-short"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="border border-gray-200 rounded-2xl h-auto flex justify-center items-center"
+                >
+                  <div
+                    class="text-grey-200 px-6 py-8 flex flex-col gap-2 items-start justify-start"
+                  >
+                    <div>
+                      <img
+                        src="./images/Voyager-GT.png"
+                        alt=""
+                        class="w-[100%] mx-auto"
+                      />
+                    </div>
+                    <div>
+                      <span class="rounded-full bg-gray-100 px-2 py-1"
+                        >Luxury Car</span
+                      >
+                      <h2 class="mt-4 text-xl font-semibold">Voyager GT</h2>
+                    </div>
+                    <div
+                      class="flex flex-row items-center justify-between w-full mt-5"
+                    >
+                      <div class="flex flex-row items-center gap-2">
+                        <img src="./icon-door.svg" />
+                        <p>Doors</p>
+                      </div>
+                      <p>6</p>
+                    </div>
+                    <div
+                      class="flex flex-row items-center justify-between w-full mt-4 border-b border-gray-200 pb-5"
+                    >
+                      <div class="flex flex-row items-center gap-2">
+                        <img src="./icon-passengers.svg" />
+                        <p>Doors</p>
+                      </div>
+                      <p>6</p>
+                    </div>
+                    <div
+                      class="mt-5 flex flex-row justify-between w-full items-center"
+                    >
+                      <h1 class="text-xl font-bold">
+                        $253<span class="text-base font-thin">/Per Day</span>
+                      </h1>
+                      <a href="#" class="flex items-center justify-end group">
+                        <span
+                          class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+                        >
+                          <!-- Default Icon -->
+                          <svg
+                            class="w-4 h-4 text-white transition-opacity duration-3000 group-hover:hidden"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                          >
+                            <path
+                              d="M11.6654 3.97592L1.64141 13.9999L-0.00537109 12.3531L10.0174 2.32914H1.18372V-0.00012207H13.9946V12.8108H11.6654V3.97592Z"
+                              fill="white"
+                            />
+                          </svg>
+
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-12 h-12 text-white hidden transition-opacity duration-3000 group-hover:block"
+                            fill="currentColor"
+                            class="bi bi-arrow-right-short"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="border border-gray-200 rounded-2xl h-auto flex justify-center items-center"
+                >
+                  <div
+                    class="text-grey-200 px-6 py-8 flex flex-col gap-2 items-start justify-start"
+                  >
+                    <div>
+                      <img
+                        src="./images/Voyager-Hybrid.png"
+                        alt=""
+                        class="w-[100%] mx-auto"
+                      />
+                    </div>
+                    <div>
+                      <span class="rounded-full bg-gray-100 px-2 py-1"
+                        >Luxury Car</span
+                      >
+                      <h2 class="mt-4 text-xl font-semibold">Voyager Hybrid</h2>
+                    </div>
+                    <div
+                      class="flex flex-row items-center justify-between w-full mt-5"
+                    >
+                      <div class="flex flex-row items-center gap-2">
+                        <img src="./icon-door.svg" />
+                        <p>Doors</p>
+                      </div>
+                      <p>6</p>
+                    </div>
+                    <div
+                      class="flex flex-row items-center justify-between w-full mt-4 border-b border-gray-200 pb-5"
+                    >
+                      <div class="flex flex-row items-center gap-2">
+                        <img src="./icon-passengers.svg" />
+                        <p>Doors</p>
+                      </div>
+                      <p>6</p>
+                    </div>
+                    <div
+                      class="mt-5 flex flex-row justify-between w-full items-center"
+                    >
+                      <h1 class="text-xl font-bold">
+                        $253<span class="text-base font-thin">/Per Day</span>
+                      </h1>
+                      <a href="#" class="flex items-center justify-end group">
+                        <span
+                          class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+                        >
+                          <!-- Default Icon -->
+                          <svg
+                            class="w-4 h-4 text-white transition-opacity duration-3000 group-hover:hidden"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                          >
+                            <path
+                              d="M11.6654 3.97592L1.64141 13.9999L-0.00537109 12.3531L10.0174 2.32914H1.18372V-0.00012207H13.9946V12.8108H11.6654V3.97592Z"
+                              fill="white"
+                            />
+                          </svg>
+
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-12 h-12 text-white hidden transition-opacity duration-3000 group-hover:block"
+                            fill="currentColor"
+                            class="bi bi-arrow-right-short"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="border border-gray-200 rounded-2xl h-auto flex justify-center items-center"
+                >
+                  <div
+                    class="text-grey-200 px-6 py-8 flex flex-col gap-2 items-start justify-start"
+                  >
+                    <div>
+                      <img
+                        src="./images/Viper-SXT.png"
+                        alt=""
+                        class="w-[100%] mx-auto"
+                      />
+                    </div>
+                    <div>
+                      <span class="rounded-full bg-gray-100 px-2 py-1"
+                        >Luxury Car</span
+                      >
+                      <h2 class="mt-4 text-xl font-semibold">Viper SXT</h2>
+                    </div>
+                    <div
+                      class="flex flex-row items-center justify-between w-full mt-5"
+                    >
+                      <div class="flex flex-row items-center gap-2">
+                        <img src="./icon-door.svg" />
+                        <p>Doors</p>
+                      </div>
+                      <p>6</p>
+                    </div>
+                    <div
+                      class="flex flex-row items-center justify-between w-full mt-4 border-b border-gray-200 pb-5"
+                    >
+                      <div class="flex flex-row items-center gap-2">
+                        <img src="./icon-passengers.svg" />
+                        <p>Doors</p>
+                      </div>
+                      <p>6</p>
+                    </div>
+                    <div
+                      class="mt-5 flex flex-row justify-between w-full items-center"
+                    >
+                      <h1 class="text-xl font-bold">
+                        $253<span class="text-base font-thin">/Per Day</span>
+                      </h1>
+                      <a href="#" class="flex items-center justify-end group">
+                        <span
+                          class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+                        >
+                          <!-- Default Icon -->
+                          <svg
+                            class="w-4 h-4 text-white transition-opacity duration-3000 group-hover:hidden"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                          >
+                            <path
+                              d="M11.6654 3.97592L1.64141 13.9999L-0.00537109 12.3531L10.0174 2.32914H1.18372V-0.00012207H13.9946V12.8108H11.6654V3.97592Z"
+                              fill="white"
+                            />
+                          </svg>
+
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-12 h-12 text-white hidden transition-opacity duration-3000 group-hover:block"
+                            fill="currentColor"
+                            class="bi bi-arrow-right-short"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div
+              class="absolute flex justify-center items-center left-1/2 transform -translate-x-1/2 bottom-0 w-fit mt-6"
+            >
+              <button
+                class="button-prev group p-2 flex justify-center items-center w-12 h-12 transition-all duration-500 rounded-full bg-[#ff3601] hover:bg-black mx-2 focus:outline-none focus:ring-0 hover:outline-none active:outline-none"
+              >
+                <img src="./images/arrow-left-32.png" />
+              </button>
+              <button
+                class="button-next group p-2 flex justify-center items-center w-12 h-12 transition-all duration-500 rounded-full bg-[#ff3601] hover:bg-black mx-2 focus:outline-none focus:ring-0 hover:outline-none active:outline-none"
+              >
+                <img src="./images/arrow-right-24.png" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+      <!-- Swiper Configuration -->
+      <script>
+        var swiper = new Swiper(".multiple-slide-carousel", {
+          loop: true,
+          slidesPerView: 3, // Display 3 slides at a time
+          spaceBetween: 20, // Space between slides
+          navigation: {
+            nextEl: ".button-next",
+            prevEl: ".button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          breakpoints: {
+            1280: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 40,
+            },
+          },
+        });
+      </script>
+    </section>
+    <!--Our Fleets Section End-->
+    <!--Car Show Section Start-->
+    <section>
+      <div
+        class="grid grid-cols-[1fr] px-6 md:grid-cols-[1fr_1fr] md:px-6 lg:px-0 lg:grid-cols-[1fr_1fr_1fr_1fr] gap-2 my-36"
+      >
+        <div class="relative mx-auto overflow-hidden rounded-2xl w-[97%]">
+          <img
+            src="./images/luxury-collection-img-1.jpg"
+            class="rounded-2xl block hover:scale-125 transition-all duration-500 w-[100%]"
+          />
+          <h1 class="absolute top-8 left-8 text-white text-3xl font-bold">
+            Sport Car
+          </h1>
+          <a
+            href="#"
+            class="flex items-center justify-end group absolute right-8 bottom-8"
+          >
+            <span
+              class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+            >
+              <svg
+                class="w-4 h-4 text-white transition-opacity duration-3000 group-hover:hidden"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  d="M11.6654 3.97592L1.64141 13.9999L-0.00537109 12.3531L10.0174 2.32914H1.18372V-0.00012207H13.9946V12.8108H11.6654V3.97592Z"
+                  fill="white"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-12 h-12 text-white hidden transition-opacity duration-3000 group-hover:block"
+                fill="currentColor"
+                class="bi bi-arrow-right-short"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div class="relative mx-auto overflow-hidden rounded-2xl w-[97%]">
+          <img
+            src="./images/luxury-collection-img-2.jpg"
+            class="rounded-2xl hover:scale-125 transition-all duration-500 block w-[100%]"
+          />
+          <h1 class="absolute top-8 left-8 text-white text-3xl font-bold">
+            Convertible Car
+          </h1>
+          <a
+            href="#"
+            class="flex items-center justify-end group absolute right-8 bottom-8"
+          >
+            <span
+              class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+            >
+              <svg
+                class="w-4 h-4 text-white transition-opacity duration-3000 group-hover:hidden"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  d="M11.6654 3.97592L1.64141 13.9999L-0.00537109 12.3531L10.0174 2.32914H1.18372V-0.00012207H13.9946V12.8108H11.6654V3.97592Z"
+                  fill="white"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-12 h-12 text-white hidden transition-opacity duration-3000 group-hover:block"
+                fill="currentColor"
+                class="bi bi-arrow-right-short"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div class="relative mx-auto overflow-hidden rounded-2xl w-[97%]">
+          <img
+            src="./images/luxury-collection-img-3.jpg"
+            class="rounded-2xl hover:scale-125 transition-all duration-500 w-[100%]"
+          />
+          <h1 class="absolute top-8 left-8 text-white text-3xl font-bold">
+            Sedan Car
+          </h1>
+          <a
+            href="#"
+            class="flex items-center justify-end group absolute right-8 bottom-8"
+          >
+            <span
+              class="bg-[#ff3600] absolute w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+            >
+              <svg
+                class="w-4 h-4 text-white transition-opacity duration-3000 group-hover:hidden"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  d="M11.6654 3.97592L1.64141 13.9999L-0.00537109 12.3531L10.0174 2.32914H1.18372V-0.00012207H13.9946V12.8108H11.6654V3.97592Z"
+                  fill="white"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-12 h-12 text-white hidden transition-opacity duration-3000 group-hover:block"
+                fill="currentColor"
+                class="bi bi-arrow-right-short"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div class="relative mx-auto overflow-hidden rounded-2xl w-[97%]">
+          <img
+            src="./images/luxury-collection-img-4.jpg"
+            class="rounded-2xl hover:scale-125 duration-500 transition-all w-[100%]"
+          />
+          <h1 class="absolute top-8 left-8 text-white text-3xl font-bold">
+            Luxury car
+          </h1>
+          <a
+            href="#"
+            class="flex items-center justify-end group absolute right-8 bottom-8"
+          >
+            <span
+              class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+            >
+              <svg
+                class="w-4 h-4 text-white transition-opacity duration-3000 group-hover:hidden"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  d="M11.6654 3.97592L1.64141 13.9999L-0.00537109 12.3531L10.0174 2.32914H1.18372V-0.00012207H13.9946V12.8108H11.6654V3.97592Z"
+                  fill="white"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-12 h-12 text-white hidden transition-opacity duration-3000 group-hover:block"
+                fill="currentColor"
+                class="bi bi-arrow-right-short"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!--Car Show Section End-->
+    <!--How It Work Section Start-->
+    <section>
+      <div
+        class="w-full flex flex-col gap-12 lg:flex-row lg:gap-4 items-start mb-20 justify-center mx-auto rounded-2xl mt-8"
+      >
+        <div
+          class="w-[97%] lg:w-[50%] flex flex-col mx-auto justify-start items-start pt-4 pl-4 pr-4 gap-6"
+        >
+          <p class="text-[#ff3601] font-medium text-lg">How It Work</p>
+          <h1 class="text-5xl font-extrabold">
+            Streamlined processes for a hassle-free experience
+          </h1>
+          <p class="text-[#616d8f]">
+            Our streamlined process ensures a seamless car rental experience
+            from start to finish. With easy online booking, flexible pick-up and
+            drop-off options.
+          </p>
+          <div class="pb-4">
+            <button
+              id="workButton"
+              class="flex flex-row items-center justify-between w-full w-[100%] focus:outline-none focus:ring-0 focus:border-none"
+            >
+              <h2 class="font-bold text-xl justify-start">
+                <span class="font-bold text-xl mr-4">1.</span>Browse And Select
+              </h2>
+              <div>
+                <img
+                  id="workUp"
+                  src="./images/arrow-up.svg"
+                  class="w-8 h-8 hidden"
+                  alt="Up Icon"
+                />
+                <img
+                  id="workDown"
+                  src="./images/arrow-down.svg"
+                  class="w-8 h-8"
+                  alt="Down Icon"
+                />
+              </div>
+            </button>
+            <p id="workPara" class="ml-8 mt-4 h-16 hidden">
+              Explore our diverse selection of high-end vehicles, choose your
+              preferred pickup and return dates, and select a location that best
+              fits your needs.
+            </p>
+          </div>
+
+          <script>
+            const workButton = document.getElementById("workButton");
+            const workPara = document.getElementById("workPara");
+            const workDown = document.getElementById("workDown");
+            const workUp = document.getElementById("workUp");
+
+            workButton.addEventListener("click", () => {
+              workPara.classList.toggle("hidden");
+              workUp.classList.toggle("hidden");
+              workDown.classList.toggle("hidden");
+            });
+          </script>
+          <div class="pb-4">
+            <button
+              id="workButton-2"
+              class="flex flex-row items-center justify-between w-full focus:outline-none focus:ring-0 focus:border-none"
+            >
+              <h2 class="font-bold text-xl justify-start">
+                <span class="font-bold text-xl mr-4">2.</span>Book And Confirm
+              </h2>
+              <div>
+                <img
+                  id="workUp-2"
+                  src="./images/arrow-up.svg"
+                  class="w-8 h-8 hidden"
+                  alt="Up Icon"
+                />
+                <img
+                  id="workDown-2"
+                  src="./images/arrow-down.svg"
+                  class="w-8 h-8"
+                  alt="Down Icon"
+                />
+              </div>
+            </button>
+            <p id="workPara-2" class="ml-8 mt-4 h-16 hidden">
+              Explore our diverse selection of high-end vehicles, choose your
+              preferred pickup and return dates, and select a location that best
+              fits your needs.
+            </p>
+          </div>
+
+          <script>
+            const workButton2 = document.getElementById("workButton-2");
+            const workPara2 = document.getElementById("workPara-2");
+            const workDown2 = document.getElementById("workDown-2");
+            const workUp2 = document.getElementById("workUp-2");
+
+            workButton2.addEventListener("click", () => {
+              workPara2.classList.toggle("hidden");
+              workUp2.classList.toggle("hidden");
+              workDown2.classList.toggle("hidden");
+            });
+          </script>
+          <div class="pb-4">
+            <button
+              id="workButton-3"
+              class="flex flex-row items-center justify-between w-full focus:outline-none focus:ring-0 focus:border-none"
+            >
+              <h2 class="font-bold text-xl justify-start">
+                <span class="font-bold text-xl mr-4">3.</span>Book And Enjoy
+              </h2>
+              <div>
+                <img
+                  id="workUp-3"
+                  src="./images/arrow-up.svg"
+                  class="w-8 h-8 hidden"
+                  alt="Up Icon"
+                />
+                <img
+                  id="workDown-3"
+                  src="./images/arrow-down.svg"
+                  class="w-8 h-8"
+                  alt="Down Icon"
+                />
+              </div>
+            </button>
+            <p id="workPara-3" class="ml-8 mt-4 h-16 hidden">
+              Explore our diverse selection of high-end vehicles, choose your
+              preferred pickup and return dates, and select a location that best
+              fits your needs.
+            </p>
+          </div>
+
+          <script>
+            const workButton3 = document.getElementById("workButton-3");
+            const workPara3 = document.getElementById("workPara-3");
+            const workDown3 = document.getElementById("workDown-3");
+            const workUp3 = document.getElementById("workUp-3");
+
+            workButton3.addEventListener("click", () => {
+              workPara3.classList.toggle("hidden");
+              workUp3.classList.toggle("hidden");
+              workDown3.classList.toggle("hidden");
+            });
+          </script>
+        </div>
+        <div
+          class="w-[97%] relative lg:w-[50%] h-auto flex justify-start items-start relative px-12 text-center mx-auto"
+        >
+          <div>
+            <img
+              src="./images/about-img-1.jpg"
+              alt=""
+              class="w-[100%] ml-5 md:w-[450px] mx-auto absolute lg:w-[100%] h-full md:ml-12 lg:ml-0 relative rounded-full"
+            />
+          </div>
+          <div
+            class="absolute right-10 bottom-0 sm:right-20 md:right-64 lg:right-20"
+          >
+            <div
+              class="w-44 flex flex-col h-40 lg:w-48 lg:h-40 px-4 py-2 bg-[#ff3001] animate-move-car rounded-2xl"
+            >
+              <h2
+                class="text-white text-xl font-bold text-left border-b-2 pb-2"
+              >
+                5 m+ Trusted world wide global clients
+              </h2>
+              <img
+                src="./images/trusted-client-img.png"
+                class="px-3 pt-2 pb-2"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--How It Work Section End-->
+    <!--Video Section Start-->
+    <section class="mt-10 lg:rounded-2xl">
+      <div class="relative flex items-center justify-center">
+        <img
+          src="./images/hero-bg.jpg"
+          class="relative object-cover lg:rounded-2xl h-[450px] sm:h-[600px] md:h-[700px] lg:h-screen w-[100%]"
+        />
+
+        <p class="absolute text-[#ff3600] font-bold text-lg top-10">
+          Watch Full Video
+        </p>
+        <h1
+          class="absolute px-4 md:px-8 lg:px-20 text-white text-3xl sm:text-4xl md:text-5xl lg:text-5xl text-center font-bold top-20"
+        >
+          Discover the ease and convenience of renting with Us
+        </h1>
+
+        <button
+          id="openModal"
+          class="bg-[#ff3001] absolute top-50 text-white p-2 sm:p-3 lg:p-4 rounded-full hover:bg-[#ff3001]"
+        >
+          <img
+            src="./images/arrow-play-64.png"
+            alt="Play"
+            class="h-8 w-8 sm:h-12 sm:w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 pl-1"
+          />
+        </button>
+
+        <div class="absolute bottom-4 border-t border-gray-100 pt-10">
+          <div class="slider w-[100%]">
+            <div class="slide-track w-[100%]">
+              <img src="./images/client-logo-1.svg" class="slide" />
+              <img src="./images/client-logo-2.svg" class="slide" />
+              <img src="./images/client-logo-3.svg" class="slide" />
+              <img src="./images/client-logo-4.svg" class="slide" />
+              <img src="./images/client-logo-5.svg" class="slide" />
+              <img src="./images/client-logo-6.svg" class="slide" />
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="videoModal"
+          class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90 hidden"
+        >
+          <div class="rounded-lg shadow-lg relative max-w-2xl max-h-2xl w-full">
+            <button
+              id="closeModal"
+              class="bg-grey-500 px-4 absolute top-[.5%] right-[.5%] text-white rounded-full z-50"
+            >
+              <span class="">X</span>
+            </button>
+
+            <div class="flex justify-center">
+              <iframe
+                class="w-[80%] h-80"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                src="https://www.youtube.com/embed/Y-x0efG1seA?autoplay=1&mute=1&loop=1&playlist=Y-x0efG1seA"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          // Open and close modal functionality
+          const openModalBtn = document.getElementById("openModal");
+          const modal = document.getElementById("videoModal");
+          const closeModalBtn = document.getElementById("closeModal");
+
+          openModalBtn.addEventListener("click", () => {
+            modal.classList.remove("hidden"); // Show the modal
+          });
+
+          closeModalBtn.addEventListener("click", () => {
+            modal.classList.add("hidden"); // Hide the modal
+          });
+
+          // Close modal when clicking outside of it
+          window.addEventListener("click", (event) => {
+            if (event.target === modal) {
+              modal.classList.add("hidden");
+            }
+          });
+        </script>
+      </div>
+    </section>
+    <!--Video Section End-->
+    <!--Why Choose Us Section Start-->
+    <section class="mt-10 bg-gray-100 pt-10 pb-20">
+      <p class="text-[#ff3600] font-bold text-lg text-center mb-5">
+        Watch Full Video
+      </p>
+      <h1
+        class="px-8 lg:px-20 text-black text-xl text-center sm:text-3xl md:text-4xl lg:text-5xl text-center font-bold"
+      >
+        Discover the ease and convenience of renting with Us
+      </h1>
+      <div
+        class="grid grid-cols-[1fr] gap-8 lg:gap-4 md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr] mt-10 px-4"
+      >
+        <div class="mt-20">
+          <a
+            href="#"
+            class="flex flex-row gap-8 items-start justify-start group border-b pb-8 border-gray-300"
+          >
+            <div>
+              <div class="text-center relative mb-5">
+                <div
+                  class="relative w-[30px] h-[30px] bg-[#ff3601] rounded-full opacity-10 z-0 group-hover:opacity-70"
+                ></div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  class="absolute top-1 left-1"
+                  viewBox="0 0 74 75"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_15_229)">
+                    <path
+                      d="M18.3842 35.8803L12.4874 34.6084C10.8686 34.2615 9.36548 35.5334 9.36548 37.1522V39.5803C9.36548 41.5459 10.8686 42.0084 12.7186 42.0084H19.1936C20.4655 42.0084 21.7374 41.7772 21.7374 40.3897V40.0428C21.7374 37.9615 20.3499 36.2272 18.3842 35.8803ZM11.5624 39.5803C11.5624 39.4647 11.5624 39.4647 11.5624 37.0365C11.5624 36.8053 11.7936 36.574 12.0249 36.6897L17.9217 37.9615C18.7311 38.1928 19.3092 38.8865 19.4249 39.6959C15.378 39.6959 11.9092 39.6959 11.5624 39.5803Z"
+                      fill="black"
+                    ></path>
+                    <path
+                      d="M70.8779 23.5084L62.5529 19.5772C59.7779 18.3053 56.7716 17.8428 53.881 18.4209L52.6091 15.8772C51.6841 13.5647 49.4873 11.9459 46.9435 11.9459H19.8873C17.3435 11.9459 15.1466 13.449 14.2216 15.7615L9.71226 25.1272C8.67163 23.624 6.93726 22.699 5.08726 22.699H3.12163C1.38726 22.699 -0.000244141 24.0865 -0.000244141 25.8209V27.0928C-0.000244141 28.8272 1.38726 30.2147 3.12163 30.2147H6.12788C4.85601 31.8334 4.27788 33.9147 4.27788 35.9959V42.9334C4.27788 45.5928 5.20288 48.1365 7.05288 50.3334V55.5365C7.05288 57.849 8.90288 59.699 11.2154 59.699H15.4935C17.806 59.699 19.656 57.849 19.656 55.5365V53.4553H42.781C47.8685 60.3928 55.8466 63.399 55.9623 63.399C56.1935 63.5147 56.4248 63.5147 56.7716 63.399C56.8873 63.2834 73.9998 57.0397 73.9998 41.4303V28.4803C73.9998 26.399 72.7279 24.4334 70.8779 23.5084ZM16.3029 16.6865C16.881 15.1834 18.2685 14.2584 19.8873 14.2584H46.9435C48.5623 14.2584 49.9498 15.1834 50.6435 16.8022L51.6841 18.999C51.2216 19.1147 50.7591 19.3459 50.2966 19.5772L41.9716 23.5084C40.1216 24.4334 38.8498 26.2834 38.8498 28.3647H10.5216C10.9841 27.6709 10.5216 28.8272 16.3029 16.6865ZM2.31226 27.0928V25.8209C2.31226 25.3584 2.65913 25.0115 3.12163 25.0115H5.08726C7.39976 25.0115 8.20913 27.0928 8.44038 27.4397C8.32476 27.6709 8.20913 27.7865 7.97788 28.0178H3.12163C2.65913 27.9022 2.31226 27.5553 2.31226 27.0928ZM17.3435 55.4209C17.3435 56.4615 16.5341 57.2709 15.4935 57.2709H11.0998C10.0591 57.3865 9.24976 56.4615 9.24976 55.4209V52.0678C10.6373 52.8772 12.256 53.3397 13.8748 53.3397H17.3435V55.4209ZM13.7591 51.1428C9.59663 51.1428 6.35913 47.0959 6.35913 42.8178V35.8803C6.35913 33.9147 7.16851 32.0647 8.55601 30.5615H38.8498V40.7365H26.131C25.5529 40.7365 24.9748 41.199 24.9748 41.8928C24.9748 42.5865 25.4373 43.049 26.131 43.049H38.9654C39.081 43.8584 39.081 44.5522 39.3123 45.2459H26.131C25.5529 45.2459 24.9748 45.7084 24.9748 46.4022C24.9748 47.0959 25.4373 47.5584 26.131 47.5584H39.7748C40.2373 48.8303 40.6998 50.1022 41.3935 51.1428H13.7591ZM71.6873 41.4303C71.6873 54.2647 58.7373 60.1615 56.4248 61.0865C48.0998 57.7334 41.1623 50.5647 41.1623 41.4303C41.1623 37.1522 41.1623 34.8397 41.1623 28.4803C41.1623 27.2084 41.856 26.1678 43.0123 25.5897L51.3373 21.6584C54.6904 20.0397 58.3904 20.0397 61.7435 21.6584L70.0685 25.5897C71.1091 26.1678 71.9185 27.2084 71.9185 28.4803V41.4303H71.6873Z"
+                      fill="black"
+                    ></path>
+                    <path
+                      d="M67.7559 28.249L60.1247 24.6647C57.8122 23.5084 54.9215 23.5084 52.609 24.6647L45.0934 28.249C44.7465 28.4803 44.3997 28.8272 44.3997 29.2897V41.4303C44.3997 50.5647 52.3778 55.5366 55.8465 57.2709C56.1934 57.3866 56.5403 57.3866 56.8872 57.2709C60.3559 55.5366 68.334 50.5647 68.334 41.4303V29.2897C68.334 28.8272 68.1028 28.4803 67.7559 28.249ZM66.1372 41.4303C66.1372 48.8303 59.6622 53.2241 56.4247 54.9584C52.609 52.8772 46.7122 48.7147 46.7122 41.4303V29.9834L53.6497 26.6303C55.384 25.8209 57.4653 25.8209 59.1997 26.6303L66.1372 29.9834V41.4303Z"
+                      fill="black"
+                    ></path>
+                    <path
+                      d="M51.9153 41.0834C51.4528 40.7365 50.759 40.8522 50.2965 41.3147C49.834 41.7772 50.0653 42.4709 50.5278 42.9334L54.9215 46.2865C55.384 46.6334 56.0778 46.5178 56.5403 46.0553L63.0153 37.6147C63.3622 37.1522 63.2465 36.4584 62.784 35.9959C62.3215 35.649 61.6278 35.7647 61.1653 36.2272L55.384 43.7428L51.9153 41.0834Z"
+                      fill="#FF3600"
+                    ></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_15_229">
+                      <rect
+                        width="74"
+                        height="74"
+                        fill="white"
+                        transform="translate(-0.000244141 0.730286)"
+                      ></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h2 class="font-bold text-xl justify-start pb-2">
+                Easy Booking Process
+              </h2>
+              <p class="text-[#616d8f] px-2">
+                We have optimized the booking process so that our clients can
+                experience the easiest and the safest service
+              </p>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="flex flex-row gap-8 items-start justify-start group pb-8 mt-10"
+          >
+            <div>
+              <div class="text-center relative mb-5">
+                <div
+                  class="relative w-[30px] h-[30px] bg-[#ff3601] rounded-full opacity-10 z-0 group-hover:opacity-70"
+                ></div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  class="absolute top-1 left-1"
+                  viewBox="0 0 74 75"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_15_229)">
+                    <path
+                      d="M18.3842 35.8803L12.4874 34.6084C10.8686 34.2615 9.36548 35.5334 9.36548 37.1522V39.5803C9.36548 41.5459 10.8686 42.0084 12.7186 42.0084H19.1936C20.4655 42.0084 21.7374 41.7772 21.7374 40.3897V40.0428C21.7374 37.9615 20.3499 36.2272 18.3842 35.8803ZM11.5624 39.5803C11.5624 39.4647 11.5624 39.4647 11.5624 37.0365C11.5624 36.8053 11.7936 36.574 12.0249 36.6897L17.9217 37.9615C18.7311 38.1928 19.3092 38.8865 19.4249 39.6959C15.378 39.6959 11.9092 39.6959 11.5624 39.5803Z"
+                      fill="black"
+                    ></path>
+                    <path
+                      d="M70.8779 23.5084L62.5529 19.5772C59.7779 18.3053 56.7716 17.8428 53.881 18.4209L52.6091 15.8772C51.6841 13.5647 49.4873 11.9459 46.9435 11.9459H19.8873C17.3435 11.9459 15.1466 13.449 14.2216 15.7615L9.71226 25.1272C8.67163 23.624 6.93726 22.699 5.08726 22.699H3.12163C1.38726 22.699 -0.000244141 24.0865 -0.000244141 25.8209V27.0928C-0.000244141 28.8272 1.38726 30.2147 3.12163 30.2147H6.12788C4.85601 31.8334 4.27788 33.9147 4.27788 35.9959V42.9334C4.27788 45.5928 5.20288 48.1365 7.05288 50.3334V55.5365C7.05288 57.849 8.90288 59.699 11.2154 59.699H15.4935C17.806 59.699 19.656 57.849 19.656 55.5365V53.4553H42.781C47.8685 60.3928 55.8466 63.399 55.9623 63.399C56.1935 63.5147 56.4248 63.5147 56.7716 63.399C56.8873 63.2834 73.9998 57.0397 73.9998 41.4303V28.4803C73.9998 26.399 72.7279 24.4334 70.8779 23.5084ZM16.3029 16.6865C16.881 15.1834 18.2685 14.2584 19.8873 14.2584H46.9435C48.5623 14.2584 49.9498 15.1834 50.6435 16.8022L51.6841 18.999C51.2216 19.1147 50.7591 19.3459 50.2966 19.5772L41.9716 23.5084C40.1216 24.4334 38.8498 26.2834 38.8498 28.3647H10.5216C10.9841 27.6709 10.5216 28.8272 16.3029 16.6865ZM2.31226 27.0928V25.8209C2.31226 25.3584 2.65913 25.0115 3.12163 25.0115H5.08726C7.39976 25.0115 8.20913 27.0928 8.44038 27.4397C8.32476 27.6709 8.20913 27.7865 7.97788 28.0178H3.12163C2.65913 27.9022 2.31226 27.5553 2.31226 27.0928ZM17.3435 55.4209C17.3435 56.4615 16.5341 57.2709 15.4935 57.2709H11.0998C10.0591 57.3865 9.24976 56.4615 9.24976 55.4209V52.0678C10.6373 52.8772 12.256 53.3397 13.8748 53.3397H17.3435V55.4209ZM13.7591 51.1428C9.59663 51.1428 6.35913 47.0959 6.35913 42.8178V35.8803C6.35913 33.9147 7.16851 32.0647 8.55601 30.5615H38.8498V40.7365H26.131C25.5529 40.7365 24.9748 41.199 24.9748 41.8928C24.9748 42.5865 25.4373 43.049 26.131 43.049H38.9654C39.081 43.8584 39.081 44.5522 39.3123 45.2459H26.131C25.5529 45.2459 24.9748 45.7084 24.9748 46.4022C24.9748 47.0959 25.4373 47.5584 26.131 47.5584H39.7748C40.2373 48.8303 40.6998 50.1022 41.3935 51.1428H13.7591ZM71.6873 41.4303C71.6873 54.2647 58.7373 60.1615 56.4248 61.0865C48.0998 57.7334 41.1623 50.5647 41.1623 41.4303C41.1623 37.1522 41.1623 34.8397 41.1623 28.4803C41.1623 27.2084 41.856 26.1678 43.0123 25.5897L51.3373 21.6584C54.6904 20.0397 58.3904 20.0397 61.7435 21.6584L70.0685 25.5897C71.1091 26.1678 71.9185 27.2084 71.9185 28.4803V41.4303H71.6873Z"
+                      fill="black"
+                    ></path>
+                    <path
+                      d="M67.7559 28.249L60.1247 24.6647C57.8122 23.5084 54.9215 23.5084 52.609 24.6647L45.0934 28.249C44.7465 28.4803 44.3997 28.8272 44.3997 29.2897V41.4303C44.3997 50.5647 52.3778 55.5366 55.8465 57.2709C56.1934 57.3866 56.5403 57.3866 56.8872 57.2709C60.3559 55.5366 68.334 50.5647 68.334 41.4303V29.2897C68.334 28.8272 68.1028 28.4803 67.7559 28.249ZM66.1372 41.4303C66.1372 48.8303 59.6622 53.2241 56.4247 54.9584C52.609 52.8772 46.7122 48.7147 46.7122 41.4303V29.9834L53.6497 26.6303C55.384 25.8209 57.4653 25.8209 59.1997 26.6303L66.1372 29.9834V41.4303Z"
+                      fill="black"
+                    ></path>
+                    <path
+                      d="M51.9153 41.0834C51.4528 40.7365 50.759 40.8522 50.2965 41.3147C49.834 41.7772 50.0653 42.4709 50.5278 42.9334L54.9215 46.2865C55.384 46.6334 56.0778 46.5178 56.5403 46.0553L63.0153 37.6147C63.3622 37.1522 63.2465 36.4584 62.784 35.9959C62.3215 35.649 61.6278 35.7647 61.1653 36.2272L55.384 43.7428L51.9153 41.0834Z"
+                      fill="#FF3600"
+                    ></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_15_229">
+                      <rect
+                        width="74"
+                        height="74"
+                        fill="white"
+                        transform="translate(-0.000244141 0.730286)"
+                      ></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h2 class="font-bold text-xl justify-start pb-2">
+                Easy Booking Process
+              </h2>
+              <p class="text-[#616d8f] px-2">
+                We have optimized the booking process so that our clients can
+                experience the easiest and the safest service
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="mx-auto relative md:hidden lg:block">
+          <img
+            src="./images/why-choose-img.jpg "
+            class="w-[100%] mx-auto rounded-full"
+          />
+          <img
+            src="./images/why-choose-car-img.png"
+            class="absolute left-0 top-80 w-100%"
+          />
+        </div>
+        <div class="mt-20">
+          <a
+            href="#"
+            class="flex flex-row gap-8 items-start justify-start group border-b pb-8 border-gray-300"
+          >
+            <div>
+              <div class="text-center relative mb-5">
+                <div
+                  class="relative w-[30px] h-[30px] bg-[#ff3601] rounded-full opacity-10 z-0 group-hover:opacity-70"
+                ></div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  class="absolute top-1 left-1"
+                  viewBox="0 0 74 75"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_15_229)">
+                    <path
+                      d="M18.3842 35.8803L12.4874 34.6084C10.8686 34.2615 9.36548 35.5334 9.36548 37.1522V39.5803C9.36548 41.5459 10.8686 42.0084 12.7186 42.0084H19.1936C20.4655 42.0084 21.7374 41.7772 21.7374 40.3897V40.0428C21.7374 37.9615 20.3499 36.2272 18.3842 35.8803ZM11.5624 39.5803C11.5624 39.4647 11.5624 39.4647 11.5624 37.0365C11.5624 36.8053 11.7936 36.574 12.0249 36.6897L17.9217 37.9615C18.7311 38.1928 19.3092 38.8865 19.4249 39.6959C15.378 39.6959 11.9092 39.6959 11.5624 39.5803Z"
+                      fill="black"
+                    ></path>
+                    <path
+                      d="M70.8779 23.5084L62.5529 19.5772C59.7779 18.3053 56.7716 17.8428 53.881 18.4209L52.6091 15.8772C51.6841 13.5647 49.4873 11.9459 46.9435 11.9459H19.8873C17.3435 11.9459 15.1466 13.449 14.2216 15.7615L9.71226 25.1272C8.67163 23.624 6.93726 22.699 5.08726 22.699H3.12163C1.38726 22.699 -0.000244141 24.0865 -0.000244141 25.8209V27.0928C-0.000244141 28.8272 1.38726 30.2147 3.12163 30.2147H6.12788C4.85601 31.8334 4.27788 33.9147 4.27788 35.9959V42.9334C4.27788 45.5928 5.20288 48.1365 7.05288 50.3334V55.5365C7.05288 57.849 8.90288 59.699 11.2154 59.699H15.4935C17.806 59.699 19.656 57.849 19.656 55.5365V53.4553H42.781C47.8685 60.3928 55.8466 63.399 55.9623 63.399C56.1935 63.5147 56.4248 63.5147 56.7716 63.399C56.8873 63.2834 73.9998 57.0397 73.9998 41.4303V28.4803C73.9998 26.399 72.7279 24.4334 70.8779 23.5084ZM16.3029 16.6865C16.881 15.1834 18.2685 14.2584 19.8873 14.2584H46.9435C48.5623 14.2584 49.9498 15.1834 50.6435 16.8022L51.6841 18.999C51.2216 19.1147 50.7591 19.3459 50.2966 19.5772L41.9716 23.5084C40.1216 24.4334 38.8498 26.2834 38.8498 28.3647H10.5216C10.9841 27.6709 10.5216 28.8272 16.3029 16.6865ZM2.31226 27.0928V25.8209C2.31226 25.3584 2.65913 25.0115 3.12163 25.0115H5.08726C7.39976 25.0115 8.20913 27.0928 8.44038 27.4397C8.32476 27.6709 8.20913 27.7865 7.97788 28.0178H3.12163C2.65913 27.9022 2.31226 27.5553 2.31226 27.0928ZM17.3435 55.4209C17.3435 56.4615 16.5341 57.2709 15.4935 57.2709H11.0998C10.0591 57.3865 9.24976 56.4615 9.24976 55.4209V52.0678C10.6373 52.8772 12.256 53.3397 13.8748 53.3397H17.3435V55.4209ZM13.7591 51.1428C9.59663 51.1428 6.35913 47.0959 6.35913 42.8178V35.8803C6.35913 33.9147 7.16851 32.0647 8.55601 30.5615H38.8498V40.7365H26.131C25.5529 40.7365 24.9748 41.199 24.9748 41.8928C24.9748 42.5865 25.4373 43.049 26.131 43.049H38.9654C39.081 43.8584 39.081 44.5522 39.3123 45.2459H26.131C25.5529 45.2459 24.9748 45.7084 24.9748 46.4022C24.9748 47.0959 25.4373 47.5584 26.131 47.5584H39.7748C40.2373 48.8303 40.6998 50.1022 41.3935 51.1428H13.7591ZM71.6873 41.4303C71.6873 54.2647 58.7373 60.1615 56.4248 61.0865C48.0998 57.7334 41.1623 50.5647 41.1623 41.4303C41.1623 37.1522 41.1623 34.8397 41.1623 28.4803C41.1623 27.2084 41.856 26.1678 43.0123 25.5897L51.3373 21.6584C54.6904 20.0397 58.3904 20.0397 61.7435 21.6584L70.0685 25.5897C71.1091 26.1678 71.9185 27.2084 71.9185 28.4803V41.4303H71.6873Z"
+                      fill="black"
+                    ></path>
+                    <path
+                      d="M67.7559 28.249L60.1247 24.6647C57.8122 23.5084 54.9215 23.5084 52.609 24.6647L45.0934 28.249C44.7465 28.4803 44.3997 28.8272 44.3997 29.2897V41.4303C44.3997 50.5647 52.3778 55.5366 55.8465 57.2709C56.1934 57.3866 56.5403 57.3866 56.8872 57.2709C60.3559 55.5366 68.334 50.5647 68.334 41.4303V29.2897C68.334 28.8272 68.1028 28.4803 67.7559 28.249ZM66.1372 41.4303C66.1372 48.8303 59.6622 53.2241 56.4247 54.9584C52.609 52.8772 46.7122 48.7147 46.7122 41.4303V29.9834L53.6497 26.6303C55.384 25.8209 57.4653 25.8209 59.1997 26.6303L66.1372 29.9834V41.4303Z"
+                      fill="black"
+                    ></path>
+                    <path
+                      d="M51.9153 41.0834C51.4528 40.7365 50.759 40.8522 50.2965 41.3147C49.834 41.7772 50.0653 42.4709 50.5278 42.9334L54.9215 46.2865C55.384 46.6334 56.0778 46.5178 56.5403 46.0553L63.0153 37.6147C63.3622 37.1522 63.2465 36.4584 62.784 35.9959C62.3215 35.649 61.6278 35.7647 61.1653 36.2272L55.384 43.7428L51.9153 41.0834Z"
+                      fill="#FF3600"
+                    ></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_15_229">
+                      <rect
+                        width="74"
+                        height="74"
+                        fill="white"
+                        transform="translate(-0.000244141 0.730286)"
+                      ></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h2 class="font-bold text-xl justify-start pb-2">
+                Easy Booking Process
+              </h2>
+              <p class="text-[#616d8f] px-2">
+                We have optimized the booking process so that our clients can
+                experience the easiest and the safest service
+              </p>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="flex flex-row gap-8 items-start justify-start group pb-8 mt-10"
+          >
+            <div>
+              <div class="text-center relative mb-5">
+                <div
+                  class="relative w-[30px] h-[30px] bg-[#ff3601] rounded-full opacity-10 z-0 group-hover:opacity-70"
+                ></div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  class="absolute top-1 left-1"
+                  viewBox="0 0 74 75"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_15_229)">
+                    <path
+                      d="M18.3842 35.8803L12.4874 34.6084C10.8686 34.2615 9.36548 35.5334 9.36548 37.1522V39.5803C9.36548 41.5459 10.8686 42.0084 12.7186 42.0084H19.1936C20.4655 42.0084 21.7374 41.7772 21.7374 40.3897V40.0428C21.7374 37.9615 20.3499 36.2272 18.3842 35.8803ZM11.5624 39.5803C11.5624 39.4647 11.5624 39.4647 11.5624 37.0365C11.5624 36.8053 11.7936 36.574 12.0249 36.6897L17.9217 37.9615C18.7311 38.1928 19.3092 38.8865 19.4249 39.6959C15.378 39.6959 11.9092 39.6959 11.5624 39.5803Z"
+                      fill="black"
+                    ></path>
+                    <path
+                      d="M70.8779 23.5084L62.5529 19.5772C59.7779 18.3053 56.7716 17.8428 53.881 18.4209L52.6091 15.8772C51.6841 13.5647 49.4873 11.9459 46.9435 11.9459H19.8873C17.3435 11.9459 15.1466 13.449 14.2216 15.7615L9.71226 25.1272C8.67163 23.624 6.93726 22.699 5.08726 22.699H3.12163C1.38726 22.699 -0.000244141 24.0865 -0.000244141 25.8209V27.0928C-0.000244141 28.8272 1.38726 30.2147 3.12163 30.2147H6.12788C4.85601 31.8334 4.27788 33.9147 4.27788 35.9959V42.9334C4.27788 45.5928 5.20288 48.1365 7.05288 50.3334V55.5365C7.05288 57.849 8.90288 59.699 11.2154 59.699H15.4935C17.806 59.699 19.656 57.849 19.656 55.5365V53.4553H42.781C47.8685 60.3928 55.8466 63.399 55.9623 63.399C56.1935 63.5147 56.4248 63.5147 56.7716 63.399C56.8873 63.2834 73.9998 57.0397 73.9998 41.4303V28.4803C73.9998 26.399 72.7279 24.4334 70.8779 23.5084ZM16.3029 16.6865C16.881 15.1834 18.2685 14.2584 19.8873 14.2584H46.9435C48.5623 14.2584 49.9498 15.1834 50.6435 16.8022L51.6841 18.999C51.2216 19.1147 50.7591 19.3459 50.2966 19.5772L41.9716 23.5084C40.1216 24.4334 38.8498 26.2834 38.8498 28.3647H10.5216C10.9841 27.6709 10.5216 28.8272 16.3029 16.6865ZM2.31226 27.0928V25.8209C2.31226 25.3584 2.65913 25.0115 3.12163 25.0115H5.08726C7.39976 25.0115 8.20913 27.0928 8.44038 27.4397C8.32476 27.6709 8.20913 27.7865 7.97788 28.0178H3.12163C2.65913 27.9022 2.31226 27.5553 2.31226 27.0928ZM17.3435 55.4209C17.3435 56.4615 16.5341 57.2709 15.4935 57.2709H11.0998C10.0591 57.3865 9.24976 56.4615 9.24976 55.4209V52.0678C10.6373 52.8772 12.256 53.3397 13.8748 53.3397H17.3435V55.4209ZM13.7591 51.1428C9.59663 51.1428 6.35913 47.0959 6.35913 42.8178V35.8803C6.35913 33.9147 7.16851 32.0647 8.55601 30.5615H38.8498V40.7365H26.131C25.5529 40.7365 24.9748 41.199 24.9748 41.8928C24.9748 42.5865 25.4373 43.049 26.131 43.049H38.9654C39.081 43.8584 39.081 44.5522 39.3123 45.2459H26.131C25.5529 45.2459 24.9748 45.7084 24.9748 46.4022C24.9748 47.0959 25.4373 47.5584 26.131 47.5584H39.7748C40.2373 48.8303 40.6998 50.1022 41.3935 51.1428H13.7591ZM71.6873 41.4303C71.6873 54.2647 58.7373 60.1615 56.4248 61.0865C48.0998 57.7334 41.1623 50.5647 41.1623 41.4303C41.1623 37.1522 41.1623 34.8397 41.1623 28.4803C41.1623 27.2084 41.856 26.1678 43.0123 25.5897L51.3373 21.6584C54.6904 20.0397 58.3904 20.0397 61.7435 21.6584L70.0685 25.5897C71.1091 26.1678 71.9185 27.2084 71.9185 28.4803V41.4303H71.6873Z"
+                      fill="black"
+                    ></path>
+                    <path
+                      d="M67.7559 28.249L60.1247 24.6647C57.8122 23.5084 54.9215 23.5084 52.609 24.6647L45.0934 28.249C44.7465 28.4803 44.3997 28.8272 44.3997 29.2897V41.4303C44.3997 50.5647 52.3778 55.5366 55.8465 57.2709C56.1934 57.3866 56.5403 57.3866 56.8872 57.2709C60.3559 55.5366 68.334 50.5647 68.334 41.4303V29.2897C68.334 28.8272 68.1028 28.4803 67.7559 28.249ZM66.1372 41.4303C66.1372 48.8303 59.6622 53.2241 56.4247 54.9584C52.609 52.8772 46.7122 48.7147 46.7122 41.4303V29.9834L53.6497 26.6303C55.384 25.8209 57.4653 25.8209 59.1997 26.6303L66.1372 29.9834V41.4303Z"
+                      fill="black"
+                    ></path>
+                    <path
+                      d="M51.9153 41.0834C51.4528 40.7365 50.759 40.8522 50.2965 41.3147C49.834 41.7772 50.0653 42.4709 50.5278 42.9334L54.9215 46.2865C55.384 46.6334 56.0778 46.5178 56.5403 46.0553L63.0153 37.6147C63.3622 37.1522 63.2465 36.4584 62.784 35.9959C62.3215 35.649 61.6278 35.7647 61.1653 36.2272L55.384 43.7428L51.9153 41.0834Z"
+                      fill="#FF3600"
+                    ></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_15_229">
+                      <rect
+                        width="74"
+                        height="74"
+                        fill="white"
+                        transform="translate(-0.000244141 0.730286)"
+                      ></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h2 class="font-bold text-xl justify-start pb-2">
+                Easy Booking Process
+              </h2>
+              <p class="text-[#616d8f] px-2">
+                We have optimized the booking process so that our clients can
+                experience the easiest and the safest service
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="text-center mx-auto hidden relative md:block lg:hidden">
+        <img
+          src="./images/why-choose-img.jpg"
+          class="w-[300px] mx-auto rounded-full"
+        />
+        <img
+          src="./images/why-choose-car-img.png"
+          class="absolute left-1/2 transform -translate-x-1/2 top-60"
+        />
+      </div>
+    </section>
+    <!--Why Choose Us Section End -->
+    <!--Frequently Asked Questions Section Start -->
+    <section class="mb-20">
+      <div
+        class="w-full bg-[#fff8f6] rounded-2xl flex flex-col gap-12 lg:flex-row lg:gap-0 items-center mb-20 justify-center mx-auto rounded-2xl mt-8"
+      >
+        <div
+          class="w-[97%] lg:w-[50%] flex flex-col mx-auto justify-start items-start pt-4 pl-4 pr-4 gap-6"
+        >
+          <p class="text-[#ff3601] font-medium text-lg">How It Work</p>
+          <h1 class="text-5xl font-extrabold">
+            Streamlined processes for a hassle-free experience
+          </h1>
+          <p class="text-[#616d8f]">
+            Our streamlined process ensures a seamless car rental experience
+            from start to finish. With easy online booking, flexible pick-up and
+            drop-off options.
+          </p>
+          <div class="pb-4">
+            <button
+              id="workButton-4"
+              class="flex flex-row items-center justify-between w-full w-[100%] focus:outline-none focus:ring-0 focus:border-none"
+            >
+              <h2 class="font-bold text-xl justify-start">
+                <span class="font-bold text-xl mr-4">1.</span>Browse And Select
+              </h2>
+              <div>
+                <img
+                  id="workUp-4"
+                  src="./images/arrow-up.svg"
+                  class="w-8 h-8 hidden"
+                  alt="Up Icon"
+                />
+                <img
+                  id="workDown-4"
+                  src="./images/arrow-down.svg"
+                  class="w-8 h-8"
+                  alt="Down Icon"
+                />
+              </div>
+            </button>
+            <p id="workPara-4" class="ml-8 mt-4 h-16 hidden">
+              Explore our diverse selection of high-end vehicles, choose your
+              preferred pickup and return dates, and select a location that best
+              fits your needs.
+            </p>
+          </div>
+
+          <script>
+            const workButton4 = document.getElementById("workButton-4");
+            const workPara4 = document.getElementById("workPara-4");
+            const workDown4 = document.getElementById("workDown-4");
+            const workUp4 = document.getElementById("workUp-4");
+
+            workButton.addEventListener("click", () => {
+              workPara.classList.toggle("hidden");
+              workUp.classList.toggle("hidden");
+              workDown.classList.toggle("hidden");
+            });
+          </script>
+          <div class="pb-4">
+            <button
+              id="workButton-5"
+              class="flex flex-row items-center justify-between w-full focus:outline-none focus:ring-0 focus:border-none"
+            >
+              <h2 class="font-bold text-xl justify-start">
+                <span class="font-bold text-xl mr-4">2.</span>Book And Confirm
+              </h2>
+              <div>
+                <img
+                  id="workUp-5"
+                  src="./images/arrow-up.svg"
+                  class="w-8 h-8 hidden"
+                  alt="Up Icon"
+                />
+                <img
+                  id="workDown-5"
+                  src="./images/arrow-down.svg"
+                  class="w-8 h-8"
+                  alt="Down Icon"
+                />
+              </div>
+            </button>
+            <p id="workPara-5" class="ml-8 mt-4 h-16 hidden">
+              Explore our diverse selection of high-end vehicles, choose your
+              preferred pickup and return dates, and select a location that best
+              fits your needs.
+            </p>
+          </div>
+
+          <script>
+            const workButton5 = document.getElementById("workButton-5");
+            const workPara5 = document.getElementById("workPara-5");
+            const workDown5 = document.getElementById("workDown-5");
+            const workUp5 = document.getElementById("workUp-5");
+
+            workButton2.addEventListener("click", () => {
+              workPara2.classList.toggle("hidden");
+              workUp2.classList.toggle("hidden");
+              workDown2.classList.toggle("hidden");
+            });
+          </script>
+          <div class="pb-4">
+            <button
+              id="workButton-6"
+              class="flex flex-row items-center justify-between w-full focus:outline-none focus:ring-0 focus:border-none"
+            >
+              <h2 class="font-bold text-xl justify-start">
+                <span class="font-bold text-xl mr-4">3.</span>Book And Enjoy
+              </h2>
+              <div>
+                <img
+                  id="workUp-6"
+                  src="./images/arrow-up.svg"
+                  class="w-8 h-8 hidden"
+                  alt="Up Icon"
+                />
+                <img
+                  id="workDown-6"
+                  src="./images/arrow-down.svg"
+                  class="w-8 h-8"
+                  alt="Down Icon"
+                />
+              </div>
+            </button>
+            <p id="workPara-6" class="ml-8 mt-4 h-16 hidden">
+              Explore our diverse selection of high-end vehicles, choose your
+              preferred pickup and return dates, and select a location that best
+              fits your needs.
+            </p>
+          </div>
+
+          <script>
+            const workButton6 = document.getElementById("workButton-6");
+            const workPara6 = document.getElementById("workPara-6");
+            const workDown6 = document.getElementById("workDown-6");
+            const workUp6 = document.getElementById("workUp-6");
+
+            workButton3.addEventListener("click", () => {
+              workPara3.classList.toggle("hidden");
+              workUp3.classList.toggle("hidden");
+              workDown3.classList.toggle("hidden");
+            });
+          </script>
+        </div>
+        <div
+          class="w-[97%] lg:w-[50%] flex justify-center relative h-[600px] text-center mx-auto"
+        >
+          <div class="flex flex-row relative">
+            <img
+              src="./images/our-faqs-img-1.jpg"
+              class="w-[48%]"
+              style="clip-path: polygon(0 0, 46% 0, 100% 100%, 50% 100%)"
+            />
+            <img
+              src="./images/our-faqs-img-2.jpg"
+              class="w-[48%]"
+              style="clip-path: polygon(0 0, 46% 0, 100% 100%, 50% 100%)"
+            />
+            <img
+              src="./images/our-faqs-car-img.png"
+              class="absolute top-40 w[95%] left-0 sm:left-5"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Frequently Asked Questions Section End -->
+
+    <!--Testimonial Section Start-->
+    <!-- Carousel Section -->
+    <section>
+      <div class="flex flex-col justify-center items-center">
+        <p class="mx-auto text-[#ff3601] mb-4 font-semibold">Testimonials</p>
+        <h1
+          class="text-2xl text-center sm:text-3xl md:text-4xl px-10 sm:px-30 lg:text-5xl font-bold mb-16"
+        >
+          What our customers are saying about us
+        </h1>
+        <div class="w-full relative px-2 lg:px-0 mb-20">
+          <div
+            class="swiper multiple-slide-carousel-2 swiper-container-2 relative"
+          >
+            <div class="swiper-wrapper mb-24">
+              <div class="swiper-slide">
+                <div
+                  class="border border-gray-200 rounded-2xl h-60 flex justify-center items-center"
+                >
+                  <div
+                    class="text-grey-200 px-6 py-8 flex flex-col gap-2 items-start justify-start"
+                  >
+                    <ul class="flex flex-row gap-1">
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-star text-yellow-500"></i
+                        ></span>
+                      </li>
+
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-star text-yellow-500"></i
+                        ></span>
+                      </li>
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-star text-yellow-500"></i
+                        ></span>
+                      </li>
+
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-star text-yellow-500"></i
+                        ></span>
+                      </li>
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-star text-yellow-500"></i
+                        ></span>
+                      </li>
+                    </ul>
+                    <p>
+                      Renting a car from nova ride was a great decision. Not
+                      only did I get a reliable and comfortable vehicle, but the
+                      prices were also very competitive.
+                    </p>
+                    <div
+                      class="flex flex-row gap-4 items-start justify-start pt-4 border-t border-grey-100 w-full"
+                    >
+                      <img
+                        src="./images/author-3.jpg"
+                        alt="author-3"
+                        class="rounded-full"
+                      />
+                      <div>
+                        <h2 class="text-xl font-semibold">Leslie</h2>
+                        <p>Project Manager</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="border border-gray-200 rounded-2xl h-60 flex justify-center items-center"
+                >
+                  <div
+                    class="text-grey-200 px-6 py-8 flex flex-col gap-2 items-start justify-start"
+                  >
+                    <ul class="flex flex-row gap-1">
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-star text-yellow-500"></i
+                        ></span>
+                      </li>
+
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-star text-yellow-500"></i
+                        ></span>
+                      </li>
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-star text-yellow-500"></i
+                        ></span>
+                      </li>
+
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-star text-yellow-500"></i
+                        ></span>
+                      </li>
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-star text-yellow-500"></i
+                        ></span>
+                      </li>
+                    </ul>
+                    <p>
+                      Renting a car from nova ride was a great decision. Not
+                      only did I get a reliable and comfortable vehicle, but the
+                      prices were also very competitive.
+                    </p>
+                    <div
+                      class="flex flex-row gap-4 items-start justify-start pt-4 border-t border-grey-100 w-full"
+                    >
+                      <img
+                        src="./images/author-1.jpg"
+                        alt="author-3"
+                        class="rounded-full"
+                      />
+                      <div>
+                        <h2 class="text-xl font-semibold">Floyd Miles</h2>
+                        <p>Project Manager</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="border border-gray-200 rounded-2xl h-60 flex justify-center items-center"
+                >
+                  <div
+                    class="text-grey-200 px-6 py-8 flex flex-col gap-2 items-start justify-start"
+                  >
+                    <ul class="flex flex-row gap-1">
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-star text-yellow-500"></i
+                        ></span>
+                      </li>
+
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-star text-yellow-500"></i
+                        ></span>
+                      </li>
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-star text-yellow-500"></i
+                        ></span>
+                      </li>
+
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-star text-yellow-500"></i
+                        ></span>
+                      </li>
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-star text-yellow-500"></i
+                        ></span>
+                      </li>
+                    </ul>
+                    <p>
+                      Renting a car from nova ride was a great decision. Not
+                      only did I get a reliable and comfortable vehicle, but the
+                      prices were also very competitive.
+                    </p>
+                    <div
+                      class="flex flex-row gap-4 items-start justify-start pt-4 border-t border-grey-100 w-full"
+                    >
+                      <img
+                        src="./images/author-2.jpg"
+                        alt="author-3"
+                        class="rounded-full"
+                      />
+                      <div>
+                        <h2 class="text-xl font-semibold">Anette Black</h2>
+                        <p>Project Manager</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="border border-gray-200 rounded-2xl h-60 flex justify-center items-center"
+                >
+                  <div
+                    class="text-grey-200 px-6 py-8 flex flex-col gap-2 items-start justify-start"
+                  >
+                    <ul class="flex flex-row gap-1">
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-star text-yellow-500"></i
+                        ></span>
+                      </li>
+
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-star text-yellow-500"></i
+                        ></span>
+                      </li>
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-star text-yellow-500"></i
+                        ></span>
+                      </li>
+
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-star text-yellow-500"></i
+                        ></span>
+                      </li>
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-star text-yellow-500"></i
+                        ></span>
+                      </li>
+                    </ul>
+                    <p>
+                      Renting a car from nova ride was a great decision. Not
+                      only did I get a reliable and comfortable vehicle, but the
+                      prices were also very competitive.
+                    </p>
+                    <div
+                      class="flex flex-row gap-4 items-start justify-start pt-4 border-t border-grey-100 w-full"
+                    >
+                      <img
+                        src="./images/author-4.jpg"
+                        alt="author-3"
+                        class="rounded-full"
+                      />
+                      <div>
+                        <h2 class="text-xl font-semibold">Alex</h2>
+                        <p>Project Manager</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="absolute flex justify-center items-center left-1/2 transform -translate-x-1/2 bottom-0 w-fit mt-6"
+            >
+              <button
+                class="button-prev group p-2 flex justify-center items-center w-12 h-12 transition-all duration-500 rounded-full bg-[#ff3601] hover:bg-black mx-2 focus:outline-none focus:ring-0 hover:outline-none active:outline-none"
+              >
+                <img src="./images/arrow-left-32.png" />
+              </button>
+              <button
+                class="button-next group p-2 flex justify-center items-center w-12 h-12 transition-all duration-500 rounded-full bg-[#ff3601] hover:bg-black mx-2 focus:outline-none focus:ring-0 hover:outline-none active:outline-none"
+              >
+                <img src="./images/arrow-right-24.png" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+      <script>
+        var swiper = new Swiper(".multiple-slide-carousel-2", {
+          loop: true,
+          slidesPerView: 3, // Display 3 slides at a time
+          spaceBetween: 20, // Space between slides
+          navigation: {
+            nextEl: ".button-next",
+            prevEl: ".button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          breakpoints: {
+            1280: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 40,
+            },
+          },
+        });
+      </script>
+    </section>
+    <!--Testimonial Section End-->
+
+    <!-- CTA Section Start -->
+    <section
+      class="bg-black flex flex-col md:flex-row gap-16 md:gap-8 py-20 md:rounded-2xl mb-10"
+      style="
+        background-image: url('./images/cta-box-bg.svg');
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <div class="flex flex-col gap-8 ml-4 pr-8">
+        <h1 class="text-white text-5xl font-bold">
+          Ready to hit the road?<br />
+          Book your car today !
+        </h1>
+        <p class="text-white">
+          Our friendly customer service team is here to help. Contact us anytime
+          for support and inquiries.
+        </p>
+        <a href="#" class="flex">
+          <span
+            class="border bg-[#ff3600] py-2 px-6 rounded-full text-white text-lg font-medium border-none"
+          >
+            Book a Rental</span
+          ><span
+            class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+            >
+              <path
+                d="M11.6654 3.97592L1.64141 13.9999L-0.00537109 12.3531L10.0174 2.32914H1.18372V-0.00012207H13.9946V12.8108H11.6654V3.97592Z"
+                fill="white"
+              ></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+      <div class="px-8">
+        <img src="./images/cta-car-img.png" alt="" />
+      </div>
+    </section>
+    <!-- CTA Section End -->
+    <!-- Latest Section Start -->
+    <section class="py-16">
+      <p class="text-center text-base font-medium text-[#ff3601]">
+        Latest Articles
+      </p>
+      <h1 class="text-center text-5xl font-extrabold text-black">
+        Stay informed and inspired for<br />
+        your next journey
+      </h1>
+      <div
+        class="text-center flex flex-col lg:flex-row items-center justify-center gap-8 py-16"
+      >
+        <div class="w-[97%] lg:w-[50%] overflow-hidden relative">
+          <img
+            src="./images/ben.jpg"
+            class="h-[400px] sm:h-[535px] w-[100%] rounded-2xl"
+            alt=""
+          />
+          <div
+            class="flex flex-col justify-start items-start p-2 absolute bottom-2 left-4 sm:left-8 sm:bottom-8"
+          >
+            <div class="flex items-center mb-2">
+              <img
+                src="./images/icons8-date-32.png"
+                class="w-4 h-4 mr-2"
+                alt="Date Icon"
+              />
+              <span class="text-white text-sm">October 5, 2024</span>
+            </div>
+            <h2 class="text-2xl text-white text-left font-bold mb-5">
+              Exploring your rental car options: sedan, SUV, or convertible?
+            </h2>
+          </div>
+        </div>
+        <div class="w-[97%] lg:w-[50%] flex flex-col gap-6">
+          <div
+            class="flex flex-row gap-4 items-start justify-start border rounded-lg shadow-md bg-white"
+          >
+            <div class="rounded-2xl">
+              <img
+                src="./images/post-2.jpg"
+                class="w-[25rem] h-[10rem] object-cover rounded-2xl"
+                alt="Rental Car Options"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-start items-start p-1 sm:p-2 lg:p-1"
+            >
+              <div class="flex items-center mb-1 sm:mb-2 lg:mb-1">
+                <img
+                  src="./images/date.png"
+                  class="w-4 h-4 mr-2"
+                  alt="Date Icon"
+                />
+                <span class="text-gray-500 text-sm">October 5, 2024</span>
+              </div>
+              <h2
+                class="text-base sm:text-2xl lg:text-xl text-left font-bold mb-2 sm:mb-5 lg:mb-3"
+              >
+                Exploring your rental car options: sedan, SUV, or convertible?
+              </h2>
+              <p class="text-red-600 font-medium cursor-pointer">Read Story</p>
+            </div>
+          </div>
+          <div
+            class="flex flex-row gap-4 items-start justify-start border rounded-lg shadow-md bg-white"
+          >
+            <div class="rounded-2xl">
+              <img
+                src="./images/post-2.jpg"
+                class="w-[25rem] h-[10rem] object-cover rounded-2xl"
+                alt="Rental Car Options"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-start items-start p-1 sm:p-2 lg:p-1"
+            >
+              <div class="flex items-center mb-1 sm:mb-2 lg:mb-1">
+                <img
+                  src="./images/date.png"
+                  class="w-4 h-4 mr-2"
+                  alt="Date Icon"
+                />
+                <span class="text-gray-500 text-sm">October 5, 2024</span>
+              </div>
+              <h2
+                class="text-base sm:text-2xl lg:text-xl text-left font-bold mb-2 sm:mb-5 lg:mb-3"
+              >
+                Exploring your rental car options: sedan, SUV, or convertible?
+              </h2>
+              <p class="text-red-600 font-medium cursor-pointer">Read Story</p>
+            </div>
+          </div>
+          <div
+            class="flex flex-row gap-4 items-start justify-start border rounded-lg shadow-md bg-white"
+          >
+            <div class="rounded-2xl">
+              <img
+                src="./images/post-2.jpg"
+                class="w-[25rem] h-[10rem] object-cover rounded-2xl"
+                alt="Rental Car Options"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-start items-start p-1 sm:p-2 lg:p-1"
+            >
+              <div class="flex items-center mb-1 sm:mb-2 lg:mb-1">
+                <img
+                  src="./images/date.png"
+                  class="w-4 h-4 mr-2"
+                  alt="Date Icon"
+                />
+                <span class="text-gray-500 text-sm">October 5, 2024</span>
+              </div>
+              <h2
+                class="text-base sm:text-2xl lg:text-xl text-left font-bold mb-2 sm:mb-5 lg:mb-3"
+              >
+                Exploring your rental car options: sedan, SUV, or convertible?
+              </h2>
+              <p class="text-red-600 font-medium cursor-pointer">Read Story</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Footer Section Start-->
+    <section
+      class="w-full bg-cover bg-center bg-black rounded-2xl"
+      style="background-image: url('./images/footer-bg.svg')"
+    >
+      <div class="flex flex-col lg:hidden">
+        <img
+          src="/images/logo.svg"
+          alt="Novaride Logo"
+          class="w-48 mb-4 ml-8 mt-10"
+        />
+        <p class="text-white ml-8 mb-4">
+          Experience the ease and convenience of renting a car with Novaride.
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-[1fr] md:grid-cols-[1fr_1fr_1fr] md:justify-between lg:grid-cols-[1fr_1fr_1fr_1fr] gap-8 items-start justify-start p-6 lg:pt-20 border-b mx-2 border-gray-100"
+      >
+        <div class="flex flex-col hidden lg:block">
+          <img src="/images/logo.svg" alt="Novaride Logo" class="w-48 mb-8" />
+          <p class="text-white">
+            Experience the ease and <br />
+            convenience of renting a car <br />
+            with Novaride.
+          </p>
+        </div>
+        <div class="flex flex-col">
+          <h2 class="text-white font-bold text-2xl mb-8">Legal Policy</h2>
+          <a href="#" class="text-white hover:text-[#ff3601] mb-3"
+            >Terms & Conditions</a
+          >
+          <a href="#" class="text-white hover:text-[#ff3601] mb-3"
+            >Privacy Policy</a
+          >
+          <a href="#" class="text-white hover:text-[#ff3601] mb-3"
+            >Legal Notice</a
+          >
+          <a href="#" class="text-white hover:text-[#ff3601]">Accessibility</a>
+        </div>
+        <div class="flex flex-col">
+          <h2 class="text-white font-bold text-2xl mb-8">Quick Links</h2>
+          <a href="#" class="text-white hover:text-[#ff3601] mb-3">Home</a>
+          <a href="#" class="text-white hover:text-[#ff3601] mb-3">About Us</a>
+          <a href="#" class="text-white hover:text-[#ff3601] mb-3">Car Type</a>
+          <a href="#" class="text-white hover:text-[#ff3601]">Service</a>
+        </div>
+        <div class="flex flex-col">
+          <h2 class="text-white font-bold text-2xl mb-8">
+            Subscribe to the Newsletter
+          </h2>
+          <div class="flex items-center">
+            <input
+              type="text"
+              placeholder="Email..."
+              class="w-[70%] p-3 rounded-full text-white hover:outline-none outline-none bg-gray-500"
+            />
+            <a href="#" class="flex justify-end group">
+              <span
+                class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+              >
+                <img
+                  src="./images/arrow-angle-24.png"
+                  class="w-6 h-6 text-white transition-opacity duration-3000 group-hover:hidden"
+                />
+                <img
+                  src="./images/arrow-right-24.png"
+                  class="w-6 h-6 text-white hidden transition-opacity duration-3000 group-hover:block"
+                />
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col justify-center gap-8 sm:flex-row sm:justify-between items-center py-12 px-8 text-white"
+      >
+        <p class="text-sm">© 2024 Novaride. All rights reserved.</p>
+
+        <div>
+          <button
+            class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button"
+          >
+            <i class="fa-brands fa-x-twitter"></i></button
+          ><button
+            class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button"
+          >
+            <i class="fa-brands fa-facebook"></i></button
+          ><button
+            class="bg-white text-red-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button"
+          >
+            <i class="fa-brands fa-youtube"></i></button
+          ><button
+            class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!--Footer Section End-->
+  </body>
+</html>

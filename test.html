@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar with Dropdown</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 flex justify-center items-center h-screen">
+    <!--Our Fleets Section Start-->
+    <section class="py-20">
+      <div class="mt-30 flex flex-col justify-center items-center">
+        <p class="text-[#ff3601] font-medium text-lg mt-30">Our Fleets</p>
+        <h1 class="text-5xl font-extrabold px-30 text-center">
+          Explore our perfect and <br />
+          extensive fleet
+        </h1>
+      </div>
+    </section>
+    <div class="px-6 flex flex-col items-center justify-center my-16">
+      <div class="relative w-full overflow-hidden">
+        <div id="carousel" class="carousel">
+          <div
+            class="card bg-white w-[25.25%] flex flex-col px-4 pb-8 border border-gray-200 rounded-2xl"
+          >
+            <div>
+              <img src="./Voyager-GT.png" alt="" class="w-[100%] mx-auto" />
+            </div>
+            <div>
+              <span class="rounded-full bg-gray-100 px-2 py-1">Luxury Car</span>
+              <h2 class="mt-4 text-xl font-semibold">Voyager GT</h2>
+            </div>
+            <div class="flex flex-row items-center justify-between mt-5">
+              <div class="flex flex-row items-center gap-2">
+                <img src="./icon-door.svg" />
+                <p>Doors</p>
+              </div>
+              <p>6</p>
+            </div>
+            <div
+              class="flex flex-row items-center justify-between mt-4 border-b border-gray-200 pb-5"
+            >
+              <div class="flex flex-row items-center gap-2">
+                <img src="./icon-passengers.svg" />
+                <p>Doors</p>
+              </div>
+              <p>6</p>
+            </div>
+            <div class="mt-5 flex flex-row justify-between items-center">
+              <h1 class="text-xl font-bold">
+                $253<span class="text-base font-thin">/Per Day</span>
+              </h1>
+              <a href="#" class="flex items-center justify-end group">
+                <span
+                  class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+                >
+                  <!-- Default Icon -->
+                  <svg
+                    class="w-4 h-4 text-white transition-opacity duration-3000 group-hover:hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                  >
+                    <path
+                      d="M11.6654 3.97592L1.64141 13.9999L-0.00537109 12.3531L10.0174 2.32914H1.18372V-0.00012207H13.9946V12.8108H11.6654V3.97592Z"
+                      fill="white"
+                    />
+                  </svg>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-12 h-12 text-white hidden transition-opacity duration-3000 group-hover:block"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-short"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="card bg-white w-[25.25%] flex flex-col px-4 pb-8 border border-gray-200 rounded-2xl"
+          >
+            <div>
+              <img src="./Breeze-Compact.png" alt="" class="w-[100%] mx-auto" />
+            </div>
+            <div>
+              <span class="rounded-full bg-gray-100 px-2 py-1">Luxury Car</span>
+              <h2 class="mt-4 text-xl font-semibold">Breeze-Compact</h2>
+            </div>
+            <div class="flex flex-row items-center justify-between mt-5">
+              <div class="flex flex-row items-center gap-2">
+                <img src="./icon-door.svg" />
+                <p>Doors</p>
+              </div>
+              <p>6</p>
+            </div>
+            <div
+              class="flex flex-row items-center justify-between mt-4 border-b border-gray-200 pb-5"
+            >
+              <div class="flex flex-row items-center gap-2">
+                <img src="./icon-passengers.svg" />
+                <p>Doors</p>
+              </div>
+              <p>6</p>
+            </div>
+            <div class="mt-5 flex flex-row justify-between items-center">
+              <h1 class="text-xl font-bold">
+                $253<span class="text-base font-thin">/Per Day</span>
+              </h1>
+              <a href="#" class="flex items-center justify-end group">
+                <span
+                  class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+                >
+                  <!-- Default Icon -->
+                  <svg
+                    class="w-4 h-4 text-white transition-opacity duration-3000 group-hover:hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                  >
+                    <path
+                      d="M11.6654 3.97592L1.64141 13.9999L-0.00537109 12.3531L10.0174 2.32914H1.18372V-0.00012207H13.9946V12.8108H11.6654V3.97592Z"
+                      fill="white"
+                    />
+                  </svg>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-12 h-12 text-white hidden transition-opacity duration-3000 group-hover:block"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-short"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="card bg-white w-[25.25%] flex flex-col border border-gray-200 px-4 pb-8 rounded-2xl"
+          >
+            <div>
+              <img src="./Eclipse-Sedan.png" alt="" class="w-[100%] mx-auto" />
+            </div>
+            <div>
+              <span class="rounded-full bg-gray-100 px-2 py-1">Luxury Car</span>
+              <h2 class="mt-4 text-xl font-semibold">Eclipse-Sedan</h2>
+            </div>
+            <div class="flex flex-row items-center justify-between mt-5">
+              <div class="flex flex-row items-center gap-2">
+                <img src="./icon-door.svg" />
+                <p>Doors</p>
+              </div>
+              <p>6</p>
+            </div>
+            <div
+              class="flex flex-row items-center justify-between mt-4 border-b border-gray-200 pb-5"
+            >
+              <div class="flex flex-row items-center gap-2">
+                <img src="./icon-passengers.svg" />
+                <p>Doors</p>
+              </div>
+              <p>6</p>
+            </div>
+            <div class="mt-5 flex flex-row justify-between items-center">
+              <h1 class="text-xl font-bold">
+                $253<span class="text-base font-thin">/Per Day</span>
+              </h1>
+              <a href="#" class="flex items-center justify-end group">
+                <span
+                  class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+                >
+                  <svg
+                    class="w-4 h-4 text-white transition-opacity duration-3000 group-hover:hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                  >
+                    <path
+                      d="M11.6654 3.97592L1.64141 13.9999L-0.00537109 12.3531L10.0174 2.32914H1.18372V-0.00012207H13.9946V12.8108H11.6654V3.97592Z"
+                      fill="white"
+                    />
+                  </svg>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-12 h-12 text-white hidden transition-opacity duration-3000 group-hover:block"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-short"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="card bg-white w-[25.25%] flex flex-col px-4 pb-8 border border-gray-200 rounded-2xl"
+          >
+            <div>
+              <img src="./Voyager-GT.png" alt="" class="w-[100%] mx-auto" />
+            </div>
+            <div>
+              <span class="rounded-full bg-gray-100 px-2 py-1">Luxury Car</span>
+              <h2 class="mt-4 text-xl font-semibold">Voyager GT</h2>
+            </div>
+            <div class="flex flex-row items-center justify-between mt-5">
+              <div class="flex flex-row items-center gap-2">
+                <img src="./icon-door.svg" />
+                <p>Doors</p>
+              </div>
+              <p>6</p>
+            </div>
+            <div
+              class="flex flex-row items-center justify-between mt-4 border-b border-gray-200 pb-5"
+            >
+              <div class="flex flex-row items-center gap-2">
+                <img src="./icon-passengers.svg" />
+                <p>Doors</p>
+              </div>
+              <p>6</p>
+            </div>
+            <div class="mt-5 flex flex-row justify-between items-center">
+              <h1 class="text-xl font-bold">
+                $253<span class="text-base font-thin">/Per Day</span>
+              </h1>
+              <a href="#" class="flex items-center justify-end group">
+                <span
+                  class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+                >
+                  <svg
+                    class="w-4 h-4 text-white transition-opacity duration-3000 group-hover:hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                  >
+                    <path
+                      d="M11.6654 3.97592L1.64141 13.9999L-0.00537109 12.3531L10.0174 2.32914H1.18372V-0.00012207H13.9946V12.8108H11.6654V3.97592Z"
+                      fill="white"
+                    />
+                  </svg>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-12 h-12 text-white hidden transition-opacity duration-3000 group-hover:block"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-short"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="card bg-white w-[25.25%] flex flex-col px-4 pb-8 border border-gray-200 rounded-2xl"
+          >
+            <div>
+              <img
+                src="./Sapphire-Convertible.png"
+                alt=""
+                class="w-[100%] mx-auto"
+              />
+            </div>
+            <div>
+              <span class="rounded-full bg-gray-100 px-2 py-1">Luxury Car</span>
+              <h2 class="mt-4 text-xl font-semibold">Sapphire-Convertible</h2>
+            </div>
+            <div class="flex flex-row items-center justify-between mt-5">
+              <div class="flex flex-row items-center gap-2">
+                <img src="./icon-door.svg" />
+                <p>Doors</p>
+              </div>
+              <p>6</p>
+            </div>
+            <div
+              class="flex flex-row items-center justify-between mt-4 border-b border-gray-200 pb-5"
+            >
+              <div class="flex flex-row items-center gap-2">
+                <img src="./icon-passengers.svg" />
+                <p>Doors</p>
+              </div>
+              <p>6</p>
+            </div>
+            <div class="mt-5 flex flex-row justify-between items-center">
+              <h1 class="text-xl font-bold">
+                $253<span class="text-base font-thin">/Per Day</span>
+              </h1>
+              <a href="#" class="flex items-center justify-end group">
+                <span
+                  class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+                >
+                  <svg
+                    class="w-4 h-4 text-white transition-opacity duration-3000 group-hover:hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                  >
+                    <path
+                      d="M11.6654 3.97592L1.64141 13.9999L-0.00537109 12.3531L10.0174 2.32914H1.18372V-0.00012207H13.9946V12.8108H11.6654V3.97592Z"
+                      fill="white"
+                    />
+                  </svg>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-12 h-12 text-white hidden transition-opacity duration-3000 group-hover:block"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-short"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="card bg-white w-[25.25%] flex flex-col border border-gray-200 px-4 pb-8 rounded-2xl"
+          >
+            <div>
+              <img src="./Viper-SXT.png" alt="" class="w-[100%] mx-auto" />
+            </div>
+            <div>
+              <span class="rounded-full bg-gray-100 px-2 py-1">Luxury Car</span>
+              <h2 class="mt-4 text-xl font-semibold">Viper-SXT</h2>
+            </div>
+            <div class="flex flex-row items-center justify-between mt-5">
+              <div class="flex flex-row items-center gap-2">
+                <img src="./icon-door.svg" />
+                <p>Doors</p>
+              </div>
+              <p>6</p>
+            </div>
+            <div
+              class="flex flex-row items-center justify-between mt-4 border-b border-gray-200 pb-5"
+            >
+              <div class="flex flex-row items-center gap-2">
+                <img src="./icon-passengers.svg" />
+                <p>Doors</p>
+              </div>
+              <p>6</p>
+            </div>
+            <div class="mt-5 flex flex-row justify-between items-center">
+              <h1 class="text-xl font-bold">
+                $253<span class="text-base font-thin">/Per Day</span>
+              </h1>
+              <a href="#" class="flex items-center justify-end group">
+                <span
+                  class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+                >
+                  <!-- Default Icon -->
+                  <svg
+                    class="w-4 h-4 text-white transition-opacity duration-3000 group-hover:hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                  >
+                    <path
+                      d="M11.6654 3.97592L1.64141 13.9999L-0.00537109 12.3531L10.0174 2.32914H1.18372V-0.00012207H13.9946V12.8108H11.6654V3.97592Z"
+                      fill="white"
+                    />
+                  </svg>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-12 h-12 text-white hidden transition-opacity duration-3000 group-hover:block"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-short"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="card bg-white w-[25.25%] flex flex-col px-4 pb-8 border border-gray-200 rounded-2xl"
+          >
+            <div>
+              <img src="./Voyager-Hybrid.png" alt="" class="w-[100%] mx-auto" />
+            </div>
+            <div>
+              <span class="rounded-full bg-gray-100 px-2 py-1">Luxury Car</span>
+              <h2 class="mt-4 text-xl font-semibold">Voyager-Hybrid</h2>
+            </div>
+            <div class="flex flex-row items-center justify-between mt-5">
+              <div class="flex flex-row items-center gap-2">
+                <img src="./icon-door.svg" />
+                <p>Doors</p>
+              </div>
+              <p>6</p>
+            </div>
+            <div
+              class="flex flex-row items-center justify-between mt-4 border-b border-gray-200 pb-5"
+            >
+              <div class="flex flex-row items-center gap-2">
+                <img src="./icon-passengers.svg" />
+                <p>Doors</p>
+              </div>
+              <p>6</p>
+            </div>
+            <div class="mt-5 flex flex-row justify-between items-center">
+              <h1 class="text-xl font-bold">
+                $253<span class="text-base font-thin">/Per Day</span>
+              </h1>
+              <a href="#" class="flex items-center justify-end group">
+                <span
+                  class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+                >
+                  <svg
+                    class="w-4 h-4 text-white transition-opacity duration-3000 group-hover:hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                  >
+                    <path
+                      d="M11.6654 3.97592L1.64141 13.9999L-0.00537109 12.3531L10.0174 2.32914H1.18372V-0.00012207H13.9946V12.8108H11.6654V3.97592Z"
+                      fill="white"
+                    />
+                  </svg>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-12 h-12 text-white hidden transition-opacity duration-3000 group-hover:block"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-short"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="card bg-white w-[25.25%] flex border border-gray-200 flex-col px-4 pb-8 rounded-2xl"
+          >
+            <div>
+              <img src="./Voyager-GT.png" alt="" class="w-[100%] mx-auto" />
+            </div>
+            <div>
+              <span class="rounded-full bg-gray-100 px-2 py-1">Luxury Car</span>
+              <h2 class="mt-4 text-xl font-semibold">Tesla</h2>
+            </div>
+            <div class="flex flex-row items-center justify-between mt-5">
+              <div class="flex flex-row items-center gap-2">
+                <img src="./icon-door.svg" />
+                <p>Doors</p>
+              </div>
+              <p>6</p>
+            </div>
+            <div
+              class="flex flex-row items-center justify-between mt-4 border-b border-gray-200 pb-5"
+            >
+              <div class="flex flex-row items-center gap-2">
+                <img src="./icon-passengers.svg" />
+                <p>Doors</p>
+              </div>
+              <p>6</p>
+            </div>
+            <div class="mt-5 flex flex-row justify-between items-center">
+              <h1 class="text-xl font-bold">
+                $253<span class="text-base font-thin">/Per Day</span>
+              </h1>
+              <a href="#" class="flex items-center justify-end group">
+                <span
+                  class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+                >
+                  <!-- Default Icon -->
+                  <svg
+                    class="w-4 h-4 text-white transition-opacity duration-3000 group-hover:hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                  >
+                    <path
+                      d="M11.6654 3.97592L1.64141 13.9999L-0.00537109 12.3531L10.0174 2.32914H1.18372V-0.00012207H13.9946V12.8108H11.6654V3.97592Z"
+                      fill="white"
+                    />
+                  </svg>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-12 h-12 text-white hidden transition-opacity duration-3000 group-hover:block"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-short"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap-4 justify-center items-center mt-4 w-full max-w-lg">
+        <button
+          id="prevBtn"
+          class="focus:outline-none focus:ring-0 focus:border-none active:border-none"
+        >
+          <span
+            class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center hover:bg-black"
+          >
+            <img
+              src="./images/icons8-arrow-left-64.png"
+              class="w-9 h-9 text-white transition-opacity duration-3000"
+            />
+          </span>
+        </button>
+        <button
+          id="nextBtn"
+          class="focus:outline-none focus:ring-0 focus:border-none active:border-none"
+        >
+          <span
+            class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center hover:bg-black"
+          >
+            <img
+              src="./images/arrow-right-24.png"
+              class="w-6 h-6 text-white transition-opacity duration-3000"
+            />
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const carousel = document.getElementById("carousel");
+      const cards = Array.from(document.querySelectorAll(".card"));
+      const totalCards = cards.length;
+
+      // Clone the first and last card for seamless cycling
+      const firstCardClone = cards[0].cloneNode(true);
+      const lastCardClone = cards[totalCards - 1].cloneNode(true);
+      carousel.prepend(lastCardClone);
+      carousel.append(firstCardClone);
+
+      const newCards = Array.from(document.querySelectorAll(".card")); // Get all cards including clones
+      let currentIndex = 1; // Start at the first original card (after clone)
+
+      // Set the number of cards to show based on screen size
+      function getCardsToShow() {
+        if (window.innerWidth >= 1024) return 4; // Large screens
+        if (window.innerWidth >= 768) return 2; // Medium screens
+        return 1; // Small screens
+      }
+
+      document.getElementById("nextBtn").addEventListener("click", () => {
+        const cardsToShow = getCardsToShow();
+        currentIndex = (currentIndex + 1) % newCards.length; // Shift one card to the right
+
+        if (currentIndex === newCards.length - 1) {
+          setTimeout(() => {
+            carousel.style.transition = "none"; // Disable transition for the jump back
+            currentIndex = 1; // Jump back to the first original card
+            carousel.style.transform = `translateX(${
+              -currentIndex * (100 / cardsToShow)
+            }%)`;
+          }, 100); // Match the duration of the transition
+        }
+        updateCarousel(cardsToShow);
+      });
+
+      document.getElementById("prevBtn").addEventListener("click", () => {
+        const cardsToShow = getCardsToShow();
+        currentIndex = (currentIndex - 1 + newCards.length) % newCards.length; // Shift one card to the left
+
+        if (currentIndex === 0) {
+          setTimeout(() => {
+            carousel.style.transition = "none"; // Disable transition for the jump back
+            currentIndex = newCards.length - 2; // Jump back to the last original card
+            carousel.style.transform = `translateX(${
+              -currentIndex * (100 / cardsToShow)
+            }%)`;
+          }, 100); // Match the duration of the transition
+        }
+        updateCarousel(cardsToShow);
+      });
+
+      function updateCarousel(cardsToShow) {
+        const offset = -currentIndex * (100 / cardsToShow); // Calculate the offset
+        carousel.style.transition = ""; // Enable transition
+        carousel.style.transform = `translateX(${offset}%)`;
+
+        // Update card widths based on screen size
+        const cardWidth = 100 / cardsToShow - 1 / cardsToShow; // Adjust for margins
+        newCards.forEach((card) => {
+          card.style.width = `${cardWidth}%`;
+        });
+      }
+
+      // Update the carousel when the window is resized
+      window.addEventListener("resize", () => {
+        updateCarousel(getCardsToShow());
+      });
+
+      // Initialize the carousel on load
+      updateCarousel(getCardsToShow());
+    </script>
+    <!--Our Fleets Section End-->
+    <!--Testimonials Section Start-->
+
+    <!--Testimonial Section End-->
+  </body>
+</html>
