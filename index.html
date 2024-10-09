@@ -117,7 +117,7 @@
       }
     </style>
   </head>
-  <body id="bodyId" class="lg:px-6">
+  <body id="bodyId" class="lg:px-6 lg:bg-white">
     <!--Header Section Start-->
     <header id="headerId" class="px-3 py-9">
       <nav
@@ -145,7 +145,7 @@
             </li>
             <li>
               <a
-                href="javascript:void(0)"
+                href="/about.html"
                 class="hover:text-[#ff3001] hover:fill-[#ff3001] text-gray-800 text-lg font-medium block"
                 >About Us</a
               >
@@ -269,7 +269,7 @@
         </div>
       </nav>
     </header>
-    <div id="mobile-menu" class="hidden lg:hidden h-100vh text-white">
+    <div id="mobile-menu" class="hidden lg:hidden h-screen text-white">
       <ul
         class="flex flex-col gap-4 ml-4 items-start justify-start text-lg font-medium"
       >
@@ -1128,7 +1128,7 @@
                       class="flex flex-row items-center justify-between w-full mt-5"
                     >
                       <div class="flex flex-row items-center gap-2">
-                        <img src="./icon-door.svg" />
+                        <img src="./images/icon-door.svg" />
                         <p>Doors</p>
                       </div>
                       <p>6</p>
@@ -1137,7 +1137,7 @@
                       class="flex flex-row items-center justify-between w-full mt-4 border-b border-gray-200 pb-5"
                     >
                       <div class="flex flex-row items-center gap-2">
-                        <img src="./icon-passengers.svg" />
+                        <img src="./images/icon-passengers.svg" />
                         <p>Doors</p>
                       </div>
                       <p>6</p>
@@ -1207,7 +1207,7 @@
                       class="flex flex-row items-center justify-between w-full mt-5"
                     >
                       <div class="flex flex-row items-center gap-2">
-                        <img src="./icon-door.svg" />
+                        <img src="./images/icon-door.svg" />
                         <p>Doors</p>
                       </div>
                       <p>6</p>
@@ -1216,7 +1216,7 @@
                       class="flex flex-row items-center justify-between w-full mt-4 border-b border-gray-200 pb-5"
                     >
                       <div class="flex flex-row items-center gap-2">
-                        <img src="./icon-passengers.svg" />
+                        <img src="./images/icon-passengers.svg" />
                         <p>Doors</p>
                       </div>
                       <p>6</p>
@@ -1286,7 +1286,7 @@
                       class="flex flex-row items-center justify-between w-full mt-5"
                     >
                       <div class="flex flex-row items-center gap-2">
-                        <img src="./icon-door.svg" />
+                        <img src="./images/icon-door.svg" />
                         <p>Doors</p>
                       </div>
                       <p>6</p>
@@ -1295,7 +1295,7 @@
                       class="flex flex-row items-center justify-between w-full mt-4 border-b border-gray-200 pb-5"
                     >
                       <div class="flex flex-row items-center gap-2">
-                        <img src="./icon-passengers.svg" />
+                        <img src="./images/icon-passengers.svg" />
                         <p>Doors</p>
                       </div>
                       <p>6</p>
@@ -1365,7 +1365,7 @@
                       class="flex flex-row items-center justify-between w-full mt-5"
                     >
                       <div class="flex flex-row items-center gap-2">
-                        <img src="./icon-door.svg" />
+                        <img src="./images/icon-door.svg" />
                         <p>Doors</p>
                       </div>
                       <p>6</p>
@@ -1374,7 +1374,7 @@
                       class="flex flex-row items-center justify-between w-full mt-4 border-b border-gray-200 pb-5"
                     >
                       <div class="flex flex-row items-center gap-2">
-                        <img src="./icon-passengers.svg" />
+                        <img src="./images/icon-passengers.svg" />
                         <p>Doors</p>
                       </div>
                       <p>6</p>
@@ -1444,7 +1444,7 @@
                       class="flex flex-row items-center justify-between w-full mt-5"
                     >
                       <div class="flex flex-row items-center gap-2">
-                        <img src="./icon-door.svg" />
+                        <img src="./images/icon-door.svg" />
                         <p>Doors</p>
                       </div>
                       <p>6</p>
@@ -1453,7 +1453,7 @@
                       class="flex flex-row items-center justify-between w-full mt-4 border-b border-gray-200 pb-5"
                     >
                       <div class="flex flex-row items-center gap-2">
-                        <img src="./icon-passengers.svg" />
+                        <img src="./images/icon-passengers.svg" />
                         <p>Doors</p>
                       </div>
                       <p>6</p>
@@ -1747,131 +1747,125 @@
             from start to finish. With easy online booking, flexible pick-up and
             drop-off options.
           </p>
-          <div class="pb-4">
-            <button
-              id="workButton"
-              class="flex flex-row items-center justify-between w-full w-[100%] focus:outline-none focus:ring-0 focus:border-none"
+          <div
+            class="w-[100%] flex flex-col justify-start items-center mt-10 gap-4"
+          >
+            <!-- FAQ Item 1 -->
+            <div
+              id="faqContainer1"
+              class="mb-4 w-full border bg-white rounded-2xl"
             >
-              <h2 class="font-bold text-xl justify-start">
-                <span class="font-bold text-xl mr-4">1.</span>Browse And Select
-              </h2>
-              <div>
-                <img
-                  id="workUp"
-                  src="./images/arrow-up.svg"
-                  class="w-8 h-8 hidden"
-                  alt="Up Icon"
-                />
-                <img
-                  id="workDown"
-                  src="./images/arrow-down.svg"
-                  class="w-8 h-8"
-                  alt="Down Icon"
-                />
+              <div
+                class="flex justify-between items-center rounded-2xl p-6 shadow"
+                id="faq1"
+              >
+                <h2 class="text-2xl font-medium">Browse And Select</h2>
+                <button
+                  onclick="toggleFaq(1)"
+                  class="text-2xl font-medium transition-transform transform duration-300 items-center focus:outline-none"
+                  id="btn1"
+                >
+                  +
+                </button>
               </div>
-            </button>
-            <p id="workPara" class="ml-8 mt-4 h-16 hidden">
-              Explore our diverse selection of high-end vehicles, choose your
-              preferred pickup and return dates, and select a location that best
-              fits your needs.
-            </p>
+              <div id="answer1" class="rounded-2xl px-4 py-3 mt-2 hidden">
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem Ipsum is that it has a more-or-less
+                  normal.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div
+              id="faqContainer2"
+              class="mb-4 w-full border bg-white rounded-2xl"
+            >
+              <div
+                class="flex justify-between items-center rounded-2xl p-6 shadow"
+                id="faq2"
+              >
+                <h2 class="text-2xl font-medium">Book and Confirm</h2>
+                <button
+                  onclick="toggleFaq(2)"
+                  class="text-2xl font-medium transition-transform transform duration-300 items-center focus:outline-none"
+                  id="btn2"
+                >
+                  +
+                </button>
+              </div>
+              <div id="answer2" class="rounded-2xl px-4 py-3 mt-2 hidden">
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem Ipsum is that it has a more-or-less
+                  normal.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div
+              id="faqContainer3"
+              class="mb-4 w-full border bg-white rounded-2xl"
+            >
+              <div
+                class="flex justify-between items-center rounded-2xl p-6 shadow"
+                id="faq3"
+              >
+                <h2 class="text-2xl font-medium">
+                  Can I Rent A Car With A Debit Card?
+                </h2>
+                <button
+                  onclick="toggleFaq(3)"
+                  class="text-2xl font-medium transition-transform transform duration-300 items-center focus:outline-none"
+                  id="btn3"
+                >
+                  +
+                </button>
+              </div>
+              <div id="answer3" class="rounded-2xl px-4 py-3 mt-2 hidden">
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem Ipsum is that it has a more-or-less
+                  normal.
+                </p>
+              </div>
+            </div>
           </div>
 
           <script>
-            const workButton = document.getElementById("workButton");
-            const workPara = document.getElementById("workPara");
-            const workDown = document.getElementById("workDown");
-            const workUp = document.getElementById("workUp");
+            function toggleFaq(index) {
+              const answers = document.querySelectorAll("[id^='answer']");
+              const buttons = document.querySelectorAll("[id^='btn']");
+              const faqContainers = document.querySelectorAll(
+                "[id^='faqContainer']"
+              );
 
-            workButton.addEventListener("click", () => {
-              workPara.classList.toggle("hidden");
-              workUp.classList.toggle("hidden");
-              workDown.classList.toggle("hidden");
-            });
-          </script>
-          <div class="pb-4">
-            <button
-              id="workButton-2"
-              class="flex flex-row items-center justify-between w-full focus:outline-none focus:ring-0 focus:border-none"
-            >
-              <h2 class="font-bold text-xl justify-start">
-                <span class="font-bold text-xl mr-4">2.</span>Book And Confirm
-              </h2>
-              <div>
-                <img
-                  id="workUp-2"
-                  src="./images/arrow-up.svg"
-                  class="w-8 h-8 hidden"
-                  alt="Up Icon"
-                />
-                <img
-                  id="workDown-2"
-                  src="./images/arrow-down.svg"
-                  class="w-8 h-8"
-                  alt="Down Icon"
-                />
-              </div>
-            </button>
-            <p id="workPara-2" class="ml-8 mt-4 h-16 hidden">
-              Explore our diverse selection of high-end vehicles, choose your
-              preferred pickup and return dates, and select a location that best
-              fits your needs.
-            </p>
-          </div>
+              answers.forEach((answer, i) => {
+                const answerIndex = i + 1;
+                const btn = buttons[i];
+                const faqContainer = faqContainers[i];
 
-          <script>
-            const workButton2 = document.getElementById("workButton-2");
-            const workPara2 = document.getElementById("workPara-2");
-            const workDown2 = document.getElementById("workDown-2");
-            const workUp2 = document.getElementById("workUp-2");
+                if (answerIndex === index) {
+                  answer.classList.toggle("hidden");
 
-            workButton2.addEventListener("click", () => {
-              workPara2.classList.toggle("hidden");
-              workUp2.classList.toggle("hidden");
-              workDown2.classList.toggle("hidden");
-            });
-          </script>
-          <div class="pb-4">
-            <button
-              id="workButton-3"
-              class="flex flex-row items-center justify-between w-full focus:outline-none focus:ring-0 focus:border-none"
-            >
-              <h2 class="font-bold text-xl justify-start">
-                <span class="font-bold text-xl mr-4">3.</span>Book And Enjoy
-              </h2>
-              <div>
-                <img
-                  id="workUp-3"
-                  src="./images/arrow-up.svg"
-                  class="w-8 h-8 hidden"
-                  alt="Up Icon"
-                />
-                <img
-                  id="workDown-3"
-                  src="./images/arrow-down.svg"
-                  class="w-8 h-8"
-                  alt="Down Icon"
-                />
-              </div>
-            </button>
-            <p id="workPara-3" class="ml-8 mt-4 h-16 hidden">
-              Explore our diverse selection of high-end vehicles, choose your
-              preferred pickup and return dates, and select a location that best
-              fits your needs.
-            </p>
-          </div>
-
-          <script>
-            const workButton3 = document.getElementById("workButton-3");
-            const workPara3 = document.getElementById("workPara-3");
-            const workDown3 = document.getElementById("workDown-3");
-            const workUp3 = document.getElementById("workUp-3");
-
-            workButton3.addEventListener("click", () => {
-              workPara3.classList.toggle("hidden");
-              workUp3.classList.toggle("hidden");
-              workDown3.classList.toggle("hidden");
-            });
+                  const isOpen = !answer.classList.contains("hidden");
+                  faqContainer.classList.toggle("bg-[#ff3601]", isOpen);
+                  faqContainer.classList.toggle("bg-white", !isOpen); // Ensure it goes back to white
+                  btn.textContent = isOpen ? "-" : "+";
+                } else {
+                  // Reset others
+                  answer.classList.add("hidden");
+                  faqContainers[i].classList.add("bg-white");
+                  faqContainers[i].classList.remove("bg-[#ff3601]");
+                  btn.textContent = "+";
+                }
+              });
+            }
           </script>
         </div>
         <div
@@ -2269,149 +2263,10 @@
     <!--Frequently Asked Questions Section Start -->
     <section class="mb-20">
       <div
-        class="w-full bg-[#fff8f6] rounded-2xl flex flex-col gap-12 lg:flex-row lg:gap-0 items-center mb-20 justify-center mx-auto rounded-2xl mt-8"
+        class="w-full bg-[#fff8f6] py-24 rounded-2xl flex flex-col gap-12 lg:flex-row lg:gap-0 items-center mb-20 justify-center mx-auto rounded-2xl mt-8"
       >
         <div
-          class="w-[97%] lg:w-[50%] flex flex-col mx-auto justify-start items-start pt-4 pl-4 pr-4 gap-6"
-        >
-          <p class="text-[#ff3601] font-medium text-lg">How It Work</p>
-          <h1 class="text-5xl font-extrabold">
-            Streamlined processes for a hassle-free experience
-          </h1>
-          <p class="text-[#616d8f]">
-            Our streamlined process ensures a seamless car rental experience
-            from start to finish. With easy online booking, flexible pick-up and
-            drop-off options.
-          </p>
-          <div class="pb-4">
-            <button
-              id="workButton-4"
-              class="flex flex-row items-center justify-between w-full w-[100%] focus:outline-none focus:ring-0 focus:border-none"
-            >
-              <h2 class="font-bold text-xl justify-start">
-                <span class="font-bold text-xl mr-4">1.</span>Browse And Select
-              </h2>
-              <div>
-                <img
-                  id="workUp-4"
-                  src="./images/arrow-up.svg"
-                  class="w-8 h-8 hidden"
-                  alt="Up Icon"
-                />
-                <img
-                  id="workDown-4"
-                  src="./images/arrow-down.svg"
-                  class="w-8 h-8"
-                  alt="Down Icon"
-                />
-              </div>
-            </button>
-            <p id="workPara-4" class="ml-8 mt-4 h-16 hidden">
-              Explore our diverse selection of high-end vehicles, choose your
-              preferred pickup and return dates, and select a location that best
-              fits your needs.
-            </p>
-          </div>
-
-          <script>
-            const workButton4 = document.getElementById("workButton-4");
-            const workPara4 = document.getElementById("workPara-4");
-            const workDown4 = document.getElementById("workDown-4");
-            const workUp4 = document.getElementById("workUp-4");
-
-            workButton.addEventListener("click", () => {
-              workPara.classList.toggle("hidden");
-              workUp.classList.toggle("hidden");
-              workDown.classList.toggle("hidden");
-            });
-          </script>
-          <div class="pb-4">
-            <button
-              id="workButton-5"
-              class="flex flex-row items-center justify-between w-full focus:outline-none focus:ring-0 focus:border-none"
-            >
-              <h2 class="font-bold text-xl justify-start">
-                <span class="font-bold text-xl mr-4">2.</span>Book And Confirm
-              </h2>
-              <div>
-                <img
-                  id="workUp-5"
-                  src="./images/arrow-up.svg"
-                  class="w-8 h-8 hidden"
-                  alt="Up Icon"
-                />
-                <img
-                  id="workDown-5"
-                  src="./images/arrow-down.svg"
-                  class="w-8 h-8"
-                  alt="Down Icon"
-                />
-              </div>
-            </button>
-            <p id="workPara-5" class="ml-8 mt-4 h-16 hidden">
-              Explore our diverse selection of high-end vehicles, choose your
-              preferred pickup and return dates, and select a location that best
-              fits your needs.
-            </p>
-          </div>
-
-          <script>
-            const workButton5 = document.getElementById("workButton-5");
-            const workPara5 = document.getElementById("workPara-5");
-            const workDown5 = document.getElementById("workDown-5");
-            const workUp5 = document.getElementById("workUp-5");
-
-            workButton2.addEventListener("click", () => {
-              workPara2.classList.toggle("hidden");
-              workUp2.classList.toggle("hidden");
-              workDown2.classList.toggle("hidden");
-            });
-          </script>
-          <div class="pb-4">
-            <button
-              id="workButton-6"
-              class="flex flex-row items-center justify-between w-full focus:outline-none focus:ring-0 focus:border-none"
-            >
-              <h2 class="font-bold text-xl justify-start">
-                <span class="font-bold text-xl mr-4">3.</span>Book And Enjoy
-              </h2>
-              <div>
-                <img
-                  id="workUp-6"
-                  src="./images/arrow-up.svg"
-                  class="w-8 h-8 hidden"
-                  alt="Up Icon"
-                />
-                <img
-                  id="workDown-6"
-                  src="./images/arrow-down.svg"
-                  class="w-8 h-8"
-                  alt="Down Icon"
-                />
-              </div>
-            </button>
-            <p id="workPara-6" class="ml-8 mt-4 h-16 hidden">
-              Explore our diverse selection of high-end vehicles, choose your
-              preferred pickup and return dates, and select a location that best
-              fits your needs.
-            </p>
-          </div>
-
-          <script>
-            const workButton6 = document.getElementById("workButton-6");
-            const workPara6 = document.getElementById("workPara-6");
-            const workDown6 = document.getElementById("workDown-6");
-            const workUp6 = document.getElementById("workUp-6");
-
-            workButton3.addEventListener("click", () => {
-              workPara3.classList.toggle("hidden");
-              workUp3.classList.toggle("hidden");
-              workDown3.classList.toggle("hidden");
-            });
-          </script>
-        </div>
-        <div
-          class="w-[97%] lg:w-[50%] flex justify-center relative h-[600px] text-center mx-auto"
+          class="w-[97%] lg:w-[50%] flex justify-center relative text-center mx-auto"
         >
           <div class="flex flex-row relative">
             <img
@@ -2429,6 +2284,141 @@
               class="absolute top-40 w[95%] left-0 sm:left-5"
             />
           </div>
+        </div>
+        <div
+          class="w-[97%] lg:w-[50%] flex flex-col mx-auto justify-start items-start pt-4 pl-4 pr-4 gap-6"
+        >
+          <p class="text-[#ff3601] font-medium text-lg">How It Work</p>
+          <h1 class="text-5xl font-extrabold">
+            Streamlined processes for a hassle-free experience
+          </h1>
+          <p class="text-[#616d8f]">
+            Our streamlined process ensures a seamless car rental experience
+            from start to finish. With easy online booking, flexible pick-up and
+            drop-off options.
+          </p>
+          <div
+            class="w-[100%] flex flex-col justify-start items-center mt-10 gap-4"
+          >
+            <!-- FAQ Item 11 -->
+            <div
+              id="faqContainer11"
+              class="mb-4 w-full border bg-white rounded-2xl"
+            >
+              <div
+                class="flex justify-between items-center rounded-2xl p-6 shadow"
+                id="faq11"
+              >
+                <h2 class="text-2xl font-medium">Browse And Select</h2>
+                <button
+                  onclick="toggleFaq(11)"
+                  class="text-2xl font-medium transition-transform transform duration-300 items-center focus:outline-none"
+                  id="btn11"
+                >
+                  +
+                </button>
+              </div>
+              <div id="answer11" class="rounded-2xl px-4 py-3 mt-2 hidden">
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem Ipsum is that it has a more-or-less
+                  normal.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 21 -->
+            <div
+              id="faqContainer21"
+              class="mb-4 w-full border bg-white rounded-2xl"
+            >
+              <div
+                class="flex justify-between items-center rounded-2xl p-6 shadow"
+                id="faq21"
+              >
+                <h2 class="text-2xl font-medium">
+                  How Old Do I Need To Be To Rent A Car?
+                </h2>
+                <button
+                  onclick="toggleFaq(21)"
+                  class="text-2xl font-medium transition-transform transform duration-300 items-center focus:outline-none"
+                  id="btn21"
+                >
+                  +
+                </button>
+              </div>
+              <div id="answer21" class="rounded-2xl px-4 py-3 mt-2 hidden">
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem Ipsum is that it has a more-or-less
+                  normal.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 31 -->
+            <div
+              id="faqContainer31"
+              class="mb-4 w-full border bg-white rounded-2xl"
+            >
+              <div
+                class="flex justify-between items-center rounded-2xl p-6 shadow"
+                id="faq31"
+              >
+                <h2 class="text-2xl font-medium">
+                  What Do I Need To Rent A Car?
+                </h2>
+                <button
+                  onclick="toggleFaq(31)"
+                  class="text-2xl font-medium transition-transform transform duration-300 items-center focus:outline-none"
+                  id="btn31"
+                >
+                  +
+                </button>
+              </div>
+              <div id="answer31" class="rounded-2xl px-4 py-3 mt-2 hidden">
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem Ipsum is that it has a more-or-less
+                  normal.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            function toggleFaq(index) {
+              const answers = document.querySelectorAll("[id^='answer']");
+              const buttons = document.querySelectorAll("[id^='btn']");
+              const faqContainers = document.querySelectorAll(
+                "[id^='faqContainer']"
+              );
+
+              answers.forEach((answer, i) => {
+                const answerIndex = i + 1;
+                const btn = buttons[i];
+                const faqContainer = faqContainers[i];
+
+                if (answerIndex === index) {
+                  answer.classList.toggle("hidden");
+
+                  const isOpen = !answer.classList.contains("hidden");
+                  faqContainer.classList.toggle("bg-[#ff3601]", isOpen);
+                  faqContainer.classList.toggle("bg-white", !isOpen); // Ensure it goes back to white
+                  btn.textContent = isOpen ? "-" : "+";
+                } else {
+                  // Reset others
+                  answer.classList.add("hidden");
+                  faqContainers[i].classList.add("bg-white");
+                  faqContainers[i].classList.remove("bg-[#ff3601]");
+                  btn.textContent = "+";
+                }
+              });
+            }
+          </script>
         </div>
       </div>
     </section>
@@ -2905,7 +2895,7 @@
     </section>
     <!--Footer Section Start-->
     <section
-      class="w-full bg-cover bg-center bg-black rounded-2xl"
+      class="w-full bg-cover bg-center bg-black lg:rounded-2xl"
       style="background-image: url('./images/footer-bg.svg')"
     >
       <div class="flex flex-col lg:hidden">
@@ -2984,25 +2974,31 @@
 
         <div>
           <button
-            class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            class="bg-black text-white border border-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
             type="button"
           >
-            <i class="fa-brands fa-x-twitter"></i></button
-          ><button
-            class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            <i class="fa-brands fa-x-twitter"></i>
+          </button>
+
+          <button
+            class="bg-black text-white border border-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
             type="button"
           >
-            <i class="fa-brands fa-facebook"></i></button
-          ><button
-            class="bg-white text-red-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            <i class="fa-brands fa-facebook-f"></i>
+          </button>
+
+          <button
+            class="bg-black text-white border border-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
             type="button"
           >
-            <i class="fa-brands fa-youtube"></i></button
-          ><button
-            class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            <i class="fa-brands fa-instagram"></i>
+          </button>
+
+          <button
+            class="bg-black text-white border border-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
             type="button"
           >
-            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-youtube"></i>
           </button>
         </div>
       </div>

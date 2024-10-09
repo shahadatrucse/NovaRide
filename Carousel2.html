@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <title>Carousel-2</title>
+
+    <!-- <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        max-width: 100vw;
+        overflow-x: hidden;
+      }
+
+      .container {
+        background-color: #292929;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+      }
+
+      .swiper {
+        width: 80%;
+      }
+
+      .image_wrapper {
+        width: 100%;
+        position: relative;
+        padding-top: 56.25%;
+      }
+
+      .image_wrapper img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
+    </style> -->
+  </head>
+  <body>
+    <div class="bg-red-300">
+      <div class="w-[100%] grid place-items-center min-h-[100vh]">
+        <div class="swiper w-[80%]">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide relative w-[100%] pt-[56.25%]">
+              <img
+                src="./images/Car-Single-1.jpg"
+                alt="Car Image 1"
+                class="w-[100%] h-[100%] absolute top-0 left-0 object-cover"
+              />
+            </div>
+            <div class="swiper-slide relative w-[100%] pt-[56.25%]">
+              <img
+                src="./images/Car-Single-2.jpg"
+                alt="Car Image 2"
+                class="w-[100%] h-[100%] absolute top-0 left-0 object-cover"
+              />
+            </div>
+          </div>
+
+          <!--Pagination-->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets", // corrected type here
+          clickable: true,
+        },
+        keyboard: true,
+        mousewheel: true,
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Contact Us</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <style>
+      .swiper-wrapper {
+        transition-timing-function: linear;
+      }
+    </style>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <style>
+      .swiper-wrapper {
+        transition-timing-function: linear;
+      }
+    </style>
+    <style>
+      .carousel {
+        display: flex;
+        transition: transform 0.01s ease;
+      }
+      .card {
+        flex: 0 0 auto; /* Allow cards to adjust based on their width */
+        width: 100%;
+        margin: 0.1rem; /* Default to full width for small screens */
+      }
+    </style>
+    <style>
+      @keyframes move-car {
+        0% {
+          transform: translateX(20%); /* Start from outside the right */
+        }
+        50% {
+          transform: translateX(-20%); /* Move to outside the left */
+        }
+        100% {
+          transform: translateX(20%); /* Move back to outside the right */
+        }
+      }
+
+      .animate-move-car {
+        animation: move-car 2s linear infinite;
+      }
+      /* Corrected marquees styles */
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-50px * 6));
+        }
+      }
+
+      .slider {
+        height: 100px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .slider .slide-track {
+        animation: scroll 40s linear infinite;
+        display: flex;
+        gap: 12px;
+      }
+    </style>
+  </head>
+  <body id="bodyId" class="lg:px-6 lg:bg-white">
+    <!--Header Section Start-->
+    <header id="headerId" class="px-3 py-9">
+      <nav
+        id="navId"
+        class="flex flex-cols-1 lg:grid lg:grid-cols-[1fr_2fr_1fr] gap-4 items-center justify-between"
+      >
+        <div class="w-[95%] lg:block">
+          <img
+            src="./images/logo.svg"
+            alt=""
+            id="logoId"
+            class="h-[33.44px] w-[180px] lg:block"
+          />
+        </div>
+        <div class="hidden lg:block">
+          <ul
+            class="flex flex-row gap-12 items-center justify-center text-lg font-medium"
+          >
+            <li>
+              <a
+                href="javascript:void(0)"
+                class="hover:text-[#ff3001] hover:fill-[#ff3001] text-gray-800 text-lg font-medium block"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="javascript:void(0)"
+                class="hover:text-[#ff3001] hover:fill-[#ff3001] text-gray-800 text-lg font-medium block"
+                >About Us</a
+              >
+            </li>
+            <li class="group relative">
+              <a
+                href="javascript:void(0)"
+                class="hover:text-[#ff3001] hover:fill-[#ff3001] text-gray-800 text-lg font-medium block"
+                >Store<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16px"
+                  height="16px"
+                  class="ml-1 inline-block"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
+                    data-name="16"
+                    data-original="#000000"
+                  />
+                </svg>
+              </a>
+              <ul
+                class="absolute rounded-2xl top-10 left-0 block space-y-2 shadow-lg bg-[#ff3001] text-white max-h-0 overflow-hidden min-w-[250px] group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500"
+              >
+                <li class="py-1">
+                  <a
+                    href="javascript:void(0)"
+                    class="hover:text-black hover:fill-black text-white text-gray-800 text-lg font-medium block"
+                  >
+                    Car Lists
+                  </a>
+                </li>
+                <li class="py-1">
+                  <a
+                    href="javascript:void(0)"
+                    class="hover:text-black hover:fill-black text-white text-gray-800 text-lg font-medium block"
+                  >
+                    Car Type
+                  </a>
+                </li>
+                <li class="py-1">
+                  <a
+                    href="javascript:void(0)"
+                    class="hover:text-black hover:fill-black text-white text-gray-800 text-lg font-medium block"
+                  >
+                    Car Single
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                href="javascript:void(0)"
+                class="hover:text-[#ff3001] hover:fill-[#ff3001] text-gray-800 text-lg font-medium block"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="hidden lg:block">
+          <a href="#" class="flex justify-end group">
+            <span
+              class="border bg-[#ff3600] py-2 px-6 rounded-full text-white text-lg font-medium border-none"
+            >
+              Book a Rental</span
+            ><span
+              class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+            >
+              <img
+                src="./images/arrow-angle-24.png"
+                class="w-6 h-6 text-white transition-opacity duration-3000 group-hover:hidden"
+              />
+              <img
+                src="./images/arrow-right-24.png"
+                class="w-6 h-6 text-white hidden transition-opacity duration-3000 group-hover:block"
+              />
+            </span>
+          </a>
+        </div>
+        <div class="lg:hidden w-[10%] h-auto">
+          <button
+            id="menu-button"
+            class="flex items-center justify-end float-right focus:outline-none"
+          >
+            <svg
+              class="h-[33.44px] bg-[#ff3600] text-white font-semibold rounded p-1"
+              fill="white"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+          <button
+            id="close-button"
+            class="hidden lg:hidden flex items-center justify-end float-right focus:outline-none"
+          >
+            <svg
+              class="h-[33.44px] bg-[#ff3601] text-white font-semibold rounded p-1"
+              fill="white"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 18L18 6M6 6l12 12"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <div id="mobile-menu" class="hidden lg:hidden h-100vh text-white">
+      <ul
+        class="flex flex-col gap-4 ml-4 items-start justify-start text-lg font-medium"
+      >
+        <li>
+          <a
+            href="javascript:void(0)"
+            class="hover:text-[#ff3001] hover:fill-[#ff3001] text-white text-lg font-medium block"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="javascript:void(0)"
+            class="hover:text-[#ff3001] hover:fill-[#ff3001] text-white text-lg font-medium block"
+            >About Us</a
+          >
+        </li>
+        <li class="group relative">
+          <a
+            href="javascript:void(0)"
+            class="hover:text-[#ff3001] hover:fill-[#ff3001] text-white text-lg font-medium block"
+            >Store
+            <span class="ml-1 inline-block items-center"
+              ><img
+                src="./images/arrow-down-24.png"
+                class="w-3 h-6 items-center pt-4"
+            /></span>
+          </a>
+          <ul
+            class="absolute rounded-2xl top-10 left-0 block space-y-2 shadow-lg bg-[#ff3001] text-white max-h-0 overflow-hidden min-w-[250px] group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500"
+          >
+            <li class="py-1">
+              <a
+                href="javascript:void(0)"
+                class="hover:text-black hover:fill-black text-white text-lg font-medium block"
+              >
+                Car Lists
+              </a>
+            </li>
+            <li class="py-1">
+              <a
+                href="javascript:void(0)"
+                class="hover:text-black hover:fill-black text-white text-lg font-medium block"
+              >
+                Car Type
+              </a>
+            </li>
+            <li class="py-1">
+              <a
+                href="javascript:void(0)"
+                class="hover:text-black hover:fill-black text-white text-lg font-medium block"
+              >
+                Car Single
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a
+            href="javascript:void(0)"
+            class="hover:text-[#ff3001] hover:fill-[#ff3001] text-white text-lg font-medium block"
+            >Contact Us</a
+          >
+        </li>
+        <li>
+          <a
+            href="javascript:void(0)"
+            class="hover:text-[#ff3001] hover:fill-[#ff3001] text-white text-lg font-medium block"
+            >Book A Rental</a
+          >
+        </li>
+      </ul>
+    </div>
+    <script>
+      // JavaScript for toggling the mobile menu
+      const menuButton = document.getElementById("menu-button");
+      const closeButton = document.getElementById("close-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const logoId = document.getElementById("logoId");
+      const navId = document.getElementById("navId");
+      const bodyId = document.getElementById("bodyId");
+      const headerId = document.getElementById("headerId");
+
+      // Show mobile menu and change styles when menu button is clicked
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        menuButton.classList.add("hidden"); // Hide the menu button
+        closeButton.classList.remove("hidden"); // Show the close button
+        logoId.classList.toggle("hidden");
+        navId.classList.add("border-b", "pb-5", "border-white"); // Ensure you're adding classes correctly
+        bodyId.classList.add("bg-black");
+        headerId.classList.add("py-4");
+      });
+
+      // Hide mobile menu and revert styles when close button is clicked
+      closeButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        menuButton.classList.remove("hidden"); // Show the menu button
+        closeButton.classList.add("hidden"); // Hide the close button
+        logoId.classList.toggle("hidden");
+        navId.classList.remove("border-b-4", "pb-3", "border-red-500"); // Remove classes correctly
+        bodyId.classList.remove("bg-black"); // Remove the background class
+        headerId.classList.remove("py-4"); // Remove the background class
+      });
+    </script>
+    <!--Header Section End-->
+    <!--Hero Section Start-->
+    <section class="relative">
+      <div class="relative">
+        <img
+          src="./images/about/hero-section.jpg"
+          alt="hero background"
+          class="lg:rounded-2xl w-[100%] h-[18rem] sm:h-[20rem] md:h-[22rem] xl:h-[25rem] object-cover opacity-90"
+        />
+      </div>
+      <div
+        class="absolute bg-[#00000095] lg:rounded-2xl top-0 left-0 bottom-0 right-0"
+      ></div>
+      <div
+        class="absolute right-0 left-0 top-24 flex flex-col items-center justify-center text-center mx-4 sm:mx-10 md:mx-22"
+      >
+        <h1
+          class="font-bold text-4xl max-w-4xl sm:text-6xl md:text-7xl mt-4 text-white"
+        >
+          Car Lists
+        </h1>
+        <p class="font-medium text-lg max-w-3xl text-white mt-3 sm:mt-4">
+          <a href="#" class="text-xl sm:text-2xl font-semibold mr-2">Home</a
+          ><span class="text-xl sm:text-2xl font-semibold">/</span
+          ><span class="text-xl sm:text-2xl font-semibold text-[#ff3601] ml-2"
+            >Car Type</span
+          >
+        </p>
+      </div>
+    </section>
+    <!--Hero Section End-->
+
+    <!--Contact Information Section Start-->
+    <section class="my-30">
+      <div
+        class="md:border px-6 md:p-8 my-16 border-grey-100 rounded-2xl grid grid-cols-1 md:grid-cols-[1fr_1fr] justify-center items-start gap-12 w-full md:gap-6"
+      >
+        <!-- Left Section - Contact Information -->
+        <div
+          class="bg-black py-12 px-8 rounded-2xl w-full"
+          style="background-image: url('./images/contact-information-bg.svg')"
+        >
+          <h1 class="text-5xl text-white font-bold mb-8">
+            Contact Information
+          </h1>
+          <p class="text-white text-base font-medium mb-20">
+            Say something to start a live chat!
+          </p>
+
+          <!-- Phone Number -->
+          <div class="flex items-center gap-4 text-white mb-6">
+            <i class="fa-solid fa-phone text-4xl text-white"></i>
+            <span class="text-lg font-medium">+1 123 456 7890</span>
+          </div>
+
+          <!-- Mail Address -->
+          <div class="flex items-center gap-4 text-white mb-6">
+            <i class="fa-solid fa-envelope text-4xl text-white"></i>
+            <span class="text-lg font-medium">example@mail.com</span>
+          </div>
+
+          <!-- Location -->
+          <div class="flex items-center text-white gap-4 mb-20">
+            <i class="fa-solid fa-map-marker-alt text-4xl text-white"></i>
+            <span class="text-lg font-medium">123 Main St, City, Country</span>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="mt-18 flex flex-row gap-2">
+            <button
+              class="bg-black text-white border border-white shadow-lg font-normal h-10 w-10 flex items-center justify-center rounded-full outline-none focus:outline-none mr-2"
+              type="button"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </button>
+
+            <button
+              class="bg-black text-white border border-white shadow-lg font-normal h-10 w-10 flex items-center justify-center rounded-full outline-none focus:outline-none mr-2"
+              type="button"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </button>
+
+            <button
+              class="bg-black text-white border border-white shadow-lg font-normal h-10 w-10 flex items-center justify-center rounded-full outline-none focus:outline-none mr-2"
+              type="button"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </button>
+
+            <button
+              class="bg-black text-white border border-white shadow-lg font-normal h-10 w-10 flex items-center justify-center rounded-full outline-none focus:outline-none mr-2"
+              type="button"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Section - Form -->
+        <div class="w-full mx-auto flex flex-col bg-white gap-8">
+          <!-- First Name and Last Name -->
+          <div class="flex flex-col sm:flex-row items-start w-full gap-8">
+            <!-- First Name -->
+            <div
+              class="flex sm:w-[48%] flex-col items-start justify-start text-left sm:pr-4 w-[93%]"
+            >
+              <label for="firstName" class="mb-2 text-lg font-semibold"
+                >First Name</label
+              >
+              <input
+                id="firstName"
+                placeholder="Enter First Name"
+                class="focus:outline-none w-[100%] border-b border-gray-300 pb-2"
+              />
+            </div>
+
+            <!-- Last Name -->
+            <div
+              class="flex sm:w-[48%] flex-col items-start justify-start text-left sm:pr-4 w-[93%]"
+            >
+              <label for="lastName" class="mb-2 text-lg font-semibold"
+                >Last Name</label
+              >
+              <input
+                id="lastName"
+                placeholder="Enter Last Name"
+                class="focus:outline-none w-[100%] border-b border-gray-300 pb-2"
+              />
+            </div>
+          </div>
+
+          <!-- Email and Phone -->
+          <div class="flex flex-col sm:flex-row items-start w-full gap-8">
+            <!-- Email -->
+            <div
+              class="flex sm:w-[48%] flex-col items-start justify-start text-left sm:pr-4 w-[93%]"
+            >
+              <label for="email" class="mb-2 text-lg font-semibold"
+                >Email
+              </label>
+              <input
+                id="email"
+                placeholder="Enter Your Email"
+                class="focus:outline-none w-[100%] border-b border-gray-300 pb-2"
+              />
+            </div>
+
+            <!-- Phone -->
+            <div
+              class="flex sm:w-[48%] flex-col items-start justify-start text-left sm:pr-4 w-[93%]"
+            >
+              <label for="phone" class="mb-2 text-lg font-semibold"
+                >Phone</label
+              >
+              <input
+                id="phone"
+                placeholder="Enter Your Number"
+                class="focus:outline-none w-[100%] border-b border-gray-300 pb-2"
+              />
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="flex flex-col justify-start w-full sm:w-[96%]">
+            <label for="message" class="mb-2 text-lg font-semibold"
+              >Message</label
+            >
+            <input
+              id="message"
+              placeholder="Write Your Message"
+              class="focus:outline-none w-[100%]"
+            />
+          </div>
+
+          <!-- Submit Button -->
+          <div class="flex justify-start w-full mt-4">
+            <button
+              class="bg-[#ff3600] text-white py-2 px-6 rounded-full font-medium hover:bg-[#e02e00] transition"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Contact Information Section End-->
+    <!--Location Section Start-->
+
+    <section class="my-30">
+      <div class="px-6 lg:px-0 my-16 rounded-2xl">
+        <p class="text-center text-[#ff3601] mb-3 font-semibold">Location</p>
+        <h1
+          class="text-2xl text-center sm:text-3xl md:text-4xl px-10 sm:px-30 lg:text-5xl font-bold mb-16"
+        >
+          How to reach our location
+        </h1>
+        <!-- Google Map -->
+        <div class="w-full h-96 mb-8 rounded-2xl">
+          <iframe
+            class="w-full h-full rounded-2xl"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.222142001152!2d144.95544641528253!3d-37.816279742567474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce7e33!2zU2lkbmV5LCBNZWxib3VybmUgVklDLCBBdXN0cmFsaWE!5e0!3m2!1sen!2sin!4v1600209078492!5m2!1sen!2sin"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!--Location Section End-->
+    <!--Footer Section Start-->
+
+    <section
+      class="w-full bg-cover bg-center bg-black lg:rounded-2xl"
+      style="background-image: url('./images/footer-bg.svg')"
+    >
+      <div class="flex flex-col lg:hidden">
+        <img
+          src="/images/logo.svg"
+          alt="Novaride Logo"
+          class="w-48 mb-4 ml-8 mt-10"
+        />
+        <p class="text-white ml-8 mb-4">
+          Experience the ease and convenience of renting a car with Novaride.
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-[1fr] md:grid-cols-[1fr_1fr_1fr] md:justify-between lg:grid-cols-[1fr_1fr_1fr_1fr] gap-8 items-start justify-start p-6 lg:pt-20 border-b mx-2 border-gray-100"
+      >
+        <div class="flex flex-col hidden lg:block">
+          <img src="/images/logo.svg" alt="Novaride Logo" class="w-48 mb-8" />
+          <p class="text-white">
+            Experience the ease and <br />
+            convenience of renting a car <br />
+            with Novaride.
+          </p>
+        </div>
+        <div class="flex flex-col">
+          <h2 class="text-white font-bold text-2xl mb-8">Legal Policy</h2>
+          <a href="#" class="text-white hover:text-[#ff3601] mb-3"
+            >Terms & Conditions</a
+          >
+          <a href="#" class="text-white hover:text-[#ff3601] mb-3"
+            >Privacy Policy</a
+          >
+          <a href="#" class="text-white hover:text-[#ff3601] mb-3"
+            >Legal Notice</a
+          >
+          <a href="#" class="text-white hover:text-[#ff3601]">Accessibility</a>
+        </div>
+        <div class="flex flex-col">
+          <h2 class="text-white font-bold text-2xl mb-8">Quick Links</h2>
+          <a href="#" class="text-white hover:text-[#ff3601] mb-3">Home</a>
+          <a href="#" class="text-white hover:text-[#ff3601] mb-3">About Us</a>
+          <a href="#" class="text-white hover:text-[#ff3601] mb-3">Car Type</a>
+          <a href="#" class="text-white hover:text-[#ff3601]">Service</a>
+        </div>
+        <div class="flex flex-col">
+          <h2 class="text-white font-bold text-2xl mb-8">
+            Subscribe to the Newsletter
+          </h2>
+          <div class="flex items-center">
+            <input
+              type="text"
+              placeholder="Email..."
+              class="w-[70%] p-3 rounded-full text-white hover:outline-none outline-none bg-gray-500"
+            />
+            <a href="#" class="flex justify-end group">
+              <span
+                class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+              >
+                <img
+                  src="./images/arrow-angle-24.png"
+                  class="w-6 h-6 text-white transition-opacity duration-3000 group-hover:hidden"
+                />
+                <img
+                  src="./images/arrow-right-24.png"
+                  class="w-6 h-6 text-white hidden transition-opacity duration-3000 group-hover:block"
+                />
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col justify-center gap-8 sm:flex-row sm:justify-between items-center py-12 px-8 text-white"
+      >
+        <p class="text-sm">© 2024 Novaride. All rights reserved.</p>
+
+        <div>
+          <button
+            class="bg-black text-white border border-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button"
+          >
+            <i class="fa-brands fa-twitter"></i>
+          </button>
+
+          <button
+            class="bg-black text-white border border-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </button>
+
+          <button
+            class="bg-black text-white border border-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </button>
+
+          <button
+            class="bg-black text-white border border-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button"
+          >
+            <i class="fa-brands fa-youtube"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!--Footer Section End-->
+  </body>
+</html>
