@@ -3,15 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./styles.css" />
-    <title>NovaRide</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
     <link
       rel="stylesheet"
       href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"
@@ -23,42 +20,30 @@
 
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
       integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-    <!-- Tailwind CSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>NovaRide</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
       .swiper-wrapper {
         transition-timing-function: linear;
       }
     </style>
-    <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
 
     <style>
       .swiper-wrapper {
@@ -119,10 +104,10 @@
   </head>
   <body id="bodyId" class="lg:px-6 lg:bg-white">
     <!--Header Section Start-->
-    <header id="headerId" class="px-3 py-9">
+    <header id="headerId" class="px-3 py-6 z-10 relative">
       <nav
         id="navId"
-        class="flex flex-cols-1 lg:grid lg:grid-cols-[1fr_2fr_1fr] gap-4 items-center justify-between"
+        class="grid grid-cols-[1fr_1fr] lg:grid-cols-[1fr_2fr_1fr] gap-4 items-center justify-between"
       >
         <div class="w-[95%] lg:block">
           <img
@@ -154,7 +139,7 @@
               <a
                 href="/cars.html"
                 class="hover:text-[#ff3001] hover:fill-[#ff3001] text-gray-800 text-lg font-medium block"
-                >Store<svg
+                >Cars<svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16px"
                   height="16px"
@@ -169,7 +154,7 @@
                 </svg>
               </a>
               <ul
-                class="absolute rounded-2xl top-10 left-0 block space-y-2 shadow-lg bg-[#ff3001] text-white max-h-0 overflow-hidden min-w-[250px] group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500"
+                class="absolute z-20 rounded-2xl top-10 left-0 block space-y-2 shadow-lg bg-[#ff3001] text-white max-h-0 overflow-hidden min-w-[250px] group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500"
               >
                 <li class="py-1">
                   <a
@@ -226,10 +211,10 @@
             </span>
           </a>
         </div>
-        <div class="lg:hidden w-[10%] h-auto">
+        <div class="lg:hidden w-full pr-4 h-auto">
           <button
             id="menu-button"
-            class="flex items-center justify-end float-right focus:outline-none"
+            class="justify-end float-right focus:outline-none w-[10%]"
           >
             <svg
               class="h-[33.44px] bg-[#ff3600] text-white font-semibold rounded p-1"
@@ -248,7 +233,7 @@
           </button>
           <button
             id="close-button"
-            class="hidden lg:hidden flex items-center justify-end float-right focus:outline-none"
+            class="hidden lg:hidden w-[10%] justify-end float-right focus:outline-none"
           >
             <svg
               class="h-[33.44px] bg-[#ff3601] text-white font-semibold rounded p-1"
@@ -269,6 +254,7 @@
         </div>
       </nav>
     </header>
+
     <div id="mobile-menu" class="hidden lg:hidden h-screen text-white">
       <ul
         class="flex flex-col gap-4 ml-4 items-start justify-start text-lg font-medium"
@@ -292,14 +278,25 @@
             href="/cars.html"
             class="hover:text-[#ff3001] hover:fill-[#ff3001] text-white text-lg font-medium block"
             >Cars
-            <span class="ml-1 inline-block items-center"
-              ><img
-                src="./images/arrow-down-24.png"
-                class="w-3 h-6 items-center pt-4"
-            /></span>
+            <span class="inline-block items-center"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16px"
+                height="16px"
+                class="ml-1 inline-block"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
+                  fill="#ffffff"
+                  data-name="16"
+                  data-original="#ffffff"
+                />
+              </svg>
+            </span>
           </a>
           <ul
-            class="absolute rounded-2xl top-10 left-0 block space-y-2 shadow-lg bg-[#ff3001] text-white max-h-0 overflow-hidden min-w-[250px] group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500"
+            class="absolute rounded-2xl z-20 top-10 left-0 block space-y-2 shadow-lg bg-[#ff3001] text-white max-h-0 overflow-hidden min-w-[250px] group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500"
           >
             <li class="py-1">
               <a
@@ -377,7 +374,7 @@
     </script>
     <!--Header Section End-->
     <!--Hero Section Start-->
-    <section class="relative">
+    <section class="relative z-0">
       <div class="relative">
         <img
           src="./images/hero-bg.jpg"
@@ -1756,10 +1753,10 @@
               class="mb-4 w-full border bg-white rounded-2xl"
             >
               <div
-                class="flex justify-between items-center rounded-2xl p-6 shadow"
+                class="flex justify-between items-center rounded-2xl p-3 shadow"
                 id="faq1"
               >
-                <h2 class="text-2xl font-medium">Browse And Select</h2>
+                <h2 class="text-xl font-medium">Browse And Select</h2>
                 <button
                   onclick="toggleFaq(1)"
                   class="text-2xl font-medium transition-transform transform duration-300 items-center focus:outline-none"
@@ -1784,10 +1781,10 @@
               class="mb-4 w-full border bg-white rounded-2xl"
             >
               <div
-                class="flex justify-between items-center rounded-2xl p-6 shadow"
+                class="flex justify-between items-center rounded-2xl p-3 shadow"
                 id="faq2"
               >
-                <h2 class="text-2xl font-medium">Book and Confirm</h2>
+                <h2 class="text-xl font-medium">Book and Confirm</h2>
                 <button
                   onclick="toggleFaq(2)"
                   class="text-2xl font-medium transition-transform transform duration-300 items-center focus:outline-none"
@@ -1812,10 +1809,10 @@
               class="mb-4 w-full border bg-white rounded-2xl"
             >
               <div
-                class="flex justify-between items-center rounded-2xl p-6 shadow"
+                class="flex justify-between items-center rounded-2xl p-3 shadow"
                 id="faq3"
               >
-                <h2 class="text-2xl font-medium">
+                <h2 class="text-xl font-medium">
                   Can I Rent A Car With A Debit Card?
                 </h2>
                 <button
@@ -2306,10 +2303,10 @@
               class="mb-4 w-full border bg-white rounded-2xl"
             >
               <div
-                class="flex justify-between items-center rounded-2xl p-6 shadow"
+                class="flex justify-between items-center rounded-2xl p-3 shadow"
                 id="faq11"
               >
-                <h2 class="text-2xl font-medium">Browse And Select</h2>
+                <h2 class="text-xl font-medium">Browse And Select</h2>
                 <button
                   onclick="toggleFaq(11)"
                   class="text-2xl font-medium transition-transform transform duration-300 items-center focus:outline-none"
@@ -2334,10 +2331,10 @@
               class="mb-4 w-full border bg-white rounded-2xl"
             >
               <div
-                class="flex justify-between items-center rounded-2xl p-6 shadow"
+                class="flex justify-between items-center rounded-2xl p-3 shadow"
                 id="faq21"
               >
-                <h2 class="text-2xl font-medium">
+                <h2 class="text-xl font-medium">
                   How Old Do I Need To Be To Rent A Car?
                 </h2>
                 <button
@@ -2364,10 +2361,10 @@
               class="mb-4 w-full border bg-white rounded-2xl"
             >
               <div
-                class="flex justify-between items-center rounded-2xl p-6 shadow"
+                class="flex justify-between items-center rounded-2xl p-3 shadow"
                 id="faq31"
               >
-                <h2 class="text-2xl font-medium">
+                <h2 class="text-xl font-medium">
                   What Do I Need To Rent A Car?
                 </h2>
                 <button
@@ -2977,7 +2974,7 @@
             class="bg-black text-white border border-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
             type="button"
           >
-            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-twitter"></i>
           </button>
 
           <button
