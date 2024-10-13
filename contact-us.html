@@ -102,42 +102,183 @@
   </head>
   <body id="bodyId" class="lg:px-6 lg:bg-white">
     <!--Header Section Start-->
-    <header id="headerId" class="px-3 py-6 z-10 relative">
-      <nav
-        id="navId"
-        class="grid grid-cols-[1fr_1fr] lg:grid-cols-[1fr_2fr_1fr] gap-4 items-center justify-between"
-      >
-        <div class="w-[95%] lg:block">
-          <img
-            src="./images/logo.svg"
-            alt=""
-            id="logoId"
-            class="h-[33.44px] w-[180px] lg:block"
-          />
-        </div>
-        <div class="hidden lg:block">
-          <ul
-            class="flex flex-row gap-12 items-center justify-center text-lg font-medium"
-          >
-            <li>
-              <a
-                href="/index.html"
-                class="hover:text-[#ff3001] hover:fill-[#ff3001] text-gray-800 text-lg font-medium block"
-                >Home</a
+    <section>
+      <header id="headerId" class="px-3 py-6 z-10 relative">
+        <nav
+          id="navId"
+          class="grid grid-cols-[1fr_1fr] lg:grid-cols-[1fr_2fr_1fr] gap-4 items-center justify-between"
+        >
+          <div class="w-[95%] lg:block">
+            <img
+              src="./images/logo.svg"
+              alt=""
+              id="logoId"
+              class="h-[33.44px] w-[180px] lg:block"
+            />
+          </div>
+          <div class="hidden lg:block">
+            <ul
+              class="flex flex-row gap-12 items-center justify-center text-lg font-medium"
+            >
+              <li>
+                <a
+                  href="/index.html"
+                  class="hover:text-blue-500 hover:fill-blue-500 text-gray-800 text-lg font-medium block"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/about.html"
+                  class="hover:text-blue-500 hover:fill-blue-500 text-gray-800 text-lg font-medium block"
+                  >About Us</a
+                >
+              </li>
+              <li class="group relative">
+                <a
+                  href="/cars.html"
+                  class="hover:text-blue-500 hover:fill-blue-500 text-gray-800 text-lg font-medium block"
+                  >Cars<svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16px"
+                    height="16px"
+                    class="ml-1 inline-block"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
+                      data-name="16"
+                      data-original="#000000"
+                    />
+                  </svg>
+                </a>
+                <ul
+                  class="absolute z-20 rounded-2xl top-10 left-0 block space-y-2 shadow-lg bg-blue-500 text-white max-h-0 overflow-hidden min-w-[250px] group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500"
+                >
+                  <li class="py-1">
+                    <a
+                      href="/cars.html"
+                      class="hover:text-black hover:fill-black text-white text-gray-800 text-lg font-medium block"
+                    >
+                      Car Lists
+                    </a>
+                  </li>
+                  <li class="py-1">
+                    <a
+                      href="/car-types.html"
+                      class="hover:text-black hover:fill-black text-white text-gray-800 text-lg font-medium block"
+                    >
+                      Car Type
+                    </a>
+                  </li>
+                  <li class="py-1">
+                    <a
+                      href="/voyager-hybrid.html"
+                      class="hover:text-black hover:fill-black text-white text-gray-800 text-lg font-medium block"
+                    >
+                      Car Single
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="/contact-us.html"
+                  class="hover:text-blue-500 hover:fill-blue-500 text-gray-800 text-lg font-medium block"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="hidden lg:block">
+            <a href="#" class="flex justify-end group">
+              <span
+                class="border bg-blue-500 py-2 px-6 rounded-full text-white text-lg font-medium border-none"
               >
-            </li>
-            <li>
-              <a
-                href="/about.html"
-                class="hover:text-[#ff3001] hover:fill-[#ff3001] text-gray-800 text-lg font-medium block"
-                >About Us</a
+                Book a Rental</span
+              ><span
+                class="bg-blue-500 w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
               >
-            </li>
-            <li class="group relative">
-              <a
-                href="/cars.html"
-                class="hover:text-[#ff3001] hover:fill-[#ff3001] text-gray-800 text-lg font-medium block"
-                >Cars<svg
+                <img
+                  src="./images/arrow-angle-24.png"
+                  class="w-6 h-6 text-white transition-opacity duration-3000 group-hover:hidden"
+                />
+                <img
+                  src="./images/arrow-right-24.png"
+                  class="w-6 h-6 text-white hidden transition-opacity duration-3000 group-hover:block"
+                />
+              </span>
+            </a>
+          </div>
+          <div class="lg:hidden w-full pr-4 h-auto">
+            <button
+              id="menu-button"
+              class="justify-end float-right focus:outline-none w-[10%]"
+            >
+              <svg
+                class="h-[33.44px] bg-blue-500 text-white font-semibold rounded p-1"
+                fill="white"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+            <button
+              id="close-button"
+              class="hidden lg:hidden w-[10%] justify-end float-right focus:outline-none"
+            >
+              <svg
+                class="h-[33.44px] bg-blue-500 text-white font-semibold rounded p-1"
+                fill="white"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 18L18 6M6 6l12 12"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      <div id="mobile-menu" class="hidden lg:hidden h-screen text-white">
+        <ul
+          class="flex flex-col gap-4 ml-4 items-start justify-start text-lg font-medium"
+        >
+          <li>
+            <a
+              href="/index.html"
+              class="hover:text-blue-500 hover:fill-blue-500 text-white text-lg font-medium block"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="/about.html"
+              class="hover:text-blue-500 hover:fill-blue-500 text-white text-lg font-medium block"
+              >About Us</a
+            >
+          </li>
+          <li class="group relative">
+            <a
+              href="/cars.html"
+              class="hover:text-blue-500 hover:fill-blue-500 text-white text-lg font-medium block"
+              >Cars
+              <span class="inline-block items-center"
+                ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16px"
                   height="16px"
@@ -146,230 +287,91 @@
                 >
                   <path
                     d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
+                    fill="#ffffff"
                     data-name="16"
-                    data-original="#000000"
+                    data-original="#ffffff"
                   />
                 </svg>
-              </a>
-              <ul
-                class="absolute z-20 rounded-2xl top-10 left-0 block space-y-2 shadow-lg bg-[#ff3001] text-white max-h-0 overflow-hidden min-w-[250px] group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500"
-              >
-                <li class="py-1">
-                  <a
-                    href="/cars.html"
-                    class="hover:text-black hover:fill-black text-white text-gray-800 text-lg font-medium block"
-                  >
-                    Car Lists
-                  </a>
-                </li>
-                <li class="py-1">
-                  <a
-                    href="/car-types.html"
-                    class="hover:text-black hover:fill-black text-white text-gray-800 text-lg font-medium block"
-                  >
-                    Car Type
-                  </a>
-                </li>
-                <li class="py-1">
-                  <a
-                    href="/voyager-hybrid.html"
-                    class="hover:text-black hover:fill-black text-white text-gray-800 text-lg font-medium block"
-                  >
-                    Car Single
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a
-                href="/contact-us.html"
-                class="hover:text-[#ff3001] hover:fill-[#ff3001] text-gray-800 text-lg font-medium block"
-                >Contact Us</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="hidden lg:block">
-          <a href="#" class="flex justify-end group">
-            <span
-              class="border bg-[#ff3600] py-2 px-6 rounded-full text-white text-lg font-medium border-none"
+              </span>
+            </a>
+            <ul
+              class="absolute rounded-2xl z-20 top-10 left-0 block space-y-2 shadow-lg bg-blue-500 text-white max-h-0 overflow-hidden min-w-[250px] group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500"
             >
-              Book a Rental</span
-            ><span
-              class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+              <li class="py-1">
+                <a
+                  href="/cars.html"
+                  class="hover:text-black hover:fill-black text-white text-lg font-medium block"
+                >
+                  Car Lists
+                </a>
+              </li>
+              <li class="py-1">
+                <a
+                  href="/car-types.html"
+                  class="hover:text-black hover:fill-black text-white text-lg font-medium block"
+                >
+                  Car Type
+                </a>
+              </li>
+              <li class="py-1">
+                <a
+                  href="/voyager-hybrid.html"
+                  class="hover:text-black hover:fill-black text-white text-lg font-medium block"
+                >
+                  Car Single
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="/contact-us.html"
+              class="hover:text-blue-500 hover:fill-blue-500 text-white text-lg font-medium block"
+              >Contact Us</a
             >
-              <img
-                src="./images/arrow-angle-24.png"
-                class="w-6 h-6 text-white transition-opacity duration-3000 group-hover:hidden"
-              />
-              <img
-                src="./images/arrow-right-24.png"
-                class="w-6 h-6 text-white hidden transition-opacity duration-3000 group-hover:block"
-              />
-            </span>
-          </a>
-        </div>
-        <div class="lg:hidden w-full pr-4 h-auto">
-          <button
-            id="menu-button"
-            class="justify-end float-right focus:outline-none w-[10%]"
-          >
-            <svg
-              class="h-[33.44px] bg-[#ff3600] text-white font-semibold rounded p-1"
-              fill="white"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+          </li>
+          <li>
+            <a
+              href="javascript:void(0)"
+              class="hover:text-blue-500 hover:fill-blue-500 text-white text-lg font-medium block"
+              >Book A Rental</a
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              ></path>
-            </svg>
-          </button>
-          <button
-            id="close-button"
-            class="hidden lg:hidden w-[10%] justify-end float-right focus:outline-none"
-          >
-            <svg
-              class="h-[33.44px] bg-[#ff3601] text-white font-semibold rounded p-1"
-              fill="white"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6 18L18 6M6 6l12 12"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
-      </nav>
-    </header>
+          </li>
+        </ul>
+      </div>
+      <script>
+        // JavaScript for toggling the mobile menu
+        const menuButton = document.getElementById("menu-button");
+        const closeButton = document.getElementById("close-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const logoId = document.getElementById("logoId");
+        const navId = document.getElementById("navId");
+        const bodyId = document.getElementById("bodyId");
+        const headerId = document.getElementById("headerId");
 
-    <div id="mobile-menu" class="hidden lg:hidden h-screen text-white">
-      <ul
-        class="flex flex-col gap-4 ml-4 items-start justify-start text-lg font-medium"
-      >
-        <li>
-          <a
-            href="/index.html"
-            class="hover:text-[#ff3001] hover:fill-[#ff3001] text-white text-lg font-medium block"
-            >Home</a
-          >
-        </li>
-        <li>
-          <a
-            href="/about.html"
-            class="hover:text-[#ff3001] hover:fill-[#ff3001] text-white text-lg font-medium block"
-            >About Us</a
-          >
-        </li>
-        <li class="group relative">
-          <a
-            href="/cars.html"
-            class="hover:text-[#ff3001] hover:fill-[#ff3001] text-white text-lg font-medium block"
-            >Cars
-            <span class="inline-block items-center"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16px"
-                height="16px"
-                class="ml-1 inline-block"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
-                  fill="#ffffff"
-                  data-name="16"
-                  data-original="#ffffff"
-                />
-              </svg>
-            </span>
-          </a>
-          <ul
-            class="absolute rounded-2xl z-20 top-10 left-0 block space-y-2 shadow-lg bg-[#ff3001] text-white max-h-0 overflow-hidden min-w-[250px] group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500"
-          >
-            <li class="py-1">
-              <a
-                href="/cars.html"
-                class="hover:text-black hover:fill-black text-white text-lg font-medium block"
-              >
-                Car Lists
-              </a>
-            </li>
-            <li class="py-1">
-              <a
-                href="/car-types.html"
-                class="hover:text-black hover:fill-black text-white text-lg font-medium block"
-              >
-                Car Type
-              </a>
-            </li>
-            <li class="py-1">
-              <a
-                href="/voyager-hybrid.html"
-                class="hover:text-black hover:fill-black text-white text-lg font-medium block"
-              >
-                Car Single
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a
-            href="/contact-us.html"
-            class="hover:text-[#ff3001] hover:fill-[#ff3001] text-white text-lg font-medium block"
-            >Contact Us</a
-          >
-        </li>
-        <li>
-          <a
-            href="javascript:void(0)"
-            class="hover:text-[#ff3001] hover:fill-[#ff3001] text-white text-lg font-medium block"
-            >Book A Rental</a
-          >
-        </li>
-      </ul>
-    </div>
-    <script>
-      // JavaScript for toggling the mobile menu
-      const menuButton = document.getElementById("menu-button");
-      const closeButton = document.getElementById("close-button");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const logoId = document.getElementById("logoId");
-      const navId = document.getElementById("navId");
-      const bodyId = document.getElementById("bodyId");
-      const headerId = document.getElementById("headerId");
+        // Show mobile menu and change styles when menu button is clicked
+        menuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+          menuButton.classList.add("hidden"); // Hide the menu button
+          closeButton.classList.remove("hidden"); // Show the close button
+          logoId.classList.toggle("hidden");
+          navId.classList.add("border-b", "pb-5", "border-white"); // Ensure you're adding classes correctly
+          bodyId.classList.add("bg-black");
+          headerId.classList.add("py-4");
+        });
 
-      // Show mobile menu and change styles when menu button is clicked
-      menuButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-        menuButton.classList.add("hidden"); // Hide the menu button
-        closeButton.classList.remove("hidden"); // Show the close button
-        logoId.classList.toggle("hidden");
-        navId.classList.add("border-b", "pb-5", "border-white"); // Ensure you're adding classes correctly
-        bodyId.classList.add("bg-black");
-        headerId.classList.add("py-4");
-      });
-
-      // Hide mobile menu and revert styles when close button is clicked
-      closeButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-        menuButton.classList.remove("hidden"); // Show the menu button
-        closeButton.classList.add("hidden"); // Hide the close button
-        logoId.classList.toggle("hidden");
-        navId.classList.remove("border-b-4", "pb-3", "border-red-500"); // Remove classes correctly
-        bodyId.classList.remove("bg-black"); // Remove the background class
-        headerId.classList.remove("py-4"); // Remove the background class
-      });
-    </script>
+        // Hide mobile menu and revert styles when close button is clicked
+        closeButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+          menuButton.classList.remove("hidden"); // Show the menu button
+          closeButton.classList.add("hidden"); // Hide the close button
+          logoId.classList.toggle("hidden");
+          navId.classList.remove("border-b-4", "pb-3", "border-red-500"); // Remove classes correctly
+          bodyId.classList.remove("bg-black"); // Remove the background class
+          headerId.classList.remove("py-4"); // Remove the background class
+        });
+      </script>
+    </section>
     <!--Header Section End-->
     <!--Hero Section Start-->
     <section class="relative">
@@ -395,7 +397,7 @@
           <a href="/index.html" class="text-xl sm:text-2xl font-semibold mr-2"
             >Home</a
           ><span class="text-xl sm:text-2xl font-semibold">/</span
-          ><span class="text-xl sm:text-2xl font-semibold text-[#ff3601] ml-2"
+          ><span class="text-xl sm:text-2xl font-semibold text-blue-500 ml-2"
             >Contact Us</span
           >
         </p>
@@ -546,7 +548,7 @@
           <!-- Submit Button -->
           <div class="flex justify-start w-full mt-4">
             <button
-              class="bg-[#ff3600] text-white py-2 px-6 rounded-full font-medium hover:bg-[#e02e00] transition"
+              class="bg-blue-500 text-white py-2 px-6 rounded-full font-medium hover:bg-[#e02e00] transition"
             >
               Send
             </button>
@@ -560,7 +562,7 @@
 
     <section class="my-30">
       <div class="px-6 lg:px-0 my-16 rounded-2xl">
-        <p class="text-center text-[#ff3601] mb-3 font-semibold">Location</p>
+        <p class="text-center text-blue-500 mb-3 font-semibold">Location</p>
         <h1
           class="text-2xl text-center sm:text-3xl md:text-4xl px-10 sm:px-30 lg:text-5xl font-bold mb-16"
         >
@@ -608,29 +610,29 @@
         </div>
         <div class="flex flex-col">
           <h2 class="text-white font-bold text-2xl mb-8">Legal Policy</h2>
-          <a href="#" class="text-white hover:text-[#ff3601] mb-3"
+          <a href="#" class="text-white hover:text-blue-500 mb-3"
             >Terms & Conditions</a
           >
-          <a href="#" class="text-white hover:text-[#ff3601] mb-3"
+          <a href="#" class="text-white hover:text-blue-500 mb-3"
             >Privacy Policy</a
           >
-          <a href="#" class="text-white hover:text-[#ff3601] mb-3"
+          <a href="#" class="text-white hover:text-blue-500 mb-3"
             >Legal Notice</a
           >
-          <a href="#" class="text-white hover:text-[#ff3601]">Accessibility</a>
+          <a href="#" class="text-white hover:text-blue-500">Accessibility</a>
         </div>
         <div class="flex flex-col">
           <h2 class="text-white font-bold text-2xl mb-8">Quick Links</h2>
-          <a href="/index.html" class="text-white hover:text-[#ff3601] mb-3"
+          <a href="/index.html" class="text-white hover:text-blue-500 mb-3"
             >Home</a
           >
-          <a href="/about.html" class="text-white hover:text-[#ff3601] mb-3"
+          <a href="/about.html" class="text-white hover:text-blue-500 mb-3"
             >About Us</a
           >
-          <a href="/car-types.html" class="text-white hover:text-[#ff3601] mb-3"
+          <a href="/car-types.html" class="text-white hover:text-blue-500 mb-3"
             >Car Type</a
           >
-          <a href="#" class="text-white hover:text-[#ff3601]">Service</a>
+          <a href="#" class="text-white hover:text-blue-500">Service</a>
         </div>
         <div class="flex flex-col">
           <h2 class="text-white font-bold text-2xl mb-8">
@@ -644,7 +646,7 @@
             />
             <a href="#" class="flex justify-end group">
               <span
-                class="bg-[#ff3600] w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
+                class="bg-blue-500 w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black"
               >
                 <img
                   src="./images/arrow-angle-24.png"
